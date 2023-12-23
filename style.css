@@ -80,12 +80,12 @@ section {
 }
 
 #sec-1 {
-  background-color: yellow;
+  background-color: lightslategray;
   position: relative;
 }
 
 #sec-2 {
-  background-color: blue;
+  background-color: grey;
 }
 .noisetext2 {
   color: white;
