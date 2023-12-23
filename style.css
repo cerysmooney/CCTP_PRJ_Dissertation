@@ -101,7 +101,7 @@ section {
   margin-bottom: 20px; 
 }
 
-/* Scroll Down Button */
+/* Scroll Down Button for "What is Noise" Page */
 .scroll-down {
   height: 50px;
   width: 30px;
@@ -147,4 +147,155 @@ section {
   opacity: 0;
   top:90%
 }
+}
+
+/* .colourcontainer1{
+  
+} */
+
+/* Responsive Background for "What is Colour" Page */
+#colourbackground {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url("Images/coloursbg.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+/* H1 first visibility */
+.backgroundtext{
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-top: 200px;
+  margin-left: 20px;
+}
+
+/* first body text */
+.whatiscolourtext {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-left: 50px;
+  margin-top: 50px;
+
+}
+/* H1 second visibility */
+.backgroundtext2{
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+margin-right: 50px;
+margin-top: 700px;
+
+}
+
+.whatiscolourtext2{
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+/* Scroll Down Button for "SECOND TEXT" */
+.scroll-down-colour {
+  height: 70px;
+  width: 50px;
+  border: 2px solid white;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Scroll Down Button Animation Stuffs */
+.scroll-down-colour::before,
+.scroll-down-colour::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid white;
+  height: 20px;
+  width: 20px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down-colour::after {
+  top: 30%;
+  animation-delay: 0.3s;
+}
+
+
+
+
+
+
+/* Scroll Down Button for "THIRD SECTION" */
+.scroll-down-third {
+  height: 70px;
+  width: 50px;
+  border: 2px solid white;
+  position: absolute;
+  left: 50%; 
+  bottom: -100%; /* Adjust the bottom position */
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Scroll Down Button Animation Stuffs */
+.scroll-down-third::before,
+.scroll-down-third::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid white;
+  height: 20px;
+  width: 20px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down-third::after {
+  top: 30%;
+  animation-delay: 0.3s;
+}
+
+/* third h1 */
+.backgroundtext3{
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-left: 50px;
+  margin-top: 700px;
+}
+
+/* body text */
+.whatiscolourtext3 {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-left: 50px;
+  margin-top: 50px;
+
 }
