@@ -205,7 +205,7 @@ margin-top: 700px;
   display: flex;
   justify-content: right;
   align-items: right;
-  margin-right: 50px;
+  margin-left: 50px;
   margin-top: 50px;
 }
 /* Scroll Down Button for "SECOND TEXT" */
@@ -284,8 +284,8 @@ margin-top: 700px;
   display: flex;
   justify-content: left;
   align-items: left;
-  margin-left: 50px;
   margin-top: 700px;
+  margin-left: 20px;
 }
 
 /* body text */
