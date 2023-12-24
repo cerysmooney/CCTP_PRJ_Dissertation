@@ -14,6 +14,16 @@
 
   </div>
   <body>
+
+      <!-- First Information on Colour Section -->
+  <div class="pickyourcolourednoisecontainer">
+    <h1 class="pickyourbackgroundtext">Pick Your Coloured Noise..</h1>
+    <p class="bodypickyourcolour">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quas maxime tempora amet veritatis assumenda doloremque inventore minus eum ratione?
+    </p>
+    <div id="colourbgcham">
+    </div>
+  </div>
 <!-- Chameleon images -->
     <div class="colouredchameleons">
       <img class="greenChameleon active" src="Images/GreenChameleon-05.png">
@@ -26,7 +36,7 @@
 
 <!-- Buttons for Chameleon -->
  <div class="colourbuttoncontainer">
-  <div class="colourbutton" onmouseover="changeChameleon('whiteChameleon')"> White Noise</div>
+  <div class="colourbutton"  onmouseover="changeChameleon('whiteChameleon')" onClick="navigateTo('white_noise.html')"> White Noise</div>
   <div class="colourbutton2" onmouseover="changeChameleon('pinkChameleon')"> Pink Noise</div>
   <div class="colourbutton3" onmouseover="changeChameleon('blueChameleon')"> Blue Noise</div>
   <div class="colourbutton4" onmouseover="changeChameleon('violetChameleon')"> Violet Noise</div>
@@ -44,6 +54,13 @@ function changeChameleon(chameleonClass){
       activeChameleon.classList.add('active');
  }
 </script>
+
+<!-- allows button to go to certain pages -->
+<script>
+  function navigateTo(page) {
+    window.location.href = page;
+  }
+  </script>
 </body>
 
 

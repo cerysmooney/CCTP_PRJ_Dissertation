@@ -303,6 +303,20 @@ margin-top: 700px;
 
 /* Pick Your Colour Page */
 
+
+/* BG */
+
+#colourbgcham {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url("Images/tree.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
 /* Chameleons and Visibility Settings */
 .colouredchameleons img {
   max-width: 100%;
@@ -322,13 +336,14 @@ margin-top: 700px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  align-items: center;
 }
 
 .colourbutton {
   padding: 10px;
   text-align: center;
   cursor: pointer;
-  background-color: green;
+  background-color: #588157;
   color: white;
   font-size: 2em;
   border-radius: 5px;
@@ -346,92 +361,109 @@ margin-top: 700px;
   padding: 10px;
   text-align: center;
   cursor: pointer;
-  background-color: green;
+  background-color: #588157;
   color:white;
   font-size: 2em;
   border-radius: 5px;
   box-shadow: 1px 1px 1px #333;
   transition: .2s;
-  &:hover {
-    box-shadow: 10px 10px 10px lightcoral ;
-    transform: scale(1.05);
-    background-color: lightpink;
-    color:black;
-  }
-
+}
+.colourbutton2:hover {
+  box-shadow: 10px 10px 10px lightcoral ;
+  transform: scale(1.05);
+  background-color: lightpink;
+  color:black;
 }
 
 .colourbutton3 {
   padding: 10px;
   text-align: center;
   cursor: pointer;
-  background-color: green;
+  background-color: #588157;
   color:white;
   font-size: 2em;
   border-radius: 5px;
   box-shadow: 1px 1px 1px #333;
   transition: .2s;
-  &:hover {
-    box-shadow: 10px 10px 10px blue ;
-    transform: scale(1.05);
-    background-color: lightskyblue;
-    color:black;
-  }
-
 }
+.colourbutton3:hover {
+  box-shadow: 10px 10px 10px blue ;
+  transform: scale(1.05);
+  background-color: lightskyblue;
+  color:black;
+}
+
 
 .colourbutton4 {
   padding: 10px;
   text-align: center;
   cursor: pointer;
-  background-color: green;
+  background-color: #588157;
   color:white;
   font-size: 2em;
   border-radius: 5px;
   box-shadow: 1px 1px 1px #333;
   transition: .2s;
-  &:hover {
-    box-shadow: 10px 10px 10px purple ;
-    transform: scale(1.05);
-    background-color: violet;
-    color:black;
-  }
-
 }
+.colourbutton4:hover {
+  box-shadow: 10px 10px 10px purple ;
+  transform: scale(1.05);
+  background-color: violet;
+  color:black;
+}
+
+
 .colourbutton5 {
   padding: 10px;
   text-align: center;
   cursor: pointer;
-  background-color: green;
+  background-color: #588157;
   color:white;
   font-size: 2em;
   border-radius: 5px;
   box-shadow: 1px 1px 1px #333;
   transition: .2s;
-  &:hover {
-    box-shadow: 10px 10px 10px brown ;
-    transform: scale(1.05);
-    background-color: burlywood;
-    color:black;
-  }
+}
 
+.colourbutton5:hover {
+  box-shadow: 10px 10px 10px brown ;
+  transform: scale(1.05);
+  background-color: burlywood;
+  color:black;
 }
 
 .colourbutton6 {
   padding: 10px;
   text-align: center;
   cursor: pointer;
-  background-color: green;
+  background-color: #588157;
   color:white;
   font-size: 2em;
   border-radius: 5px;
   box-shadow: 1px 1px 1px #333;
   transition: .2s;
-  &:hover {
-    box-shadow: 10px 10px 10px fuchsia ;
-    transform: scale(1.05);
-    background-color: white;
-    color:black;
-  }
+}
+.colourbutton6:hover {
+  box-shadow: 10px 10px 10px fuchsia ;
+  transform: scale(1.05);
+  background-color: white;
+  color:black;
+}
 
+/* Header */
+.pickyourbackgroundtext{
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Body */
+.bodypickyourcolour {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: balance;
 }
