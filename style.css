@@ -311,9 +311,10 @@ margin-top: 700px;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: 2;
   gap: 1em;
-  padding-top: 500px;
+  padding-top: 200px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .colourbutton {
@@ -426,4 +427,12 @@ margin-top: 700px;
     color:black;
   }
 
+}
+
+/* Chameleon Vectors */
+
+.colouredchameleons {
+justify-content: center;
+align-items: center;
+padding-top: 100px;
 }
