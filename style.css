@@ -303,15 +303,22 @@ margin-top: 700px;
 
 /* Pick Your Colour Page */
 
-/* Buttons */
+/* Chameleons */
+.colouredchameleons img {
+  max-width: 100%;
+  height: auto;
+  display: none;
+}
+
+.colouredchameleons img.active {
+  display: block;
+}
 
 .colourbuttoncontainer {
   display: grid;
-  /* width: 1fr; */
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: 2;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1em;
-  padding-top: 200px;
+  padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -322,18 +329,18 @@ margin-top: 700px;
   text-align: center;
   cursor: pointer;
   background-color: green;
-  color:white;
+  color: white;
   font-size: 2em;
   border-radius: 5px;
   box-shadow: 1px 1px 1px #333;
   transition: .2s;
-  &:hover {
-    box-shadow: 10px 10px 10px lightgray ;
-    transform: scale(1.05);
-    background-color: white;
-    color:black;
-  }
+}
 
+.colourbutton:hover {
+  box-shadow: 10px 10px 10px lightgray;
+  transform: scale(1.05);
+  background-color: white;
+  color: black;
 }
 .colourbutton2 {
   padding: 10px;
@@ -427,12 +434,4 @@ margin-top: 700px;
     color:black;
   }
 
-}
-
-/* Chameleon Vectors */
-
-.colouredchameleons {
-justify-content: center;
-align-items: center;
-padding-top: 100px;
 }
