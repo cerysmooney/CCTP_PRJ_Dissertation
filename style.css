@@ -299,3 +299,131 @@ margin-top: 700px;
   margin-top: 50px;
 
 }
+
+
+/* Pick Your Colour Page */
+
+/* Buttons */
+
+.colourbuttoncontainer {
+  display: grid;
+  /* width: 1fr; */
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 2;
+  gap: 1em;
+  padding-top: 500px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.colourbutton {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: green;
+  color:white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+  &:hover {
+    box-shadow: 10px 10px 10px lightgray ;
+    transform: scale(1.05);
+    background-color: white;
+    color:black;
+  }
+
+}
+.colourbutton2 {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: green;
+  color:white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+  &:hover {
+    box-shadow: 10px 10px 10px lightcoral ;
+    transform: scale(1.05);
+    background-color: lightpink;
+    color:black;
+  }
+
+}
+
+.colourbutton3 {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: green;
+  color:white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+  &:hover {
+    box-shadow: 10px 10px 10px blue ;
+    transform: scale(1.05);
+    background-color: lightskyblue;
+    color:black;
+  }
+
+}
+
+.colourbutton4 {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: green;
+  color:white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+  &:hover {
+    box-shadow: 10px 10px 10px purple ;
+    transform: scale(1.05);
+    background-color: violet;
+    color:black;
+  }
+
+}
+.colourbutton5 {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: green;
+  color:white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+  &:hover {
+    box-shadow: 10px 10px 10px brown ;
+    transform: scale(1.05);
+    background-color: burlywood;
+    color:black;
+  }
+
+}
+
+.colourbutton6 {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: green;
+  color:white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+  &:hover {
+    box-shadow: 10px 10px 10px fuchsia ;
+    transform: scale(1.05);
+    background-color: white;
+    color:black;
+  }
+
+}
