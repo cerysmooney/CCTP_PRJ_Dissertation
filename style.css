@@ -320,8 +320,9 @@ margin-top: 700px;
 /* Chameleons and Visibility Settings */
 .colouredchameleons img {
   max-width: 100%;
-  height: auto;
+  height: 400px;
   display: none;
+  padding-left: 300px;
 }
 
 .colouredchameleons img.active {
