@@ -547,6 +547,15 @@ border-radius: 20px;
 }
 
 
+/* Image Grid */
+
+.imageGrid {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 /* .playWhiteNoiseButton{
   width: 150px;
   margin: 0 auto; 
