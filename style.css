@@ -492,6 +492,10 @@ text-align: center;
 }
 
 .whiteNoiseInfoHead {
+  text-align: left;
+  display: flex;
+  align-items: left;
+  justify-content: left;
   padding-top: 200px;
   padding-left: 20px;
 }
@@ -499,6 +503,34 @@ text-align: center;
 .whiteNoiseInfoBody {
   padding-left: 20px;
   text-wrap: balance;
+  text-align: left;
+  color: black;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  text-wrap: balance;
+
+}
+
+.whiteNoiseInfoHeadSection2 {
+  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  padding-top: 200px;
+
+}
+
+.whiteNoiseInfoBodySection2{
+  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: balance;
+
 }
 /* Chameleon Img */
 .whiteChameleonContainer {
@@ -559,6 +591,8 @@ border-radius: 20px;
   padding-bottom: 10px;
 
 }
+
+
 
 /* .playWhiteNoiseButton{
   width: 150px;
