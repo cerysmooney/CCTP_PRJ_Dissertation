@@ -72,17 +72,18 @@ function changeChameleon(chameleonClass){
     audio.load();
     audio.play();
 
+    
     clearTimeout(audioTimeout);
     audioTimeout = setTimeout(() => {
     stopAudio();
   }, 1000);
  }
 function stopAudio(){
-  const audio = document
+  const audio = document.getElementById('colourAudio');
+  audio.pause();
+  audio.currentTime = 0;
 }
 </script>
-
-
 <!-- allows button to go to certain pages -->
 <script>
   function navigateTo(page) {
