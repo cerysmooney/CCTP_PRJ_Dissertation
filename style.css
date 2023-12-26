@@ -541,7 +541,7 @@ border-radius: 20px;
   border-left: transparent;
   animation: scroll-down 1s ease-in-out infinite;
 }
-.scroll-down-colour::after {
+.scroll-down-white::after {
   top: 30%;
   animation-delay: 0.3s;
 }
