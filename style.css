@@ -518,10 +518,10 @@ border-radius: 20px;
 .scroll-down-white {
   height: 70px;
   width: 50px;
-  border: 2px solid white;
+  border: 2px solid #333;
   position: absolute;
   left: 50%;
-  bottom: -40px;
+  bottom: -70px;
   border-radius: 50px;
   cursor: pointer;
 }
@@ -533,7 +533,7 @@ border-radius: 20px;
   position: absolute;
   top: 20%;
   left: 50%;
-  border: 2px solid white;
+  border: 2px solid #333;
   height: 20px;
   width: 20px;
   transform: translate(-50%, -100%) rotate(45deg);
@@ -554,6 +554,10 @@ border-radius: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
 }
 
 /* .playWhiteNoiseButton{
