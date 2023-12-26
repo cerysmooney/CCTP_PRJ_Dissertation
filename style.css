@@ -472,3 +472,7 @@ margin-top: 700px;
 
 /* White Noise Page */
 
+.bgWhiteNoise {
+  background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 62%, rgba(153,153,153,1) 100%);
+}
