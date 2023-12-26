@@ -473,6 +473,22 @@ margin-top: 700px;
 /* White Noise Page */
 
 .bgWhiteNoise {
-  background: rgb(255,255,255);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+background: rgb(255,255,255);
 background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 62%, rgba(153,153,153,1) 100%);
+}
+
+/* Chameleon Img */
+.whiteChameleonContainer {
+padding-left: 200px;
+}
+
+.whiteChameleonPg {
+  max-width: 100%;
+  height: 500px;
 }
