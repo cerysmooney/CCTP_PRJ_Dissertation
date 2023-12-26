@@ -76,10 +76,11 @@ function changeChameleon(chameleonClass, audioSourceId){
     audio.load();
     audio.play();
 
-    clearTimeout(audioTimeout);
-    audioTimeout = setTimeout(() => {
-    stopAudio();
-  }, 1000);
+    // Just incase there's a need to decrease time on audio
+  //   clearTimeout(audioTimeout);
+  //   audioTimeout = setTimeout(() => {
+  //   stopAudio();
+  // }, 1000);
  }
 function stopAudio(){
   const audio = document.getElementById('colourAudio');
