@@ -38,7 +38,7 @@
 
      <div class="colourAudio">
       <audio id="colourAudio" controls>
-      <source src="Audio/White Noise.mp3" alt="White Noise">
+      <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
     </audio>
      </div>
 
@@ -52,7 +52,7 @@
   <!-- <div class="colourbutton6"> Grey Noise?</div> -->
  </div>
 
- <!-- Change images when hovered over specific button -->
+ <!-- Change images *AND AUDIO* when hovered over specific button -->
  <script>
 function changeChameleon(chameleonClass){
   const chameleons = document.querySelectorAll('.colouredchameleons img');
@@ -60,8 +60,17 @@ function changeChameleon(chameleonClass){
 
    const activeChameleon = document.querySelector(`.${chameleonClass}`);
       activeChameleon.classList.add('active');
+
+    // Audio Deets
+
+    const audio = document.getElementById('colourAudio');
+    const audioSource = document.getElementById(audioSourceId);
+    audio.src = audioSource.src;
+    audio.load();
+    audio.play();
  }
 </script>
+
 
 <!-- allows button to go to certain pages -->
 <script>
