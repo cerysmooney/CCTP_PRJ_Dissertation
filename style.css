@@ -967,6 +967,27 @@ animation: gradientAnimation 10s infinite alternate;
   
   }
 
+
+  .brownBgText2{
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-top: 200px;
+    margin-right: 20px;
+  }
+
+  .brownBodyText2 {
+    text-align: right;
+    color: white;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-right: 50px;
+    margin-top: 50px;
+  
+  }
   /* Containers */
   .brownChameleonContainer {
     margin: 0 auto;
@@ -986,10 +1007,13 @@ animation: gradientAnimation 10s infinite alternate;
 
     .placebearBrown {
  padding-top: 10px;
- padding-left: 100px;
+ padding-left: 20px;
  
     }
 
-    .placebearBrown2 {
-  
-         }
+
+    .placebearBrown2{
+      display: block;
+      margin-left: auto;
+     padding-right: 20px;
+    }
