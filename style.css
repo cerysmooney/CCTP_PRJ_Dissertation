@@ -902,3 +902,17 @@ padding-bottom: 20px;
   top: 30%;
   animation-delay: 0.3s;
 }
+
+
+
+/* Brown Noise Page */
+
+.bgBrownNoise {
+  background: linear-gradient(45deg, #D2B48C, #DAA520, #CD853F, #D2691E, #CD853F, #DAA520, #D2B48C);
+  margin: 0;
+  height: 100vh; /* Set height to 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
