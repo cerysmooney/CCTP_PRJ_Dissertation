@@ -22,71 +22,29 @@
 
 <body>
 
- <!-- Header, audio buttons and functions and chameleon/placeholder -->
-    <h1 class="whiteH1"> White Noise </h1>
-    <div class="whiteChameleonContainer">
-      <img class="whiteChameleonPg" src="Images/WhiteChameleon-05.png">
-      <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
-      <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button>
-      <audio id="whiteNoiseAudio">
-      <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
-    </audio>
-    </div>
-    
-    <script>
-      var audio = document.getElementById("whiteNoiseAudio");
-      function playNoise(){
-        
-            audio.play();
-      }
+  <h1 class="blueH1"> Brown Noise </h1>
+  <div class="blueChameleonContainer">
+    <img class="blueChameleonPg" src="Images/BrownChameleon-05.png">
+    <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
+    <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button>
+    <audio id="brownNoiseAudio">
+    <source id="brownNoiseSource" src="Audio/Brown Noise.mp3"  type="audio/mp3" alt="Brown Noise">
+  </audio>
+  </div>
   
-      function stopNoise(){
-        audio.pause();
-        audio.currentTime = 0;
-      }
-    </script>
+  <script>
+    var audio = document.getElementById("brownNoiseAudio");
+    function playNoise(){
+      
+          audio.play();
+    
+    }
 
-    <!-- First info section -->
-  <h2 class="whiteNoiseInfoHead"> White Noise Info</h2>
-  <p class="whiteNoiseInfoBody"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur atque quidem dolorum repudiandae eaque dolores 
-    fuga repellendus aliquid itaque, quae officiis praesentium et voluptates! Quis praesentium officia aspernatur voluptatibus necessitatibus!</p>
-
-    <a href="#toImageGrid">
-    <div class="scroll-down-white"></div>
-  </a>
-
-
-  <a id="toImageGrid"></a>
-  <div class="imageGrid">
-    <div class="imageGrid1">
-      <img src="https://placebear.com/500/300">
-     </div>
-
-     <div class="imageGrid2">
-      <img src="https://placebear.com/500/300">
-     </div>
-     
-     <div class="imageGrid3">
-      <img src="https://placebear.com/500/300">
-     </div>
-  </div>
-
-  <p class="whiteNoiseInfoBodySection2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, nesciunt provident! Nemo expedita ab possimus impedit temporibus atque eaque, dolorum consectetur reprehenderit, minima excepturi quo debitis, nostrum quod? Autem corporis earum 
-    itaque quae. Cum odio provident nobis delectus accusantium, similique amet non! Laborum hic commodi cum labore sunt debitis vel!</p>
-
-
-    <a href="#toSection2Head">
-    <div class="scroll-down-white2"></div>
-  </a>
-
-
-<a id="toSection2Head"></a>
-  <h2 class="whiteNoiseInfoHeadSection2"> White Noise Info</h2>
-
-
-  <div class="placeholderWhite">
-    <img src="https://placebear.com/800/500">
-  </div>
+    function stopNoise(){
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  </script>
     <!-- This div is for the background gradient -->
   </div>
 
