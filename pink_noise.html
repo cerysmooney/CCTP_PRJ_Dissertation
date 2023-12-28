@@ -20,17 +20,29 @@
 <body>
 
 
-   <!-- Header and chameleon/placeholder -->
-   <h1 class="pinkH1"> White Noise </h1>
-   <div class="whiteChameleonContainer">
-     <img class="whiteChameleonPg" src="Images/WhiteChameleon-05.png">
+   <!-- Header, chameleon/placeholder, and audio buttons -->
+   <h1 class="pinkH1"> Pink Noise </h1>
+   <div class="pinkChameleonContainer">
+     <img class="pinkChameleonPg" src="Images/PinkChameleon-05.png">
      <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
      <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button>
-     <audio id="whiteNoiseAudio">
-     <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
+     <audio id="pinkNoiseAudio">
+     <source id="pinkNoiseSource" src="Audio/Pink Noise.mp3 "  type="audio/mp3" alt="Pink Noise">
    </audio>
    </div>
 
+   <script>
+    var audio = document.getElementById("pinkNoiseAudio");
+    function playNoise(){
+      
+          audio.play();
+    }
+
+    function stopNoise(){
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  </script>
 
 
 

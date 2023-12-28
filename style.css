@@ -669,8 +669,8 @@ border-radius: 20px;
   background-size: cover;
   background-position: center;
   position: fixed;
-  top: 0;
-  z-index: -1;
+  
+
 }
 
 /* Text */
@@ -681,3 +681,14 @@ justify-content: center;
 display: flex;
 }
 
+.pinkChameleonContainer {
+  margin: 0 auto;
+  padding-left: 550px;
+  }
+  
+  .pinkChameleonPg {
+    max-width: 100%;
+    height: 200px;
+    background-color: #333;
+    border-radius: 20px;
+  }
