@@ -749,10 +749,8 @@ border-radius: 20px;
   }
 
 
-  
-  /* Text */
 
-  /* Text */
+  /* Text Stuffs */
 .blueH1 {
   font-size: 45px;
   text-align: center;
@@ -816,3 +814,69 @@ border-radius: 20px;
     background-color: #333;
   border-radius: 20px;
   }
+
+
+  /* Scrolly Things */
+
+.scroll-down-blue {
+  height: 70px;
+  width: 50px;
+  border: 2px solid #333;
+  position: absolute;
+  left: 50%;
+  bottom: -70px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Scroll Down Button Animation Stuffs */
+.scroll-down-blue::before,
+.scroll-down-blue::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid #333;
+  height: 20px;
+  width: 20px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down-blue::after {
+  top: 30%;
+  animation-delay: 0.3s;
+}
+
+
+.scroll-down-blue2 {
+  height: 70px;
+  width: 50px;
+  border: 2px solid #333;
+  position: absolute;
+  left: 50%;
+  bottom: -90%;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Scroll Down Button Animation Stuffs */
+.scroll-down-blue2::before,
+.scroll-down-blue2::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid #333;
+  height: 20px;
+  width: 20px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down-blue2::after {
+  top: 30%;
+  animation-delay: 0.3s;
+}
