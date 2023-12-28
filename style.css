@@ -1017,3 +1017,17 @@ animation: gradientAnimation 10s infinite alternate;
       margin-left: auto;
      padding-right: 20px;
     }
+
+
+
+
+
+
+    /* Violet Page */
+
+    /* BG */
+
+    .bgVioletNoise {
+      background-color: #e4b5cb;
+  background-image: linear-gradient(315deg, #e4b5cb 0%, #722ae6 74%);
+    }

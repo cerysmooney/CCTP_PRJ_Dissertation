@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="style.css">
+
 <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" href="Images/icon-06.png" type="image/x-icon">
+  <title> Violet Noise </title>
 </head>
-<div class="topnav">
-    <a  href="index.html">What is Noise?</a>
+
+<div class="bgVioletNoise">
+  <div class="topnav">
+    <a href="index.html">What is Noise?</a>
     <a href="what_is_colour.html">What is Colour?</a>
     <a href="pick_your_colour.html">Pick Your Colour</a>
     <a href="white_noise.html"> White</a>
@@ -13,11 +17,70 @@
     <a href="blue_noise.html">Blue</a>
     <a href="brown_noise.html"> Brown</a>
     <a class="active" href="violet_noise.html"> Violet</a>
-
   </div>
-<h1>  Violet Noise 7</h1>
 
 
-<body style="background-color: violet"> Checking out if this works, hopefully it does </body>
+<body>
+
+  <h1 class="brownH1"> Brown Noise </h1>
+  <div class="brownChameleonContainer">
+    <img class="brownChameleonPg" src="Images/VioletChameleon-05.png">
+    <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
+    <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button>
+    <audio id="brownNoiseAudio">
+    <source id="brownNoiseSource" src="Audio/Brown Noise.mp3"  type="audio/mp3" alt="Brown Noise">
+  </audio>
+  </div>
+  
+  <script>
+    var audio = document.getElementById("brownNoiseAudio");
+    function playNoise(){
+      
+          audio.play();
+    
+    }
+
+    function stopNoise(){
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  </script>
+    <!-- This div is for the background gradient -->
+
+   <div class="brownContainer1">
+  <h1 class="brownBgText">Information on Brown Noise</h1>
+  <p class="brownBodyText">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos unde cum veritatis.
+  </p>
+<img class="placebearBrown" src="https://placebear.com/1200/630">
+  </div>
+  
+
+
+<!-- Second Information on Colour Screen -->
+  <a id="What is Colour Again?"></a>
+  <div class="brownContainer1">
+    <h1 class="brownBgText2">More Info on Brown Noise</h1>
+    <p class="brownBodyText2">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam illo doloremque ad, maxime itaque quo ea ducimus.
+    </p>
+    <img class="placebearBrown2" src="https://placebear.com/1200/630">
+  </div>
+ 
+ 
+<!-- Third Information on Colour Screen -->
+
+<a id="third"></a>
+  <div class="colourcontainer3">
+    <h1 class="brownBgText">Still Some Info on Brown Noise</h1>
+  <p class="brownBodyText">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos unde cum veritatis.
+  </p>
+<img class="placebearBrown" src="https://placebear.com/1200/630">
+  
+  
+  </div>
+
+</body>
 
 </html>
