@@ -676,9 +676,7 @@ border-radius: 20px;
 /* Text */
 .pinkH1 {
   font-size: 45px;
-text-align: center;
-justify-content: center;
-display: flex;
+  text-align: center;
 }
 
 .pinkNoiseInfoHead {
@@ -695,10 +693,11 @@ display: flex;
   margin: 0;
 }
 
+/* Containers */
 .pinkNoiseInfoContainer {
   display: flex;
   align-items: center;
-  padding-top: 200px;
+  padding-top: 300px;
 }
 
 .pinkChameleonContainer {
@@ -706,6 +705,15 @@ display: flex;
   padding-left: 550px;
   }
   
+  .pinkContainer {
+    padding-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  /* Images */
   .pinkChameleonPg {
     max-width: 100%;
     height: 200px;
@@ -715,6 +723,13 @@ display: flex;
 
   .placebearPink {
     margin-right: 20px;
-    padding-bottom: 20px;
-
+  
   }
+
+  .pinkImgPlaceholder {
+    margin-top: 20px;
+    margin-bottom: 20px; 
+  }
+
+
+  
