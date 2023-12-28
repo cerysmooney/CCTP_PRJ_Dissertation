@@ -26,7 +26,7 @@
      <img class="pinkChameleonPg" src="Images/PinkChameleon-05.png">
      <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
      <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button>
-     <audio id="pinkNoiseAudio">
+     <audio id="pinkNoiseAudio" loop>
      <source id="pinkNoiseSource" src="Audio/Pink Noise.mp3 "  type="audio/mp3" alt="Pink Noise">
    </audio>
    </div>
@@ -36,6 +36,7 @@
     function playNoise(){
       
           audio.play();
+          
     }
 
     function stopNoise(){
@@ -43,6 +44,8 @@
       audio.currentTime = 0;
     }
   </script>
+
+
 
 
 
