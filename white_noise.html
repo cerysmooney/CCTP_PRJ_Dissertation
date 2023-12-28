@@ -26,11 +26,17 @@
     <h1 class="whiteH1"> White Noise </h1>
     <div class="whiteChameleonContainer">
       <img class="whiteChameleonPg" src="Images/WhiteChameleon-05.png">
-      <button class="playButton">▶ Play Noise</button>
-
+      <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
+      <audio id="whiteNoiseAudio">
+      <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
+    </audio>
     </div>
     
- <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
+    <script>
+      function playNoise(){
+        var audio = document.getElementById("whiteNoiseAudio");
+    }
+    </script>
 
     <!-- First info section -->
   <h2 class="whiteNoiseInfoHead"> White Noise Info</h2>
