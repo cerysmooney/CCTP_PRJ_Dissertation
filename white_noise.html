@@ -27,15 +27,23 @@
     <div class="whiteChameleonContainer">
       <img class="whiteChameleonPg" src="Images/WhiteChameleon-05.png">
       <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
+      <button class="playButton" onClick="stopNoise()">Stop Noise</button>
       <audio id="whiteNoiseAudio">
       <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
     </audio>
     </div>
     
     <script>
+      var audio = document.getElementById("whiteNoiseAudio");
       function playNoise(){
-        var audio = document.getElementById("whiteNoiseAudio");
-    }
+        
+            audio.play();
+      }
+  
+      function stopNoise(){
+        audio.pause();
+        audio.currentTime = 0;
+      }
     </script>
 
     <!-- First info section -->
