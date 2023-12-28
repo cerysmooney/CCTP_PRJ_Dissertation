@@ -734,8 +734,85 @@ border-radius: 20px;
 
   .pinkImgPlaceholder {
     margin-top: 20px;
-    margin-bottom: 20px; 
+
+  }
+
+
+
+  /* Blue Nooise Page */
+
+  /* BG */
+
+  .bgBlueNoise {
+    background: linear-gradient(45deg, #85C1E9, #3498db, #5DADE2, #87CEEB, #5DADE2, #3498db, #85C1E9);
+    margin: 0;
   }
 
 
   
+  /* Text */
+
+  /* Text */
+.blueH1 {
+  font-size: 45px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  }
+  
+  .blueNoiseInfoHead {
+    text-align: left;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    padding-top: 200px;
+    padding-left: 20px;
+  }
+  
+  .blueNoiseInfoBody {
+    padding-left: 20px;
+    text-wrap: balance;
+    text-align: left;
+    color: black;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-wrap: balance;
+  
+  }
+  
+  .blueNoiseInfoHeadSection2 {
+    font-size: 45px;
+    text-align: center;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    padding-top: 200px;
+  
+  }
+  
+  .blueNoiseInfoBodySection2{
+    text-align: center;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-wrap: balance;
+  
+  }
+
+
+  /* Chameleon Img */
+.blueChameleonContainer {
+  margin: 0 auto;
+  padding-left: 550px;
+  }
+  
+  .blueChameleonPg {
+    max-width: 100%;
+    height: 200px;
+    background-color: #333;
+  border-radius: 20px;
+  }

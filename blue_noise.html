@@ -3,7 +3,10 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <head>
   <link rel="icon" href="Images/icon-06.png" type="image/x-icon">
+  <title>Bue Noise</title>
 </head>
+
+<div class="bgBlueNoise">
 <div class="topnav">
     <a href="index.html">What is Noise?</a>
     <a href="what_is_colour.html">What is Colour?</a>
@@ -16,12 +19,76 @@
 
   </div>
 
-<h1>  Blue Noise 6 </h1>
+  <body>
 
+    <!-- Header, audio buttons and functions and chameleon/placeholder -->
+       <h1 class="blueH1"> Blue Noise </h1>
+       <div class="blueChameleonContainer">
+         <img class="blueChameleonPg" src="Images/BlueChameleon-05.png">
+         <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
+         <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button>
+         <audio id="blueNoiseAudio">
+         <source id="blueNoiseSource" src="Audio/Blue Noise.mp3"  type="audio/mp3" alt="Blue Noise">
+       </audio>
+       </div>
+       
+       <script>
+         var audio = document.getElementById("blueNoiseAudio");
+         function playNoise(){
+           
+               audio.play();
+         }
+     
+         function stopNoise(){
+           audio.pause();
+           audio.currentTime = 0;
+         }
+       </script>
+   
+       <!-- First info section -->
+     <h2 class="blueNoiseInfoHead"> Blue Noise Info</h2>
+     <p class="blueNoiseInfoBody"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur atque quidem dolorum repudiandae eaque dolores 
+       fuga repellendus aliquid itaque, quae officiis praesentium et voluptates! Quis praesentium officia aspernatur voluptatibus necessitatibus!</p>
+   
+       <a href="#toImageGrid">
+       <div class="scroll-down-white"></div>
+     </a>
+   
+   
+     <a id="toImageGrid"></a>
+     <div class="imageGrid">
+       <div class="imageGrid1">
+         <img src="https://placebear.com/500/300">
+        </div>
+   
+        <div class="imageGrid2">
+         <img src="https://placebear.com/500/300">
+        </div>
+        
+        <div class="imageGrid3">
+         <img src="https://placebear.com/500/300">
+        </div>
+     </div>
+   
+     <p class="blueNoiseInfoBodySection2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, nesciunt provident! Nemo expedita ab possimus impedit temporibus atque eaque, dolorum consectetur reprehenderit, minima excepturi quo debitis, nostrum quod? Autem corporis earum 
+       itaque quae. Cum odio provident nobis delectus accusantium, similique amet non! Laborum hic commodi cum labore sunt debitis vel!</p>
+   
+   
+       <a href="#toSection2Head">
+       <div class="scroll-down-white2"></div>
+     </a>
+   
+   
+   <a id="toSection2Head"></a>
+     <h2 class="blueNoiseInfoHeadSection2"> White Noise Info</h2>
+   
+   
+     <div class="placeholderWhite">
+       <img src="https://placebear.com/800/500">
+     </div>
+     
 
-<body style="background-color: lightblue"> Checking out if this works, hopefully it does </body>
-
-<a href="brown_noise.html">
-<button>Click Me!</button>
-</a>
-</html>
+    </div>
+   </body>
+   
+   </html>
