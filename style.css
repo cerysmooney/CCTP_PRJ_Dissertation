@@ -683,23 +683,22 @@ display: flex;
 
 .pinkNoiseInfoHead {
   text-align: left;
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  padding-top: 200px;
   padding-left: 20px;
+  margin: 0;
 }
 
 .pinkNoiseInfoBody {
   padding-left: 20px;
-  text-wrap: balance;
   text-align: left;
   color: black;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  text-wrap: balance;
+ text-wrap: balance;
+  margin: 0;
+}
 
+.pinkNoiseInfoContainer {
+  display: flex;
+  align-items: center;
+  padding-top: 200px;
 }
 
 .pinkChameleonContainer {
@@ -712,4 +711,10 @@ display: flex;
     height: 200px;
     background-color: #333;
     border-radius: 20px;
+  }
+
+  .placebearPink {
+    margin-right: 20px;
+    padding-bottom: 20px;
+
   }
