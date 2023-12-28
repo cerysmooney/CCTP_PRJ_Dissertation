@@ -483,6 +483,8 @@ margin-top: 700px;
 background: rgb(255,255,255);
 background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 62%, rgba(153,153,153,1) 100%);
 overflow-y: auto;
+animation: gradientAnimation 10s infinite linear;
+
 }
 
 /* Text */
@@ -662,6 +664,7 @@ border-radius: 20px;
 
 
 /* Background */
+
 .bgPinkNoise {
   background-image: url("Images/PinkBG.jpg");
   min-height: 100vh;
@@ -670,8 +673,11 @@ border-radius: 20px;
   background-position: center;
   position: absolute;
   
+  
 
 }
+
+
 
 /* Text */
 .pinkH1 {
@@ -746,6 +752,7 @@ border-radius: 20px;
   .bgBlueNoise {
     background: linear-gradient(45deg, #85C1E9, #3498db, #5DADE2, #87CEEB, #5DADE2, #3498db, #85C1E9);
     margin: 0;
+    animation: gradientAnimation 10s infinite linear;
   }
 
 
