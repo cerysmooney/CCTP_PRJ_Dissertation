@@ -759,24 +759,22 @@ border-radius: 20px;
   }
   
   .blueNoiseInfoHead {
-    text-align: left;
+    text-align: right;
     display: flex;
-    align-items: left;
-    justify-content: left;
+    align-items: right;
+    justify-content: right;
     padding-top: 200px;
-    padding-left: 20px;
+    padding-right: 20px;
   }
   
   .blueNoiseInfoBody {
-    padding-left: 20px;
+    padding-right: 20px;
     text-wrap: balance;
-    text-align: left;
+    text-align: right;
     color: black;
     display: flex;
-    justify-content: left;
-    align-items: left;
-    text-wrap: balance;
-  
+    justify-content: right;
+    align-items: right;
   }
   
   .blueNoiseInfoHeadSection2 {
@@ -814,6 +812,29 @@ border-radius: 20px;
     background-color: #333;
   border-radius: 20px;
   }
+
+/* IMG */
+  .blueImgPlaceholder {
+    display: flex;
+   align-items: center;
+   justify-content: center;
+padding-bottom: 20px;
+  }
+
+  
+  /* Image Grids */
+
+
+  .blueImageGrid {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* padding-left: 40px;
+    padding-right: 40px;   */
+  }
+
+
 
 
   /* Scrolly Things */
