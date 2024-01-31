@@ -20,6 +20,7 @@
       </div>
 
 <head> <title> What is Noise?</title> </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 <!-- Banner Section -->
@@ -75,6 +76,22 @@
   </a> -->
 </div>
 </section>
+
+<div class="container">
+  <!-- p5.js canvas will be initialized here -->
+  <script>
+    // Initialize p5.js canvas
+    function setup() {
+      createCanvas(1920, 1080);
+    }
+
+    // Draw on the p5.js canvas
+    function draw() {
+      background(220);
+      fill(255, 0, 0);
+      ellipse(200, 200, 100, 100);
+    }
+  </script>
 
 </body>
 </html>
