@@ -103,19 +103,25 @@ function stopAudio(){
   </script>
 
   
-<div class="pickYourColourP5container">
+<div class="pickYourColourP5Container">
   <script>
-    // Initialized p5.js canvas
+    // Calculate canvas dimensions based on existing content
     function setup() {
-      createCanvas(1920, 1080);
+      // Get dimensions of existing content
+      var containerWidth = document.querySelector('.container').offsetWidth;
+      var containerHeight = document.querySelector('.container').offsetHeight;
+
+      // Create canvas with calculated dimensions
+      createCanvas(containerWidth, containerHeight);
     }
+
     function draw() {
-      // background(220);
-      fill(255, 0, 0);
-      ellipse(200, 200, 100, 100);
+      fill(45, 10, 80);
+      ellipse(200, 60, 100, 100);
     }
   </script>
 </div>
+
 </body>
 
 
