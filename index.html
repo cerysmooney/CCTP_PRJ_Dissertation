@@ -75,54 +75,39 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
- let osc, playing, freq, amp;
-        let lineY;
+ let osc, fft;
 
-        function setup() {
-            let cnv = createCanvas(400, 400);
-            cnv.mousePressed(playOscillator);
-            osc = new p5.Oscillator('sine');
-            lineY = height / 2; // Initial position for the line
-        }
+function setup() {
+  createCanvas(720, 256);
 
-        function draw() {
-            background(220);
+  osc = new p5.TriOsc(); // set frequency and type
+  osc.amp(0.5);
 
-            // Map the lineY position to the mouseY position
-            lineY = constrain(mouseY, 0, height);
+  fft = new p5.FFT();
+  osc.start();
+}
 
-            // Adjust frequency and amplitude based on mouse position
-            freq = constrain(map(mouseX, 0, width, 100, 500), 100, 500);
-            amp = constrain(map(mouseY, height, 0, 0, 1), 0, 1);
+function draw() {
+  background(255);
 
-            // Display frequency and amplitude values
-            text('tap to play', 20, 20);
-            text('freq: ' + freq, 20, 40);
-            text('amp: ' + amp, 20, 60);
+  let waveform = fft.waveform(); // analyze the waveform
+  beginShape();
+  strokeWeight(5);
+  for (let i = 0; i < waveform.length; i++) {
+    let x = map(i, 0, waveform.length, 0, width);
+    let y = map(waveform[i], -1, 1, height, 0);
+    vertex(x, y);
+  }
+  endShape();
 
-            // Draw the reacting line
-            stroke(0);
-            line(0, lineY, width, lineY);
+  // change oscillator frequency based on mouseX
+  let freq = map(mouseX, 0, width, 40, 880);
+  osc.freq(freq);
 
-            if (playing) {
-                // Smooth the transitions by 0.1 seconds
-                osc.freq(freq, 0.1);
-                osc.amp(amp, 0.1);
-            }
-        }
+  let amp = map(mouseY, 0, height, 1, 0.01);
+  osc.amp(amp);
+}
 
-        function playOscillator() {
-            // Starting an oscillator on a user gesture will enable audio
-            // in browsers that have a strict autoplay policy.
-            osc.start();
-            playing = true;
-        }
-
-        function mouseReleased() {
-            // Ramp amplitude to 0 over 0.5 seconds
-            osc.amp(0, 0.5);
-            playing = false;
-        }
 </script>
 
 </body>
