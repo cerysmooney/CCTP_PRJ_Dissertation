@@ -79,23 +79,18 @@
 
 <div class="whatIsNoiseP5container">
   <script>
-    // Calculate canvas dimensions based on existing content
+    // Initialized p5.js canvas
     function setup() {
-      // Get dimensions of existing content
-      var containerWidth = document.querySelector('.container').offsetWidth;
-      var containerHeight = document.querySelector('.container').offsetHeight;
-
-      // Create canvas with calculated dimensions
-      createCanvas(containerWidth, containerHeight);
-    }
-
+      createCanvas(document.querySelector('.container').offsetWidth, document.querySelector('.container').offsetHeight);
+      }
+  
     function draw() {
-      fill(45, 10, 80);
-      ellipse(200, 60, 100, 100);
+      // background(220);
+      fill(255, 0, 0);
+      ellipse(200, 200, 100, 100);
     }
   </script>
 </div>
-
 </body>
 </html>
 
