@@ -560,8 +560,10 @@ display: flex;
 
 #hoverVideo {
   width: 100%;
-  max-width: 800px; /* Adjust the maximum width as needed */
+  max-width: 800px;  
+  /* changes size */
 }
+
 
 .whiteChameleonPg {
   max-width: 100%;
