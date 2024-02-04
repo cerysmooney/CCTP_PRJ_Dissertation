@@ -552,8 +552,15 @@ display: flex;
 }
 /* Chameleon Img */
 .whiteChameleonContainer {
-margin: 0 auto;
-padding-left: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+#hoverVideo {
+  width: 100%;
+  max-width: 800px; /* Adjust the maximum width as needed */
 }
 
 .whiteChameleonPg {
