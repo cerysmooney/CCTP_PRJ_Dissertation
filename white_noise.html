@@ -26,8 +26,9 @@
  <!-- Header, audio buttons and functions and chameleon/placeholder -->
     <h1 class="whiteH1"> White Noise </h1>
     <div class="whiteChameleonContainer">
-      <img class="whiteChameleonPg" src="Images/WhiteChameleon-05.png">
+      <!-- <img class="whiteChameleonPg" src="Images/WhiteChameleon-05.png"> -->
       <!-- <img class="whiteChameleonPgBranch" src="Images/leaf_Leaf.png"> -->
+      <video id="hoverOnVideo" src="Videos/Animating Chameleon.mp4"></video>
       <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
       <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button>
       <audio id="whiteNoiseAudio">
@@ -35,6 +36,7 @@
     </audio>
     </div>
     
+    <!-- <video src="Videos/Animating Chameleon.mp4"></video> -->
     <script>
       var audio = document.getElementById("whiteNoiseAudio");
       function playNoise(){
@@ -47,6 +49,9 @@
         audio.currentTime = 0;
       }
     </script>
+
+<!-- on hover coding -->
+    <script></script>
 
     <!-- First info section -->
   <h2 class="whiteNoiseInfoHead"> White Noise Info</h2>
