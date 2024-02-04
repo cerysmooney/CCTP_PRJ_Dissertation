@@ -559,10 +559,28 @@ padding-left: 550px;
 .whiteChameleonPg {
   max-width: 100%;
   height: 200px;
-  background-color: #333;
-border-radius: 20px;
+  /* background-color: #333; */
+/* border-radius: 20px; */
 }
 
+/* .whiteChameleonPgBranch {
+  max-width: 100%;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+
+@keyframes branchAnimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.whiteChameleonPgBranch:hover {
+  animation: branchAnimation 0.7s ease infinite;
+} */
 /* Scrolly Thing */
 
 .scroll-down-white {
