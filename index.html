@@ -33,7 +33,7 @@
             <p>Sound is created when something vibrates and sends waves of energy (vibration) into our ears. The vibrations travel through the air or another medium (solid, liquid or gas) to the ear. The stronger the vibrations, the louder the sound. Sounds are fainter the further you get from the sound source. </p>
         </div>
         <div class="noiseimgplaceholder">
-            <img src="https://placebear.com/700/500" alt="placeholder">
+            <div id="p5CanvasContainer" class="p5CanvasContainer"></div>
         </div>
         <div class="noisetext">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque! </p>
@@ -87,8 +87,8 @@
     let playing = false;
 
 function setup() {
-  createCanvas(720, 256);
-
+ let canvas = createCanvas(720, 256);
+canvas.parent('p5CanvasContainer');
   osc = new p5.SinOsc(); // set frequency and type
   osc.amp(0.5);
 
