@@ -43,7 +43,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque! </p>
         </div> -->
         <div class="noiseimgplaceholder">
-            <img src="https://placebear.com/700/500" alt="placeholder">
+            <div id="frequencyP5Container" class="frequencyP5Container"></div>
+            <!-- <img src="https://placebear.com/700/500" alt="placeholder"> -->
         </div>
         <div class="noisetext">
             <p>Humans can hear frequencies as low as 20 Hz and as high as 20 kHz.</p>
@@ -140,7 +141,8 @@ function draw() {
     // Another P5.Js Canvas
     var sketch = function(p) {  // template for creating another p5 sketch
         p.setup = function() {
-            p.createCanvas(700,500);
+         let anotherCanvas = p.createCanvas(700,500);
+         anotherCanvas.parent('frequencyP5Container');
             // p.background(255);
             
         p.draw = function(){
