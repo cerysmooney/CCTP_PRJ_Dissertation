@@ -89,19 +89,8 @@
 
 <script>
    
-    var sketch = function(p) {  // template for creating another p5 sketch
-        p.setup = function() {
-            p.createCanvas(700,500);
-            p.background(255);
-        }
-        p.draw = function(){
-            p.ellipse(240, 240, 80, 80);
-        }
-    }
-     var myp5 = new p5(sketch);  // new vairable to create a new canvas
-
-
     let osc, fft;
+    let f = 0;
     let playing = false;
 
 function setup() {
@@ -147,6 +136,26 @@ function draw() {
             playing = false;
         }
     }
+    var sketch = function(p) {  // template for creating another p5 sketch
+        p.setup = function() {
+            p.createCanvas(700,500);
+            // p.background(255);
+            p.osc = new p5.SinOsc();
+            p.osc.freq(f);
+            p.osc.start;
+        }
+        p.draw = function(){
+            p.background(220);
+  f = p.map(p.mouseX, 0, p.width, 0, 22000);
+  osc.freq(f);
+  p.textSize(24);
+  p.textAlign(CENTER, CENTER);
+  p.text(p.round(f), p.width/2, p.height/2);
+              
+        
+        }
+    }
+     var myp5 = new p5(sketch);  // new vairable to create a new canvas
 </script>
 
 </body>
