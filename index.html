@@ -91,11 +91,11 @@
    
     var sketch = function(p) {  // template for creating another p5 sketch
         p.setup = function() {
-            p.createCanvas(200,200);
+            p.createCanvas(700,500);
             p.background(255);
         }
         p.draw = function(){
-
+            p.ellipse(240, 240, 80, 80);
         }
     }
      var myp5 = new p5(sketch);  // new vairable to create a new canvas
