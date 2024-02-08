@@ -93,7 +93,10 @@
     let osc, fft;
     let f = 0;
     let playing = false;
+    let osc2;
 
+
+// WAVEFORM INTERACTION
 function setup() {
  let canvas = createCanvas(720, 256);
 canvas.parent('p5CanvasContainer');
@@ -137,20 +140,32 @@ function draw() {
             playing = false;
         }
     }
+</script>
 
-    // Another P5.Js Canvas
+<script>
+    // Another P5.Js Canvas (FREQUENCY INTERACTION)
     var sketch = function(p) {  // template for creating another p5 sketch
         p.setup = function() {
-         let anotherCanvas = p.createCanvas(700,500);
-         anotherCanvas.parent('frequencyP5Container');
-            // p.background(255);
-            
+            let anotherCanvas = p.createCanvas(720, 256);
+        anotherCanvas.parent('frequencyP5Container');
+        // osc = new p5.Oscillator();
+        // osc.setType('sine');
+        // osc.freq(0);
+        // osc.start();
+
+
         p.draw = function(){
             p.background(220);
+        // let f = p.map(p.mouseX, 0, p.width, 0, 22000);
+        // osc.freq(f);
+        // p.textSize(24);
+        // p.textAlign(p.CENTER, p.CENTER);
+        // p.text(Math.round(f), p.width/2, p.height/2);
         }
     }
 }
      var myp5 = new p5(sketch);  // new vairable to create a new canvas
+     
 </script>
 
 </body>
