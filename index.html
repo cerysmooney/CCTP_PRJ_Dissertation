@@ -78,8 +78,10 @@
         <div class="freqeuncyContainer">
             <!-- <h1>Move Your Mouse to hear the audible frequency range!</h1> -->
             <div id="frequencyP5Container" class="frequencyP5Container"></div>
+            <div class="noiseButtonContainer">
             <button onclick="startPlayingOscillator()">Start Oscillator</button>
             <button onclick="stopPlayingOscillator()">Stop Oscillator</button>
+        </div>
         </div>
     </div>
 </section>
@@ -172,7 +174,7 @@
             if (!isOscillatorStarted) {
                 osc2.start();
                 isOscillatorStarted = true;
-                instructionTextOpacity = 0;
+                // instructionTextOpacity = 0;
             }
         };
         // stop osc 2

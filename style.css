@@ -132,6 +132,10 @@ section {
   color: white;
 }
 
+.noiseButtonContainer {
+  display: flex;
+  justify-content: center;
+}
 .button {
   background-color: #666;
   color: white;
