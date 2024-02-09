@@ -141,6 +141,7 @@
         let isOscillatorStarted = false;
         const minFrequency = 20;   // 20 - 20,000 range, numbers to show the change
         const maxFrequency = 20000;
+        let instructionTextOpacity = 255; // instructions for interaction
 
         p.setup = function() {
             let canvas = p.createCanvas(720, 256);
