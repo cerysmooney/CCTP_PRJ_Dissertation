@@ -98,20 +98,23 @@ section {
   position: relative;
 }
 
-.waveformImage img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.waveformImage {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
-.noisetext,
+.textContainer {
+  margin-left: 60px;
+}
+/* .noisetext,
 .noisetext2,
 .noisetext3 {
   margin-bottom: 20px;
   color: whitesmoke;
   white-space: wrap;
-}
+} */
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/noiiise.png");
