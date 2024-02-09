@@ -43,6 +43,9 @@
                 <div class="noisetext2">
                     <h1> Waveform Terminology</h1>
                     <p>Amplitude is the maximum disturbance a wave creates.</p>
+                    <p>The larger the amplitude, the louder the noise is.
+                        The smaller the amplitude, the quieter the noise is.
+                    </p>
                 </div>
                 <div class="noisetext3">
                     <p>Wavelength is the distance between each crest of the wave.</p>
@@ -50,6 +53,8 @@
             </div>
         </div>
         <div class="noiseimgplaceholder">
+            <h1>Try it Out!</h1>
+            <p> Press "Start" to see how different waveforms are made</p>
             <div id="p5CanvasContainer" class="p5CanvasContainer"></div>
             <button onclick="playOscillator()">Start Oscillator</button> 
             <button onclick="stopOscillator()">Stop Oscillator</button>
@@ -86,7 +91,7 @@
 
     // Waveform Interaction
     function setup() {
-        let canvas = createCanvas(720, 256);
+        let canvas = createCanvas(920, 456);
         canvas.parent('p5CanvasContainer');
         osc = new p5.SinOsc(); // set frequency and type
         osc.amp(0.5);
