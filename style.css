@@ -167,57 +167,6 @@ section {
   margin-bottom: 20px;
 }
 
-/* Scroll Down Button for "What is Noise" Page */
-.scroll-down {
-  height: 50px;
-  width: 30px;
-  border: 2px solid black;
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-/* Scroll Down Button Animation Stuffs */
-.scroll-down::before,
-.scroll-down::after{
-  content: '';
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  border: 2px solid black;
-  height: 10px;
-  width: 10px;
-  transform: translate(-50%, -100%) rotate(45deg);
-  border-top: transparent;
-  border-left: transparent;
-  animation: scroll-down 1s ease-in-out infinite;
-}
-.scroll-down::after{
-  top:30%;
-  animation-delay: .3s;
-}
-
-@keyframes scroll-down{
-0%{
-  opacity: 0;
-}
-30%{
-  opacity: 1;
-}
-60%{
-  opacity: 1;
-}
-100%{
-  opacity: 0;
-  top:90%
-}
-}
-
-/* .colourcontainer1{
-  
-} */
 
 
 /* What is COlour Page
