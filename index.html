@@ -146,7 +146,7 @@
         let instructionTextOpacity = 255; // instructions for interaction
 
         p.setup = function() {
-            let canvas = p.createCanvas(720, 256);
+            let canvas = p.createCanvas(920, 456);
             canvas.parent('frequencyP5Container');
             osc2 = new p5.Oscillator();
             osc2.setType('sine');
@@ -165,7 +165,7 @@
                 p.textSize(24);
                 p.textAlign(p.CENTER, p.CENTER);
                 p.fill(0, instructionTextOpacity);
-                p.text("Click Start to hear the range", p.width/2, p.height/2);
+                p.text("Click start, then slide your mouse to hear the frequency range!", p.width/2, p.height/2);
 
             }
         };
