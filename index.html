@@ -5,6 +5,7 @@
     <link rel="icon" href="Images/icon-06.png" type="image/x-icon">
     <title>What is Noise?</title>
 </head>
+<!-- Nav Bar -->
 <body style="background-color: #191919">
 <div class="topnav">
     <a class="active" href="index.html">What is Noise?</a>
@@ -18,143 +19,87 @@
     <a href="violet_noise.html"> Violet</a>
 </div>
 
-
 <!-- Banner Section -->
 <div class="hero-image">
     <div class="hero-text">
-        <h1> What is Noise? </h1>
+        <h1>What is Noise?</h1>
         <p>Find out how we understand noise below!</p>
     </div>
 </div>
 
-<section id = "sec-2">
+<!-- Frequency Info section -->
+<!-- Please add more -->
+<section id="sec-2">
     <div class="container">
-        <!-- <div class="noiseimgplaceholder">
-            <img src="https://placebear.com/700/500" alt="placeholder">
-        </div> -->
-        <!-- <div class="noisetext2">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati unde eum laborum officiis est maxime enim, aspernatur numquam doloribus.</p>
-        </div> -->
-
         <div class="noisetext2">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati unde eum laborum officiis est maxime enim, aspernatur numquam doloribus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati unde eum laborum officiis est maxime enim, aspernatur numquam doloribus.</p>
         </div>
-            <div class="noiseimgplaceholder">
-         <div id="frequencyP5Container" class="frequencyP5Container"></div>
-         <button onclick="startPlayingOscillator()">Start Oscillator</button>
-         <button onclick="stopPlayingOscillator()"> Stop Oscillator</button>
-         <!-- <img src="https://placebear.com/700/500" alt="placeholder"> -->
-     </div>
-
-        <!-- <a href="#sec-2">
-          <div class="scroll-down"></div>
-        </a> -->
+        <div class="noiseimgplaceholder">
+            <div id="frequencyP5Container" class="frequencyP5Container"></div>
+            <button onclick="startPlayingOscillator()">Start Oscillator</button>
+            <button onclick="stopPlayingOscillator()">Stop Oscillator</button>
+        </div>
     </div>
 </section>
-<!-- Information Sections for Future Use -->
+
+
+<!-- Waveform interaction Section -->
 <section id="sec-1">
     <div class="container">
-          <div class="noisetext">
-            <p>Noise is created when something vibrates and sends waves of energy (vibration) into our ears. 
-                These vibrations determine how loud or soft the noise is.
-            As the waves of energy continue to travel, they create patterns of disturbance </p>
+        <div class="noisetext">
+            <p>Noise is created when something vibrates and sends waves of energy (vibration) into our ears. These vibrations determine how loud or soft the noise is. As the waves of energy continue to travel, they create patterns of disturbance.</p>
         </div>
         <div class="waveformImage">
             <img src="Images/eeee.jpg">
         </div>
         <div class="noisetext2">
-            <p>Amplitude is the maximum disturbance a wave creates. </p>
+            <p>Amplitude is the maximum disturbance a wave creates.</p>
         </div>
         <div class="noisetext3">
             <p>Wavelength is the distance between each crest of the wave.</p>
         </div>
-        
-        
-        <!-- <div class="noiseimgplaceholder">
-            <img src="https://placebear.com/700/500" alt="placeholder">
-        </div> -->
-
-        
         <div class="noiseimgplaceholder">
-
-            <div id="p5CanvasContainer" class="p5CanvasContainer" ></div>
-            <!-- Play/Pause oscillator -->
+            <div id="p5CanvasContainer" class="p5CanvasContainer"></div>
             <button onclick="playOscillator()">Start Oscillator</button> 
             <button onclick="stopOscillator()">Stop Oscillator</button>
-
         </div>
-
-        <!-- <div class="noisetext">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque! </p>
-        </div> -->
-        <!-- <div class="noiseimgplaceholder">
-            <div id="frequencyP5Container" class="frequencyP5Container"></div>
-            <button onclick="startPlayingOscillator()">Start Oscillator</button>
-            <button onclick="stopPlayingOscillator()"> Stop Oscillator</button> -->
-            <!-- <img src="https://placebear.com/700/500" alt="placeholder"> -->
-        <!-- </div>
-        <div class="noisetext">
-            <p>Humans can hear frequencies as low as 20 Hz and as high as 20 kHz.</p>
-        </div> -->
-        <!-- <a href="#sec-2">
-            <div class="scroll-down"></div>
-        </a> -->
     </div>
 </section>
-
-<!--  -->
-
-<!-- <div class="whatIsNoiseP5container">
-    p5.js script moved here -->
-<!-- </div> -->
-
-<!-- Play/Pause oscillator -->
-<!-- <button onclick="playOscillator()">Start Oscillator</button> 
-<button onclick="stopOscillator()">Stop Oscillator</button> -->
-
 
 <!-- P5.JS sound and complete library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
-   
     let osc, fft;
-    let f = 0;
     let playing = false;
-    let osc2;
 
 
-// WAVEFORM INTERACTION
-function setup() {
- let canvas = createCanvas(720, 256);
-canvas.parent('p5CanvasContainer');
-  osc = new p5.SinOsc(); // set frequency and type
-  osc.amp(0.5);
+    // Waveform Interaction
+    function setup() {
+        let canvas = createCanvas(720, 256);
+        canvas.parent('p5CanvasContainer');
+        osc = new p5.SinOsc(); // set frequency and type
+        osc.amp(0.5);
+        fft = new p5.FFT();
+    }
 
-  fft = new p5.FFT();
-}
-
-function draw() {
-  background(255);
-
-  let waveform = fft.waveform(); // analyze the waveform
-  beginShape();
-  strokeWeight(5);
-  for (let i = 0; i < waveform.length; i++) {
-    let x = map(i, 0, waveform.length, 0, width);
-    let y = map(waveform[i], -1, 1, height, 0);
-    vertex(x, y);
-  }
-  endShape();
-
-  // change oscillator frequency based on mouseX
-  let freq = map(mouseX, 0, width, 40, 880);
-  osc.freq(freq);
-
-  let amp = map(mouseY, 0, height, 1, 0.01);
-  osc.amp(amp);
-}
+    function draw() {
+        background(255);
+        let waveform = fft.waveform(); // analyze the waveform
+        beginShape();
+        strokeWeight(5);
+        for (let i = 0; i < waveform.length; i++) {
+            let x = map(i, 0, waveform.length, 0, width);
+            let y = map(waveform[i], -1, 1, height, 0);
+            vertex(x, y);
+        }
+        endShape();
+        let freq = map(mouseX, 0, width, 40, 880);
+        osc.freq(freq);
+        let amp = map(mouseY, 0, height, 1, 0.01);
+        osc.amp(amp);
+    }
 
     function playOscillator() {
         if (!playing) {
@@ -171,29 +116,24 @@ function draw() {
     }
 </script>
 
-<!-- The two are connected for some reason?? Ask simon?? -->
-
+<!-- Second Canvas -->
 <script>
-    //(FREQUENCY INTERACTION)
-    var sketch = function(p) {  
+    // Frequency Interaction
+    var sketch = function(p) {
         let osc2; // second osc
         let isOscillatorStarted = false;
-        const minFrequency = 20;
+        const minFrequency = 20;   // 20 - 20,000 range, numbers to show the change
         const maxFrequency = 20000;
 
-
-        // creating another canvas
         p.setup = function() {
             let canvas = p.createCanvas(720, 256);
             canvas.parent('frequencyP5Container');
-            // Create a new oscillator
             osc2 = new p5.Oscillator();
             osc2.setType('sine');
             osc2.freq(0);
         };
 
-        // 20 - 20,000 range, numbers to show the change 
-        p.draw = function(){
+        p.draw = function() {
             p.background(220);
             if (isOscillatorStarted) {
                 let f = p.constrain(p.map(p.mouseX, 0, p.width, minFrequency, maxFrequency), minFrequency, maxFrequency);
@@ -203,16 +143,14 @@ function draw() {
                 p.text(Math.round(f) + "Hz", p.width/2, p.height/2);
             }
         };
-
-      // start osc 2
+        // start osc 2
         window.startPlayingOscillator = function() {
             if (!isOscillatorStarted) {
                 osc2.start();
                 isOscillatorStarted = true;
             }
         };
-
-      // stop oscillator 2
+        // stop osc 2
         window.stopPlayingOscillator = function() {
             if (isOscillatorStarted) {
                 osc2.stop();
@@ -221,7 +159,7 @@ function draw() {
         };
     };
 
-    var myp5 = new p5(sketch);  // creating new canvas 
+    var myp5 = new p5(sketch);
 </script>
 
 </body>
