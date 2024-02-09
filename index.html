@@ -172,6 +172,7 @@
             if (!isOscillatorStarted) {
                 osc2.start();
                 isOscillatorStarted = true;
+                instructionTextOpacity = 0;
             }
         };
         // stop osc 2
@@ -179,6 +180,7 @@
             if (isOscillatorStarted) {
                 osc2.stop();
                 isOscillatorStarted = false;
+                
             }
         };
     };
