@@ -156,7 +156,15 @@ section {
 }
 
 #sec-2 {
-  background-color: #333333;
+  /* background-color: #333333; */
+
+  background: linear-gradient(45deg, #000000, #333333, #000000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  position: relative;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .noisetext2 {
@@ -171,6 +179,8 @@ section {
   margin-top: 100px;
   margin-left: 20px;
   margin-bottom: 100px;
+  background-color: #722ae6;
+  
 }
 
 .freqeuncyContainer {
