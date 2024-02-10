@@ -70,12 +70,19 @@
       // Initialized p5.js canvas
       function setup() {
        createCanvas(800,800);
+       background(220);
       }
       function draw() {
-        background(220);
-        fill(255, 0, 0);
-        ellipse(200, 200, 100, 100);
-        
+        whiteLightBeam();  // white beam
+        prism(); // outline of prism
+        innsidePrism(); // inner outline of prism
+        spectrum(); // range of colours
+      }
+
+      function whiteLightBeam(){
+        stroke(200);
+        strokeWeight(5);
+        line(0,350,250,280);
       }
     </script>
 </body>
