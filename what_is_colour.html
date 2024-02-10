@@ -168,7 +168,26 @@
 
         c.setup = function() {
           let canvas = c.createCanvas(920, 456);
-          c.translate(c.width/2, c.height/2); // center of page
+          // c.translate(c.width/2, c.height/2); // center of page
+          // var segmentAngle = c.TWO_PI/colors.length; // 12 segments to the circle
+          // for (var i = 0; i < colors.length; i++) { 
+      
+          //       var currentColor = getColorAtAngle(angle + i * segmentAngle); //calculating current color from angle
+          //       c.fill(currentColor);
+          //       c.stroke(currentColor);
+          //       // Calculate arc coordinates
+          //       var startAngle = i * segmentAngle - c.HALF_PI;
+          //       var endAngle = (i + 1) * segmentAngle - c.HALF_PI;
+          //       c.arc(0, 0, size, size, startAngle, endAngle, c.PIE); // drawing the arc with start/end angles
+          //   }
+
+          //   angle += 0.04; //spinny
+      
+      
+        };
+
+      c.draw = function() {
+        c.translate(c.width/2, c.height/2); // center of page
           var segmentAngle = c.TWO_PI/colors.length; // 12 segments to the circle
           for (var i = 0; i < colors.length; i++) { 
       
@@ -183,11 +202,6 @@
 
             angle += 0.04; //spinny
       
-      
-        };
-
-      c.draw = function() {
-          
       };
   };
 
