@@ -177,7 +177,7 @@ section {
   margin-top: 100px;
   margin-left: 20px;
   margin-bottom: 100px;
-  background-color: #666;
+  /* background-color: #666; */
   
 }
 
@@ -259,7 +259,7 @@ margin-top: 700px;
   margin-top: 50px;
 }
 /* Scroll Down Button for "SECOND TEXT" */
-.scroll-down-colour {
+/* .scroll-down-colour {
   height: 70px;
   width: 50px;
   border: 2px solid white;
@@ -268,10 +268,10 @@ margin-top: 700px;
   bottom: 20px;
   border-radius: 50px;
   cursor: pointer;
-}
+} */
 
 /* Scroll Down Button Animation Stuffs */
-.scroll-down-colour::before,
+/* .scroll-down-colour::before,
 .scroll-down-colour::after {
   content: '';
   position: absolute;
@@ -288,7 +288,7 @@ margin-top: 700px;
 .scroll-down-colour::after {
   top: 30%;
   animation-delay: 0.3s;
-}
+} */
 
 
 
@@ -296,16 +296,16 @@ margin-top: 700px;
 
 
 /* Scroll Down Button for "THIRD SECTION" */
-.scroll-down-third {
+/* .scroll-down-third {
   height: 70px;
   width: 50px;
   border: 2px solid white;
   position: absolute;
   left: 50%; 
   bottom: -100%; /* Adjust the bottom position */
-  border-radius: 50px;
+  /* border-radius: 50px;
   cursor: pointer;
-}
+} */ */
 
 /* Scroll Down Button Animation Stuffs */
 .scroll-down-third::before,
