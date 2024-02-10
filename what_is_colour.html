@@ -142,5 +142,21 @@
   }
       }
     </script>
+
+
+<script>
+  // Frequency Interaction
+  var sketch = function(p) {
+      p.setup = function() {
+          let canvas = p.createCanvas(920, 456);
+      };
+
+      p.draw = function() {
+          p.background(220);
+      };
+  };
+
+  var myp5 = new p5(sketch);
+</script>
 </body>
 </html>
