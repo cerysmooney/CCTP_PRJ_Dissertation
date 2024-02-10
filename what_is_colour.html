@@ -69,13 +69,13 @@
     <script>
       // Initialized p5.js canvas
       function setup() {
-       createCanvas(800,800);
+       createCanvas(600,600);
        background(50);
       }
       function draw() {
         whiteLightBeam();  // white beam
         prism(); // outline of prism
-        insidePrism(); // inner outline of prism
+        innsidePrism(); // inner outline of prism
         spectrum(); // range of colours
       }
 
@@ -86,26 +86,31 @@
       }
       function prism(){
         stroke(255);
-        noFill(); // just outline of triangle
-        strokeWeight(6); // thick
-        triangle(300,200,175,400,425,400); // outer triangle
+        noFill();
+        strokeWeight(6);
+        triangle(300,200,175,400,425,400);
         noFill();
         strokeWeight(4);
-        stroke(150, 180, 255); // inner triangle
-        triangle(300, 203, 178, 397, 422, 397); // might get rid of..
+        stroke(150, 180, 255);
+        triangle(300, 203, 178, 397, 422, 397);
       }
       
-      function insidePrism(){
-        let x1 = 255, y1 = 280, x2 = 345, y2 = 266;
-        let n = 0; // keeping track of lines
-        while (n < 11) { // 11 iterations
-          stroke(255, 5);
-          strokeWeight(0.2);
-          line(x1,y1,x2,y2,); // drawing the lines
-          x += 1.3;
-          y2 += 3.45;  // increasing by 1.3 and 3.45 each time
-           n++;
-        } 
+      // beam dispersement effect
+      function innsidePrism(){
+       let x1 = 255, y1 = 280, x2 = 345, y2 = 266; // line beams
+       let n = 0; // keeping track of beams
+       while (n < 11){  // 11 times
+        stroke(255, 7);
+        strokeWeight(0.8); // thick
+        line(x1,y1,x2,y2); // drawing from x1 to x2 y1 to y2
+        x2 += 1.3; // increasing x2 by 1.3 and y2 by 3.45
+        y2 += 3.45;
+        n++;
+       }
+      }
+
+      function spectrum(){
+        
       }
     </script>
 </body>
