@@ -80,7 +80,7 @@
       }
 
       function whiteLightBeam(){
-        stroke(255); // white
+        stroke(255,15); // white
         strokeWeight(5); // thick
         line(0,350,250,280); 
       }
@@ -128,7 +128,7 @@
   
       while (n < 11) {
     let [a, b, c] = colors[n];
-    stroke(a, b, c, 20);
+    stroke(a, b, c, 4);
     strokeWeight(7);
     line(x1, y1, x2, y2);
     x1 += 2.2;
