@@ -1,211 +1,209 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="style.css">
-<head> <title> What is Colour?</title>
- 
-    <link rel="icon" href="Images/icon-06.png" type="image/x-icon">
-</head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<div class="topnav">
-    <a href="index.html">What is Noise?</a>
-    <a class="active" href="what_is_colour.html">What is Colour?</a>
-    <a href="how_they_connect.html">The Connection</a>
-    <a href="pick_your_colour.html">Pick Your Colour</a>
-    <a href="white_noise.html"> White</a>
-    <a href="pink_noise.html"> Pink</a>
-    <a href="blue_noise.html">Blue</a>
-    <a href="brown_noise.html"> Brown</a>
-    <a href="violet_noise.html"> Violet</a>
 
-  </div>
+<head>
+    <title>What is Colour?</title>
+    <link rel="icon" href="Images/icon-06.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
 
 <body style="background-color: grey;">
 
-  <!-- First Information on Colour Section -->
-  <div class="colourcontainer1">
-  <h1 class="backgroundtext">What is Colour?</h1>
-  <p class="whatiscolourtext">
-   Colour is what is visible when light rays bounce off of an object.  
-    One way to showcase every percived colour is through a prism
-  </p>
-  <!-- FIX THE CLASS NAME -->
-  <div id="prismContainer" class="prismContainer"></div>
-  <div id="colourbackground">
-  </div>
-  <p class="whatiscolourtext">
-    Prisms allow us to visually see how light can be reflected off objects. 
-   </p>
-  <a href="#What is Colour Again?">
-    <div class="scroll-down-colour"></div>
-  </a>
-</div>
-  </div>
+    <div class="topnav">
+        <a href="index.html">What is Noise?</a>
+        <a class="active" href="what_is_colour.html">What is Colour?</a>
+        <a href="how_they_connect.html">The Connection</a>
+        <a href="pick_your_colour.html">Pick Your Colour</a>
+        <a href="white_noise.html">White</a>
+        <a href="pink_noise.html">Pink</a>
+        <a href="blue_noise.html">Blue</a>
+        <a href="brown_noise.html">Brown</a>
+        <a href="violet_noise.html">Violet</a>
+    </div>
 
-<!-- Second Information on Colour Screen -->
-  <a id="What is Colour Again?"></a>
-  <div class="colourcontainer2">
-    <h1 class="backgroundtext2">The Colour Wheel</h1>
-    <p class="whatiscolourtext2">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam illo doloremque ad, maxime itaque quo ea ducimus.
-    </p>
-  </div>
-  </div>
-  <a href="#third">
-    <div class="scroll-down-third"></div>
-  </a>
- 
-<!-- Third Information on Colour Screen -->
+    <!-- First Information on Colour Section -->
+    <div class="colourcontainer1">
+        <h1 class="backgroundtext">What is Colour?</h1>
+        <p class="whatiscolourtext">
+            Colour is what is visible when light rays bounce off of an object.
+            One way to showcase every perceived colour is through a prism.
+        </p>
+        <div id="prismContainer" class="prismContainer"></div>
+        <div id="colourbackground"></div>
+        <p class="whatiscolourtext">
+            Prisms allow us to visually see how light can be reflected off objects.
+        </p>
+        <a href="#What is Colour Again?">
+            <div class="scroll-down-colour"></div>
+        </a>
+    </div>
 
-<a id="third"></a>
-  <div class="colourcontainer3">
-    <h1 class="backgroundtext3">Third Time Asking?</h1>
-    <p class="whatiscolourtext3">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos unde cum veritatis.
-    </p>
-    <!-- FIX THE CLASS NAME -->
-    <img class="placebearBrown" src="Images/Colour.1">
-  
-  </div>
+    <!-- Second Information on Colour Screen -->
+    <a id="What is Colour Again?"></a>
+    <div class="colourcontainer2">
+        <h1 class="backgroundtext2">The Colour Wheel</h1>
+        <div id="wheelContainer" class="wheelContainer"></div>
+        <p class="whatiscolourtext2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam illo doloremque ad, maxime itaque quo ea ducimus.
+        </p>
+    </div>
+    <a href="#third">
+        <div class="scroll-down-third"></div>
+    </a>
 
-  <div class="whatIsColourP5Container">
+    <!-- Third Information on Colour Screen -->
+    <a id="third"></a>
+    <div class="colourcontainer3">
+        <h1 class="backgroundtext3">Third Time Asking?</h1>
+        <p class="whatiscolourtext3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos unde cum veritatis.
+        </p>
+        <img class="placebearBrown" src="Images/Colour.1">
+    </div>
+
+    <div class="whatIsColourP5Container"></div>
+
     <script>
-      // Initialized p5.js canvas
-      function setup() {
-       let prism = createCanvas(600,600);
-       prism.parent('prismContainer');
-       background(50);
-      }
-      function draw() {
-        whiteLightBeam();  // white beam
-        prism(); // outline of prism
-        innsidePrism(); // inner outline of prism
-        spectrum(); // range of colours
-      }
+        // Initialized p5.js canvas
+        function setup() {
+            let prism = createCanvas(600, 600);
+            prism.parent('prismContainer');
+            background(50);
+        }
 
-      function whiteLightBeam(){
-        stroke(255,15); // white
-        strokeWeight(5); // thick
-        line(0,350,250,280); 
-      }
-      function prism(){
-        stroke(255);
-        noFill();
-        strokeWeight(6);
-        triangle(300,200,175,400,425,400);
-        noFill();
-        strokeWeight(4);
-        stroke(150, 180, 255);
-        triangle(300, 203, 178, 397, 422, 397);
-      }
-      
-      // beam dispersement effect
-      function innsidePrism(){
-       let x1 = 255, y1 = 280, x2 = 345, y2 = 266; // line beams
-       let n = 0; // keeping track of beams
-       while (n < 11){  // 11 times
-        stroke(255, 7);
-        strokeWeight(0.8); // thick
-        line(x1,y1,x2,y2); // drawing from x1 to x2 y1 to y2
-        x2 += 1.3; // increasing x2 by 1.3 and y2 by 3.45
-        y2 += 3.45;
-        n++;
-       }
-      }
+        function draw() {
+            whiteLightBeam(); // white beam
+            prism(); // outline of prism
+            innsidePrism(); // inner outline of prism
+            spectrum(); // range of colours
+        }
 
-      function spectrum(){
-        let x1 = 348, y1 = 270, x2 = 600, y2 = 312;
-        let n = 0;
-        let colors = [
-       [255, 34, 0],
-      [255, 119, 0],
-      [255, 191, 0],
-      [255, 238, 0],
-      [221, 255, 0],
-      [80, 255, 0],
-      [0, 255, 0],
-      [0, 170, 255],
-      [0, 34, 255],
-      [136, 50, 255],
-      [230, 75, 175]
-  ];
-  
-      while (n < 11) {
-    let [a, b, c] = colors[n];
-    stroke(a, b, c, 4);
-    strokeWeight(7);
-    line(x1, y1, x2, y2);
-    x1 += 2.2;
-    y1 += 3;
-    x2 += 10;
-    y2 += 10;
-    n++;
-  }
-      }
+        function whiteLightBeam() {
+            stroke(255, 15); // white
+            strokeWeight(5); // thick
+            line(0, 350, 250, 280);
+        }
+
+        function prism() {
+            stroke(255);
+            noFill();
+            strokeWeight(6);
+            triangle(300, 200, 175, 400, 425, 400);
+            noFill();
+            strokeWeight(4);
+            stroke(150, 180, 255);
+            triangle(300, 203, 178, 397, 422, 397);
+        }
+
+        // beam dispersement effect
+        function innsidePrism() {
+            let x1 = 255,
+                y1 = 280,
+                x2 = 345,
+                y2 = 266; // line beams
+            let n = 0; // keeping track of beams
+            while (n < 11) { // 11 times
+                stroke(255, 7);
+                strokeWeight(0.8); // thick
+                line(x1, y1, x2, y2); // drawing from x1 to x2 y1 to y2
+                x2 += 1.3; // increasing x2 by 1.3 and y2 by 3.45
+                y2 += 3.45;
+                n++;
+            }
+        }
+
+        function spectrum() {
+            let x1 = 348,
+                y1 = 270,
+                x2 = 600,
+                y2 = 312;
+            let n = 0;
+            let colors = [
+                [255, 34, 0],
+                [255, 119, 0],
+                [255, 191, 0],
+                [255, 238, 0],
+                [221, 255, 0],
+                [80, 255, 0],
+                [0, 255, 0],
+                [0, 170, 255],
+                [0, 34, 255],
+                [136, 50, 255],
+                [230, 75, 175]
+            ];
+
+            while (n < 11) {
+                let [a, b, c] = colors[n];
+                stroke(a, b, c, 4);
+                strokeWeight(7);
+                line(x1, y1, x2, y2);
+                x1 += 2.2;
+                y1 += 3;
+                x2 += 10;
+                y2 += 10;
+                n++;
+            }
+        }
     </script>
 
+    <script>
+        // COLOUR WHEEL 
+        var sketch = function (c) {
+            // defining colours
+            const red = "#FE2712";
+            const redOrange = "#FC600A";
+            const orange = "#FB9902";
+            const yellowOrange = "#FCCC1A";
+            const yellow = "#FEFE33";
+            const yellowGreen = "#B2D732";
+            const green = "#66B032";
+            const blueGreen = "#347C98";
+            const blue = "#0247FE";
+            const bluePurple = "#4424D6";
+            const purple = "#8601AF";
+            const redPurple = "#C21460";
 
-<script>
-  // Frequency Interaction
-  var sketch = function(c) {
-    // defining colours
-        const red = "#FE2712";
-        const redOrange = "#FC600A";
-        const orange = "#FB9902";
-        const yellowOrange = "#FCCC1A";
-        const yellow = "#FEFE33";
-        const yellowGreen = "#B2D732";
-        const green = "#66B032";
-        const blueGreen = "#347C98";
-        const blue = "#0247FE";
-        const bluePurple = "#4424D6";
-        const purple = "#8601AF";
-        const redPurple = "#C21460";
+            const size = 400; // size of wheel (tbc)
+            const colors = [red, redOrange, orange, yellowOrange, yellow, yellowGreen, green, blueGreen, blue, bluePurple, purple, redPurple]; // so i don't have to ref each individually
 
-        const size = 400;
-        const colors = [red, redOrange, orange, yellowOrange, yellow, yellowGreen, green, blueGreen, blue, bluePurple, purple, redPurple];
-     
-        let angle = 0; 
+            let angle = 0; // starting off to spin it
 
-        c.setup = function() {
-          let canvas = c.createCanvas(920, 456);
-          // c.translate(c.width/2, c.height/2); // center of page
-          // var segmentAngle = c.TWO_PI/colors.length; // 12 segments to the circle
-          // for (var i = 0; i < colors.length; i++) { 
-      
-          //       var currentColor = getColorAtAngle(angle + i * segmentAngle); //calculating current color from angle
-          //       c.fill(currentColor);
-          //       c.stroke(currentColor);
-          //       // Calculate arc coordinates
-          //       var startAngle = i * segmentAngle - c.HALF_PI;
-          //       var endAngle = (i + 1) * segmentAngle - c.HALF_PI;
-          //       c.arc(0, 0, size, size, startAngle, endAngle, c.PIE); // drawing the arc with start/end angles
-          //   }
+            c.setup = function () {
+                let wheel = c.createCanvas(920, 456);
+                wheel.parent('wheelContainer');
+            };
 
-          //   angle += 0.04; //spinny
-      
-      
+            c.draw = function () {
+                c.translate(c.width / 2, c.height / 2); // center of page
+                var segmentAngle = c.TWO_PI / colors.length; // 12 segments to the circle
+                for (var i = 0; i < colors.length; i++) {
+
+                    var currentColor = getColorAtAngle(angle + i * segmentAngle); //calculating current color from angle
+                    c.fill(currentColor);
+                    c.stroke(currentColor);
+                    // Calculate arc coordinates
+                    var startAngle = i * segmentAngle - c.HALF_PI;
+                    var endAngle = (i + 1) * segmentAngle - c.HALF_PI;
+                    c.arc(0, 0, size, size, startAngle, endAngle, c.PIE); // drawing the arc with start/end angles
+                }
+
+                angle += 0.04; //spinny
+            };
+
+            function getColorAtAngle(angle) {
+
+                var index = c.floor(c.map(angle % c.TWO_PI, 0, c.TWO_PI, 0, colors.length)); // find the index of the color from angle
+
+                var fraction = (angle % (c.TWO_PI / colors.length)) / (c.TWO_PI / colors.length); //  the section between the current color and the next color
+                // Interpolate between the current color and the next color
+                return c.lerpColor(c.color(colors[index]), c.color(colors[(index + 1) % colors.length]), fraction); // lerp between the current color and the next color
+            }
         };
 
-      c.draw = function() {
-        c.translate(c.width/2, c.height/2); // center of page
-          var segmentAngle = c.TWO_PI/colors.length; // 12 segments to the circle
-          for (var i = 0; i < colors.length; i++) { 
-      
-                var currentColor = getColorAtAngle(angle + i * segmentAngle); //calculating current color from angle
-                c.fill(currentColor);
-                c.stroke(currentColor);
-                // Calculate arc coordinates
-                var startAngle = i * segmentAngle - c.HALF_PI;
-                var endAngle = (i + 1) * segmentAngle - c.HALF_PI;
-                c.arc(0, 0, size, size, startAngle, endAngle, c.PIE); // drawing the arc with start/end angles
-            }
+        var myp5 = new p5(sketch); // init sketch so it's visible
+    </script>
 
-            angle += 0.04; //spinny
-      
-      };
-  };
-
-  var myp5 = new p5(sketch);
-</script>
 </body>
+
 </html>
