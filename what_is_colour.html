@@ -70,7 +70,8 @@
         let spectrumLength = 50; // Initial length of the spectrum lines
 
         function setup() {
-            createCanvas(600, 600); 
+           let prism = createCanvas(600, 600); 
+           prism.parent('prismContainer');
             frameRate(120);
         }
 
