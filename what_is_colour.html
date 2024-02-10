@@ -28,9 +28,8 @@
    Colour is what is visible when light rays bounce off of an object.  
     One way to showcase every percived colour is through a prism
   </p>
-
   <!-- FIX THE CLASS NAME -->
-      <img class="placebearBrown" src="Images/Colour.1"> 
+  <div id="prismContainer" class="prismContainer"></div>
   <div id="colourbackground">
   </div>
   <a href="#What is Colour Again?">
@@ -69,7 +68,8 @@
     <script>
       // Initialized p5.js canvas
       function setup() {
-       createCanvas(600,600);
+       let prism = createCanvas(600,600);
+       prism.parent('prismContainer');
        background(50);
       }
       function draw() {
