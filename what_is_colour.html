@@ -65,157 +65,158 @@
     <div class="whatIsColourP5Container"></div>
 
     <script>
-    let angle = 0;
-let lightBeamLength = 250; // Initial length of the light beam
-let lightIntersecting = false; // Flag to indicate if the light beam intersects with the triangle
-let spectrumLength = 50; // Initial length of the spectrum lines
+        let lightBeamLength = 250; // Initial length of the light beam
+        let lightIntersecting = false; // Flag to indicate if the light beam intersects with the triangle
+        let spectrumLength = 50; // Initial length of the spectrum lines
 
-function setup() {
-  createCanvas(600, 600);
-  background(0);
-  frameRate(120);
-}
+        function setup() {
+            createCanvas(600, 600); 
+            frameRate(120);
+        }
 
-function draw() {
-  background(0); // Clear the background on each frame
-  lightBeam();
-  spectrum();
-  innerPrism();
-  prism();
-}
+        function draw() {
+            background(0); // defining functions 
+            lightBeam();
+            spectrum();
+            innerPrism();
+            prism();
+        }
 
-function lightBeam() {
-  let endX = mouseX;
-  let endY = mouseY;
-  
-  // Calculate intersection point with the triangle
-  let intersection = getLightBeamTriangleIntersection(0, 350, endX, endY);
-  if (intersection) {
-    endX = intersection.x;
-    endY = intersection.y;
-    lightIntersecting = true; // Set flag to true if light intersects with triangle
-  } else {
-    lightIntersecting = false; // Set flag to false if light does not intersect with triangle
-  }
-  
-  // Draw dotted line for the light beam
-  stroke(255);
-  strokeWeight(2);
-  let dottedSpacing = 8; // Adjust the spacing between dots
-  for (let i = 0; i < lightBeamLength; i += dottedSpacing * 2) {
-    let x1 = lerp(0, endX, i / lightBeamLength);
-    let y1 = lerp(350, endY, i / lightBeamLength);
-    let x2 = lerp(0, endX, (i + dottedSpacing) / lightBeamLength);
-    let y2 = lerp(350, endY, (i + dottedSpacing) / lightBeamLength);
-    line(x1, y1, x2, y2);
-  }
-}
+        function lightBeam() {
+            let endX = mouseX;  // mouse x and mouse y controls for when it intersects
+            let endY = mouseY;
 
-function prism() {
-  noFill();
-  strokeWeight(6);
-  stroke(255);
-  triangle(300, 200, 175, 400, 425, 400);
-  noFill();
-  strokeWeight(4);
-  stroke(255, 150); // Adjusted stroke color for better visibility
-  triangle(300, 203, 178, 397, 422, 397);
-}
+            
+            let intersection = getLightBeamTriangleIntersection(0, 350, endX, endY); // finding intersection point from triangle
+            if (intersection) {
+                endX = intersection.x;
+                endY = intersection.y;
+                lightIntersecting = true; // set to true if light intersects with triangle
+            } else {
+                lightIntersecting = false; // set to false if light does not intersect with triangle
+            }
 
-function innerPrism() {
-  let x1 = 255, y1 = 280, x2 = 345, y2 = 266;
-  let n = 0;
-  while (n < 11) {
-    stroke(255, 20); // Adjusted stroke color for better visibility
-    strokeWeight(0.5); // Adjusted stroke weight for better visibility
-    line(x1, y1, x2, y2);
-    x2 += 1.3;
-    y2 += 3.45;
-    n++;
-  }
-}
+            // dotted line instead of solid
+            stroke(255);
+            strokeWeight(2);
+            let dottedSpacing = 8; // spacing 
 
-function spectrum() {
-  let lightX = mouseX;
-  let lightY = mouseY;
-  
-  if (lightIntersecting) {
-    let lightAngle = atan2(lightY - 350, lightX); // Calculate the angle of the light beam
-    
-    let x1 = 348, y1 = 270; // Start point of the spectrum line
-    let x2 = x1 + spectrumLength * cos(lightAngle); // End point of the spectrum line
-    let y2 = y1 + spectrumLength * sin(lightAngle); // End point of the spectrum line
-    
-    // Draw the spectrum line
-    let colors = [
-      [255, 34, 0],
-      [255, 119, 0],
-      [255, 191, 0],
-      [255, 238, 0],
-      [221, 255, 0],
-      [80, 255, 0],
-      [0, 255, 0],
-      [0, 170, 255],
-      [0, 34, 255],
-      [136, 50, 255],
-      [230, 75, 175]
-    ];
-    
-    for (let n = 0; n < 11; n++) {
-      let [a, b, c] = colors[n];
-      stroke(a, b, c, 250); // Adjusted stroke color and alpha for better visibility
-      strokeWeight(5); // Adjusted stroke weight for better visibility
-      line(x1, y1, x2, y2);
-      x1 += 2.2;
-      y1 += 3;
-      spectrumLength += 2; // Increase the spectrum length for the next iteration
-    }
-  }
-}
+            // p5.js lerps 
+            for (let i = 0; i < lightBeamLength; i += dottedSpacing * 2) {
+                let x1 = lerp(0, endX, i / lightBeamLength);
+                let y1 = lerp(350, endY, i / lightBeamLength);
+                let x2 = lerp(0, endX, (i + dottedSpacing) / lightBeamLength);
+                let y2 = lerp(350, endY, (i + dottedSpacing) / lightBeamLength);
+                line(x1, y1, x2, y2);
+            }
+        }
 
-function getLightBeamTriangleIntersection(x1, y1, x2, y2) {
-  // Triangle vertices
-  let v1 = createVector(300, 200);
-  let v2 = createVector(175, 400);
-  let v3 = createVector(425, 400);
+        function prism() {  // making the main triangle
+            noFill();
+            strokeWeight(6);
+            stroke(255);
+            triangle(300, 200, 175, 400, 425, 400);
 
-  // Check intersection with each triangle edge
-  let intersection1 = getLineIntersection(x1, y1, x2, y2, v1.x, v1.y, v2.x, v2.y);
-  let intersection2 = getLineIntersection(x1, y1, x2, y2, v2.x, v2.y, v3.x, v3.y);
-  let intersection3 = getLineIntersection(x1, y1, x2, y2, v3.x, v3.y, v1.x, v1.y);
-
-  // Return the nearest intersection point
-  let nearestIntersection = null;
-  if (intersection1 && (!nearestIntersection || dist(x1, y1, intersection1.x, intersection1.y) < dist(x1, y1, nearestIntersection.x, nearestIntersection.y))) {
-    nearestIntersection = intersection1;
-  }
-  if (intersection2 && (!nearestIntersection || dist(x1, y1, intersection2.x, intersection2.y) < dist(x1, y1, nearestIntersection.x, nearestIntersection.y))) {
-    nearestIntersection = intersection2;
-  }
-  if (intersection3 && (!nearestIntersection || dist(x1, y1, intersection3.x, intersection3.y) < dist(x1, y1, nearestIntersection.x, nearestIntersection.y))) {
-    nearestIntersection = intersection3;
-  }
-
-  return nearestIntersection;
-}
-
-function getLineIntersection(x1, y1, x2, y2, x3, y3, x4, y4) {
-  // Calculate the direction vectors of the lines
-  let uA = ((x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)) / ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1));
-  let uB = ((x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3)) / ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1));
-
-  // If the intersection point is within both line segments, return the coordinates
-  if (uA >= 0 && uA <= 1 && uB >= 0 && uB <= 1) {
-    let intersectionX = x1 + (uA * (x2 - x1));
-    let intersectionY = y1 + (uA * (y2 - y1));
-    return createVector(intersectionX, intersectionY);
-  } else {
-    return null;
-  }
-}
+            // adding depth with another triangle
+            noFill();
+            strokeWeight(4);
+            stroke(255, 150); 
+            triangle(300, 203, 178, 397, 422, 397);
+        }
 
 
+        // STILL FIGURING THIS SECTION OUT
+        function innerPrism() {
+            // let x1 = 255, y1 = 280, x2 = 345, y2 = 266;
+            // let n = 0;
+            // while (n < 11) {
+            //     stroke(255, 20); // Adjusted stroke color for better visibility
+            //     strokeWeight(0.5); // Adjusted stroke weight for better visibility
+            //     line(x1, y1, x2, y2);
+            //     x2 += 1.3;
+            //     y2 += 3.45;
+            //     n++;
+            // }
+        }
 
+        function spectrum() {
+            let lightX = mouseX;  // mouse controls
+            let lightY = mouseY;
+
+            if (lightIntersecting) {
+                let lightAngle = atan2(lightY - 350, lightX); // angle of beam (so it's not going face down)
+
+                let x1 = 348, y1 = 270; // start of line
+                let x2 = x1 + spectrumLength * cos(lightAngle); // end spectrum line
+                let y2 = y1 + spectrumLength * sin(lightAngle); // end spectrum line
+
+               // spectrum colors
+                let colors = [
+                    [255, 34, 0],
+                    [255, 119, 0],
+                    [255, 191, 0],
+                    [255, 238, 0],
+                    [221, 255, 0],
+                    [80, 255, 0],
+                    [0, 255, 0],
+                    [0, 170, 255],
+                    [0, 34, 255],
+                    [136, 50, 255],
+                    [230, 75, 175]
+                ];
+
+                for (let n = 0; n < 11; n++) {
+                    let [a, b, c] = colors[n];
+                    stroke(a, b, c, 250); // visibility settings
+                    strokeWeight(5); // visibility settings
+                    line(x1, y1, x2, y2);
+                    x1 += 2.2;
+                    y1 += 3;
+                    spectrumLength += 1; // length of line, makes a little animation
+                }
+            }
+        }
+
+        function getLightBeamTriangleIntersection(x1, y1, x2, y2) {
+           // intersection verts
+            let v1 = createVector(300, 200);
+            let v2 = createVector(175, 400);
+            let v3 = createVector(425, 400);
+
+          // checking intersection with the triangle
+            let intersection1 = getLineIntersection(x1, y1, x2, y2, v1.x, v1.y, v2.x, v2.y);
+            let intersection2 = getLineIntersection(x1, y1, x2, y2, v2.x, v2.y, v3.x, v3.y);
+            let intersection3 = getLineIntersection(x1, y1, x2, y2, v3.x, v3.y, v1.x, v1.y);
+
+            // checking to see where the nearest intersection is
+            let nearestIntersection = null;
+            if (intersection1 && (!nearestIntersection || dist(x1, y1, intersection1.x, intersection1.y) < dist(x1, y1, nearestIntersection.x, nearestIntersection.y))) {
+                nearestIntersection = intersection1;
+            }
+            if (intersection2 && (!nearestIntersection || dist(x1, y1, intersection2.x, intersection2.y) < dist(x1, y1, nearestIntersection.x, nearestIntersection.y))) {
+                nearestIntersection = intersection2;
+            }
+            if (intersection3 && (!nearestIntersection || dist(x1, y1, intersection3.x, intersection3.y) < dist(x1, y1, nearestIntersection.x, nearestIntersection.y))) {
+                nearestIntersection = intersection3;
+            }
+
+            return nearestIntersection;
+        }
+
+        function getLineIntersection(x1, y1, x2, y2, x3, y3, x4, y4) {
+            // direction of the lines, i did look this up
+            let uA = ((x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)) / ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1));
+            let uB = ((x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3)) / ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1));
+
+            // if the intersection point is within both line segments, return the coordinates
+            if (uA >= 0 && uA <= 1 && uB >= 0 && uB <= 1) {
+                let intersectionX = x1 + (uA * (x2 - x1));
+                let intersectionY = y1 + (uA * (y2 - y1));
+                return createVector(intersectionX, intersectionY);
+            } else {
+                return null;
+            }
+        }
     </script>
 
     <script>
