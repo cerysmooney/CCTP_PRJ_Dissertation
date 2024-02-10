@@ -77,7 +77,7 @@ section {
 }
 
 #sec-1 {
-  background: linear-gradient(45deg, #000000, #333333, #000000);
+  background: linear-gradient(45deg, #000000, #333333 45%, #000000);
   background-size: 400% 400%;
   animation: gradientAnimation 8s ease infinite;
   position: relative;
@@ -85,7 +85,6 @@ section {
   padding: 50px 0;
   text-align: center;
 }
-
 #sec-1Container {
   z-index: 1;
   position: relative;
@@ -157,8 +156,7 @@ section {
 
 #sec-2 {
   /* background-color: #333333; */
-
-  background: linear-gradient(45deg, #000000, #333333, #000000);
+  background: linear-gradient(45deg, #000000, #333333 55%, #000000);
   background-size: 400% 400%;
   animation: gradientAnimation 8s ease infinite;
   position: relative;
