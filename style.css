@@ -251,13 +251,13 @@ section {
   text-align: center;
   color: white;
   display: flex;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
   margin-left: 50px;
   margin-top: 50px;
 
 }
-/* H1 second visibility */
+/* light spectrum section */
 .backgroundtext2{
   text-align: center;
   color: white;
@@ -269,6 +269,12 @@ margin-top: 700px;
 
 }
 
+.lightSpectrumSection {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-top: 50px; 
+}
 .whatiscolourtext2{
   text-align: center;
   color: white;
@@ -328,7 +334,7 @@ margin-top: 700px;
 } */ */
 
 /* Scroll Down Button Animation Stuffs */
-.scroll-down-third::before,
+/* .scroll-down-third::before,
 .scroll-down-third::after {
   content: '';
   position: absolute;
@@ -345,7 +351,7 @@ margin-top: 700px;
 .scroll-down-third::after {
   top: 30%;
   animation-delay: 0.3s;
-}
+} */
 
 /* third h1 */
 .backgroundtext3{
