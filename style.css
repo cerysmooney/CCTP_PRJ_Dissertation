@@ -220,38 +220,31 @@ section {
   text-align: center;
   color: white;
   display: block; /* Change display to block */
-  margin-top: 200px;
+  margin-top: 50px;
   margin-left: 20px;
+  background-color: #333;
 }
 
 
-/* Try it out h1! */
-.tryItOut {
-  text-align: center;
-  color: white;
-  display: block; /* Change display to block */
-  margin-top: 200px;
-  margin-left: 20px;
-}
+/* PRISM DETAILS */
 .colourcontainer1 {
-  text-align: center; /* Center align all content within the container */
+  text-align: center;
 }
 
 
 .prismSection {
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-  margin-top: 50px; /* Adjust margin as needed */
+  justify-content: center;
+  align-items: center; 
+  margin-top: 50px; 
 }
 
 .textContainer {
-  margin-left: 20px; /* Add spacing between image and text */
+  margin-bottom: 60px;
+  margin-left: 20px;
+  color: whitesmoke;
 }
 
-.textContainer h1 {
-  font-size: 24px; /* Adjust the font size as needed */
-}
 
 /* first body text */
 .whatiscolourtext {
