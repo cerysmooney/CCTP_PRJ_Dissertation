@@ -58,20 +58,23 @@
     <!-- <a id="What is Colour Again?"></a> -->
 
     
-    <div class="colourcontainer2">
+    
         <h1 class="backgroundtext2">How does Frequency Fit In?</h1>
-        <p class="aboveWhatIsColourText">On the colour wheel, colours such as violet are associated with shorter wavelengths, while others such as red are linked to longer wavelengths. The colors are arranged on the wheel from shortest (violet) to longest (red) as a spectrum of wave lengths. Much like
-            the visible like spectrum chart above. </p>
+        <p class="aboveWhatIsColourText">On the color wheel, colors such as violet are associated with shorter wavelengths, while others such as red are linked to longer wavelengths. The colors are arranged on the wheel from shortest (violet) to longest (red) as a spectrum of wavelengths, much like the visible light spectrum chart above.</p>
+      
+        <div class="colourcontainer2">
         <div id="wheelContainer" class="wheelContainer"></div>
+       <div class="frequencyTextContainer">
         <p class="whatiscolourtext2">
-           In this context, frequency tells us how often a color will pass by in a second while the wheel is spinning. 
+            In this context, frequency tells us how often a color will pass by in a second while the wheel is spinning.
         </p>
         <p class="whatiscolourtext2">
-            Shorter wavelength colours like violet pass by your eyes more frequently because they're closer together on the wheel. This means they have a higher frequency.
-         </p>
-         <p class="whatiscolourtext2">
-            Longer wavelength colors like red pass by less frequently because they're farther apart on the wheel. In turn, having a lower frequency.
-         </p>
+            Shorter wavelength colors like violet pass by your eyes more frequently because they're closer together on the wheel. This means they have a higher frequency.
+        </p>
+        <p class="whatiscolourtext2">
+            Longer wavelength colors like red pass by less frequently because they're farther apart on the wheel, resulting in a lower frequency.
+        </p>
+    </div>
     </div>
 
 
@@ -271,7 +274,7 @@
             let angle = 0; // starting off to spin it
 
             c.setup = function () {
-                let wheel = c.createCanvas(920, 456);
+                let wheel = c.createCanvas(600, 600);
                 wheel.parent('wheelContainer');
             };
 
