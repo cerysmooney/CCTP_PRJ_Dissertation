@@ -261,17 +261,21 @@ section {
 .backgroundtext2{
   text-align: center;
   color: white;
-  display: flex;
-  justify-content: right;
-  align-items: right;
-margin-right: 50px;
-margin-top: 700px;
-
+  display: block; /* Change display to block */
+  margin-top: 70px;
+  background-color: #333;
 }
 
 .lightSpectrumSection {
   margin-top: 100px;
 }
+
+
+/* colour wheel info */
+.colourcontainer2 {
+  margin-top: 100px;
+}
+/* below colour wheel text */
 .whatiscolourtext2{
   text-align: center;
   color: white;
