@@ -279,6 +279,15 @@ section {
   margin-top: 100px;
 }
 
+.wheelContainer {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+
+}
+
+
+
 /* body text */
 .whatiscolourtext2{
   text-align: left;
@@ -289,7 +298,6 @@ section {
   margin-left: 50px;
   margin-top: 50px;
 }
-
 /* Scroll Down Button for "SECOND TEXT" */
 /* .scroll-down-colour {
   height: 70px;
