@@ -281,8 +281,8 @@ section {
 
 .wheelContainer {
   display: flex;
-  align-items: right;
-  justify-content: right;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -290,13 +290,13 @@ section {
 
 /* body text */
 .whatiscolourtext2{
-  text-align: left;
+  text-align: center;
   color: white;
   display: flex;
-  justify-content: left;
-  align-items: left;
-  margin-left: 50px;
-  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 50px; */
+  /* margin-top: 50px; */
 }
 /* Scroll Down Button for "SECOND TEXT" */
 /* .scroll-down-colour {
