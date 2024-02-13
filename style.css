@@ -258,6 +258,8 @@ section {
 
 }
 /* light spectrum section */
+
+/* H1 */
 .backgroundtext2{
   text-align: center;
   color: white;
@@ -265,6 +267,7 @@ section {
   margin-top: 70px;
   background-color: #333;
 }
+
 
 .lightSpectrumSection {
   margin-top: 100px;
@@ -275,16 +278,18 @@ section {
 .colourcontainer2 {
   margin-top: 100px;
 }
-/* below colour wheel text */
+
+/* body text */
 .whatiscolourtext2{
-  text-align: center;
+  text-align: left;
   color: white;
   display: flex;
-  justify-content: right;
-  align-items: right;
+  justify-content: left;
+  align-items: left;
   margin-left: 50px;
   margin-top: 50px;
 }
+
 /* Scroll Down Button for "SECOND TEXT" */
 /* .scroll-down-colour {
   height: 70px;
@@ -376,6 +381,9 @@ section {
   margin-top: 50px;
 
 }
+
+
+
 
 
 /* Pick Your Colour Page */
