@@ -97,6 +97,15 @@ section {
   margin-bottom: 100px;
 }
 
+
+.waveformChart{
+  max-width: 65%; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .textContainer {
   margin-left: 60px;
   
@@ -258,6 +267,13 @@ section {
   margin-top: 100px;
 }
 
+.lsChartImage {
+  max-width: 65%;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  padding: 20px;
+}
 
 /* colour wheel info */
 .colourcontainer2 {
@@ -280,7 +296,6 @@ section {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-
 }
 
 .frequencyTextContainer {
@@ -454,12 +469,16 @@ z-index: -1;
 }
 
 .psdImage{
-  margin-left: 50px;
+  max-width: 65%; 
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  padding: 20px;
 }
 
-.psdSecContainer{
-  padding: 30px;
-}
+/* .psdSecContainer{
+  /* padding: 30px; */
+/* } */ 
 
 .psdText{
   text-align: center;
