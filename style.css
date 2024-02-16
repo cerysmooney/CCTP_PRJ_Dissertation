@@ -231,11 +231,14 @@ section {
 .backgroundtext {
   text-align: center;
   color: white;
-  display: block; /* Change display to block */
+  display: block;
   margin-top: 50px;
+  font-size: xx-large;
   
   /* background-color: #333; */
 }
+
+
 
 
 /* PRISM DETAILS */
@@ -249,6 +252,14 @@ section {
   justify-content: center;
   align-items: center; 
   margin-top: 50px; 
+}
+
+.tryItOut{
+  text-align: center;
+  color: white;
+  display: block; 
+  margin-top: 50px;
+  font-size: xx-large;
 }
 
 .textContainer {
@@ -265,10 +276,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
-  margin-top: 50px;
-
+  /* margin-left: 50px;
+  margin-top: 50px; */
+font-size: medium;
 }
+
+
+
 /* light spectrum section */
 
 
@@ -297,6 +311,7 @@ section {
   color: whitesmoke;
   display: block;
   margin-top: 70px;
+  font-size: xx-large;
   /* background-color: #333; */
 }
 
@@ -322,6 +337,7 @@ section {
   color: whitesmoke;
   margin-bottom: 10px; 
   margin-left: 10px;
+  font-size: medium;
 }
 .aboveWhatIsColourText{
  
