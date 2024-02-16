@@ -84,7 +84,14 @@ section {
   color: white;
   padding: 50px 0;
   text-align: center;
+  
 }
+
+.noiseH1{
+  font-size: xx-large;
+}
+
+
 #sec-1Container {
   z-index: 1;
   position: relative;
@@ -113,6 +120,7 @@ section {
 
 .noisetext3 {
   margin-top: 20px;
+  font-size: medium;
 }
 
 
@@ -171,6 +179,7 @@ section {
 .noisetext2 {
   text-align: center;
   color: whitesmoke;
+  font-size: medium;
 }
 
 .sec-2Container {
