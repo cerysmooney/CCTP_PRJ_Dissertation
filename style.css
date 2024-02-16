@@ -47,6 +47,8 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+  
 }
 
 /* Responsive adjustments using media queries */
@@ -280,6 +282,9 @@ section {
   color: whitesmoke;
 }
 
+.prismContainer{
+  margin-left: 105px;
+}
 
 /* first body text */
 .whatiscolourtext {
