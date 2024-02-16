@@ -391,7 +391,7 @@ section {
 }
 
 /* body text */
-.whatiscolourtext3 {
+.whatiscolourtext3{
   text-align: center;
   color: white;
   display: flex;
@@ -415,47 +415,54 @@ section {
   padding: 50px 0;
   text-align: center;
 }
-#connectionSecContainer {
+
+#connectionSecContainer{
   z-index: 1;
   position: relative;
 }
 
-.H1Connection {
+.H1Connection{
   position: relative;
   color: white;
   text-align: center;
 }
-.connectionText {
+
+.connectionText{
   margin-top: 20px;
   margin-left: 20px;
 }
 
-/* PSD Section */
-
-.psdSec {
+.psdSec{
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
-/* Graphic */
-
-.psdImage {
+.psdImage{
   margin-left: 50px;
 }
 
-/* text */
-.psdSecContainer {
- padding: 30px;
-  
+.psdSecContainer{
+  padding: 30px;
 }
 
-.psdText {
+.psdText{
   text-align: center;
   color: whitesmoke;
 }
 
+/* responsive */
+@media only screen and (max-width: 768px){
+  .connectionText {
+    margin-left: 0;
+  }
+  
+  .psdImage {
+    margin-left: 0;
+  }
+}
 
 
 
