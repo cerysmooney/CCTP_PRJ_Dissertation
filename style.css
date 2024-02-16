@@ -430,11 +430,31 @@ section {
   margin-left: 20px;
 }
 
+/* PSD Section */
 
+.psdSec {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 
+/* Graphic */
 
+.psdImage {
+  margin-left: 50px;
+}
 
+/* text */
+.psdSecContainer {
+ padding: 30px;
+  
+}
 
+.psdText {
+  text-align: center;
+  color: whitesmoke;
+}
 
 
 
