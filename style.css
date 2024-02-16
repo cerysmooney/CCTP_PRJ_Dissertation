@@ -405,14 +405,25 @@ section {
 /* HOW THEY CONNECT PAGE */
 
 
+#connectionBG{
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url("Images/noisecolourbg.jpg");
+height: 100vh;
+width: 100%;
+background-size: cover;
+background-position: center;
+position: fixed;
+top: 0;
+z-index: -1;
+}
+
 /* First bit about definition */
 #connectionSec{
-  background: linear-gradient(45deg, #000000, #333 45%, #000000);
+  /* background: linear-gradient(45deg, #000000, #333 45%, #000000);
   background-size: 400% 400%;
-  animation: gradientAnimation 8s ease infinite;
-  position: relative;
+  animation: gradientAnimation 8s ease infinite; */
+  /* position: relative; */
   color: white;
-  padding: 50px 0;
+  /* padding: 50px 0; */
   text-align: center;
 }
 
@@ -463,6 +474,7 @@ section {
     margin-left: 0;
   }
 }
+
 
 
 
