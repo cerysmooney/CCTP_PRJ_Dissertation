@@ -478,11 +478,13 @@ z-index: -1;
   color: white;
   display: block; /* Change display to block */
   margin-top: 50px;
+  font-size: xx-large;
 }
 
 .connectionText{
   margin-top: 20px;
   margin-left: 20px;
+  font-size: medium;
 }
 
 .psdSec{
@@ -492,6 +494,16 @@ z-index: -1;
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
+.H1PSD{
+  position: relative;
+  text-align: center;
+  color: white;
+  display: block; /* Change display to block */
+  margin-top: 50px;
+  font-size: xx-large;
+}
+
 
 .psdImage{
   max-width: 65%; 
@@ -508,6 +520,7 @@ z-index: -1;
 .psdText{
   text-align: center;
   color: whitesmoke;
+  font-size: medium;
 }
 
 /* responsive */
