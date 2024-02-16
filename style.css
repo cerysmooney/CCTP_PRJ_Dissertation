@@ -434,8 +434,10 @@ z-index: -1;
 
 .H1Connection{
   position: relative;
-  color: white;
   text-align: center;
+  color: white;
+  display: block; /* Change display to block */
+  margin-top: 50px;
 }
 
 .connectionText{
