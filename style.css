@@ -105,13 +105,7 @@ section {
 .noisetext3 {
   margin-top: 20px;
 }
-/* .noisetext,
-.noisetext2,
-.noisetext3 {
-  margin-bottom: 20px;
-  color: whitesmoke;
-  white-space: wrap;
-} */
+
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/noiiise.png");
@@ -222,7 +216,7 @@ section {
   display: block; /* Change display to block */
   margin-top: 50px;
   
-  background-color: #333;
+  /* background-color: #333; */
 }
 
 
@@ -278,7 +272,7 @@ section {
   color: whitesmoke;
   display: block;
   margin-top: 70px;
-  background-color: #333;
+  /* background-color: #333; */
 }
 
 
@@ -407,6 +401,64 @@ section {
   margin-top: 50px;
 
 }
+
+/* HOW THEY CONNECT PAGE */
+
+
+/* First bit about definition */
+#connectionSec{
+  background: linear-gradient(45deg, #000000, #333 45%, #000000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  position: relative;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+#connectionSecContainer {
+  z-index: 1;
+  position: relative;
+}
+
+.H1Connection {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.connectionText {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
