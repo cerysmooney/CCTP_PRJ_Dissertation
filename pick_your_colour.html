@@ -115,10 +115,12 @@ function stopAudio(){
        createCanvas(800,800);
       }
       function draw() {
-        // background(220);
-        fill(255);
         image(greenCham, -200,-300,1200,1100);    // x, y, width, height 
-        ellipse(640, 190, 20, 20); // EYE
+        
+        let constrainedX = constrain(mouseX, 640,650);
+        
+        fill(255);
+        ellipse(constrainedX, 190, 20, 20); // EYE      // 640, 190, POS
       }
   </script>
 </div>
