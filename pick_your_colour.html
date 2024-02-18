@@ -117,10 +117,11 @@ function stopAudio(){
       function draw() {
         image(greenCham, -200,-300,1200,1100);    // x, y, width, height 
         
-        let constrainedX = constrain(mouseX, 640,650);
+        let constrainedX = constrain(mouseX, 620,650);
+        let constrainedY = constrain(mouseY, 184.5,190);
         
-        fill(255);
-        ellipse(constrainedX, 190, 20, 20); // EYE      // 640, 190, POS
+        fill(0);
+        ellipse(constrainedX, constrainedY, 15, 15); // EYE      // 640, 190, POS
       }
   </script>
 </div>
