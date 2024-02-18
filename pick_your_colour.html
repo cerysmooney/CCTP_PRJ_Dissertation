@@ -107,7 +107,7 @@ function stopAudio(){
   <script>
 
     function preload(){
-      greenCham =loadImage ("Images/ah.png") 
+      greenCham = loadImage ("Images/noEyesTest.png") 
     }
    
     function setup() {
@@ -116,9 +116,9 @@ function stopAudio(){
       }
       function draw() {
         // background(220);
-        fill(255, 0, 0);
-        ellipse(200, 200, 100, 100);
-        image(greenCham, 100,100,700,800);    // x, y, width, height 
+        fill(255);
+        image(greenCham, -200,-300,1200,1100);    // x, y, width, height 
+        ellipse(640, 190, 20, 20); // EYE
       }
   </script>
 </div>
