@@ -65,6 +65,9 @@
  <script>
 let audioTimeout;
 
+// change chameleon p5.js 
+// if ('whitechameleon' = true) 
+
 function changeChameleon(chameleonClass, audioSourceId){
   const chameleons = document.querySelectorAll('.colouredchameleons img');
    chameleons.forEach(chameleon => chameleon.classList.remove('active'));
@@ -115,6 +118,8 @@ function stopAudio(){
        createCanvas(800,800);
       }
       function draw() {
+        // global variable, give string value 
+        // if global variable == true, then next chameleon
         image(greenCham, -200,-300,1200,1100);    // x, y, width, height 
         
         let constrainedX = constrain(mouseX, 620,650);
