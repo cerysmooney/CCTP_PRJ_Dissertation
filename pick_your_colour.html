@@ -110,7 +110,7 @@ function stopAudio(){
   <script>
 
     function preload(){
-      greenCham = loadImage ("Images/noEyesTest.png") 
+      greenCham = loadImage ("Images/UpdatedGreenNoEyes-01.png") 
     }
    
     function setup() {
@@ -123,7 +123,7 @@ function stopAudio(){
         image(greenCham, -200,-300,1200,1100);    // x, y, width, height 
         
         let constrainedX = constrain(mouseX, 620,650);
-        let constrainedY = constrain(mouseY, 184.5,190);
+        let constrainedY = constrain(mouseY, 184.5, 205.5);
         
         fill(0);
         ellipse(constrainedX, constrainedY, 15, 15); // EYE      // 640, 190, POS
