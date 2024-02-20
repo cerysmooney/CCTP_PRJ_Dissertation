@@ -20,28 +20,38 @@
   </div>
   <body>
 
+    <div id="sketch-holder"></div>
+  <!-- <button id="green-button">Green Chameleon</button> -->
+  <button div class="colourbutton" id="white-button">White Chameleon</button>
+  <button div class="colourbutton2" id ="pink-button">Pink Chameleon</button>
+  <button div class="colourbutton3" id="blue-button">Blue Chameleon</button>
+  <button div class="colourbutton4" id="violet-button">Violet Chameleon</button>
+  <button div class="colourbutton5" id="brown-button">Brown Chameleon</button>
+
+
+  <div id="colourbgcham"></div>
       <!-- First Information on Colour Section -->
-  <div class="pickyourcolourednoisecontainer">
+  <!-- <div class="pickyourcolourednoisecontainer">
     <h1 class="pickyourbackgroundtext">Pick Your Coloured Noise..</h1>
     <p class="bodypickyourcolour">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quas maxime tempora amet veritatis assumenda doloremque inventore minus eum ratione?
     </p>
     <div id="colourbgcham">
     </div>
-  </div>
+  </div> -->
 
 <!-- Chameleon images -->
-    <div class="colouredchameleons">
+    <!-- <div class="colouredchameleons">
       <img class="greenChameleon active" src="Images/GreenChameleon-05.png">
       <img class="whiteChameleon" src="Images/WhiteChameleon-05.png">
       <img class="pinkChameleon" src="Images/PinkChameleon-05.png">
       <img class="blueChameleon" src="Images/BlueChameleon-05.png">
       <img class="violetChameleon" src=Images/VioletChameleon-05.png>
       <img class="brownChameleon" src="Images/BrownChameleon-05.png">
-     </div>
+     </div> -->
 
      <!-- Importing audios -->
-     <div class="colourAudio">
+     <!-- <div class="colourAudio">
       <audio id="colourAudio" controls autoplay  >
       <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
       <source id="pinkNoiseSource" src="Audio/Pink Noise.mp3" type="audio/mp3" alt="Pink Noise"> 
@@ -49,15 +59,15 @@
       <source id="violetNoiseSource" src="Audio/Violet Noise.mp3" type="audio/mp3" alt="Violet Noise">
       <source id="brownNoiseSource" src="Audio/Brown Noise.mp3" type="audio/mp3" alt="Brown Noise">
     </audio>
-     </div>
+     </div> -->
 
 <!-- Buttons for Chameleon -->
- <div class="colourbuttoncontainer">
+ <!-- <div class="colourbuttoncontainer">
   <div class="colourbutton"  onmouseover="changeChameleon('whiteChameleon', 'whiteNoiseSource')" onmouseout="stopAudio()" onClick="navigateTo('white_noise.html')"> White Noise</div>
   <div class="colourbutton2" onmouseover="changeChameleon('pinkChameleon', 'pinkNoiseSource')" onmouseout="stopAudio()" onClick="navigateTo('pink_noise.html')"> Pink Noise</div>
   <div class="colourbutton3" onmouseover="changeChameleon('blueChameleon', 'blueNoiseSource')" onmouseout="stopAudio()" onClick="navigateTo('blue_noise.html')"> Blue Noise</div>
   <div class="colourbutton4" onmouseover="changeChameleon('violetChameleon', 'violetNoiseSource')" onmouseout="stopAudio()" onClick="navigateTo('violet_noise.html')"> Violet Noise</div>
-  <div class="colourbutton5" onmouseover="changeChameleon('brownChameleon', 'brownNoiseSource')" onmouseout="stopAudio()" onClick="navigateTo('brown_noise.html')"> Brown Noise</div>
+  <div class="colourbutton5" onmouseover="changeChameleon('brownChameleon', 'brownNoiseSource')" onmouseout="stopAudio()" onClick="navigateTo('brown_noise.html')"> Brown Noise</div> -->
   <!-- <div class="colourbutton6"> Grey Noise?</div> -->
  </div>
 
@@ -67,124 +77,85 @@ let audioTimeout;
 
 // change chameleon p5.js 
 // if ('whitechameleon' = true) 
-
-function changeChameleon(chameleonClass, audioSourceId){
-  const chameleons = document.querySelectorAll('.colouredchameleons img');
-   chameleons.forEach(chameleon => chameleon.classList.remove('active'));
-
-   const activeChameleon = document.querySelector(`.${chameleonClass}`);
-      activeChameleon.classList.add('active');
-
-    // Audio Deets
-
-    const audio = document.getElementById('colourAudio');
-    const audioSource = document.getElementById(audioSourceId);
-    audio.src = audioSource.src;
-    audio.load();
-    audio.play();
-
-    // Just incase there's a need to decrease time on audio
-  //   clearTimeout(audioTimeout);
-  //   audioTimeout = setTimeout(() => {
-  //   stopAudio();
-  // }, 1000);
- }
-function stopAudio(){
-  const audio = document.getElementById('colourAudio');
-  audio.pause();
-  audio.currentTime = 0;
-}
-</script>
-
-
-
-<!-- allows button to go to certain pages -->
-<script>
-  function navigateTo(page) {
-    window.location.href = page;
-  }
-  </script>
-
-  
-<div class="pickYourColourP5Container">
-  <script>
-
 let greenCham;
-let whiteCham; 
+let whiteCham;
+let pinkCham;
 let blueCham;
 let violetCham;
 let brownCham;
-    function preload(){
-      greenCham = loadImage ("Images/UpdatedGreenNoEyes-01.png"); 
-      whiteCham = loadImage("Images/UpdatedWhiteNoEyes-01.png");
-      pinkCham = loadImage("Images/UpdatedPinkNoEyes-01.png");
-      blueCham = loadImage("Images/UpdatedBlueNoEyes-01.png");
-      violetCham = loadImage("Images/UpdatedVioletNoEyes-01.png");
-      brownCham = loadImage("Images/UpdatedBrownNoEyes-01.png")
+let selectedChameleon;
 
-    }
-   
-    function setup() {
-     
-       createCanvas(800,800);
-      }
+function preload() {
+  greenCham = loadImage("Images/UpdatedGreenNoEyes-01.png");
+  whiteCham = loadImage("Images/UpdatedWhiteNoEyes-01.png");
+  pinkCham = loadImage("Images/UpdatedPinkNoEyes-01.png");
+  blueCham = loadImage("Images/UpdatedBlueNoEyes-01.png");
+  violetCham = loadImage("Images/UpdatedVioletNoEyes-01.png");
+  brownCham = loadImage("Images/UpdatedBrownNoEyes-01.png");
+}
 
+function setup() {
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent('sketch-holder'); 
+  selectedChameleon = greenCham; // setting initial chameleon image to green
+}
 
-      function draw() {
-        // global variable, give string value 
-        // if global variable == true, then next chameleon
-
-        // GREEN CHAM
-        image(greenCham, -200,-300,1200,1100);    // x, y, width, height 
-        
-        let constrainedX = constrain(mouseX, 620,650);
-        let constrainedY = constrain(mouseY, 184.5, 206.5);
-        
-        fill(0);
-        ellipse(constrainedX, constrainedY, 15, 15); // EYE     
-
-
-        //WHITE CHAM
-        image(whiteCham, -200, -300,1200,1100);
-            
-        fill(0);
-        ellipse(constrainedX, constrainedY, 15, 15); // EYE      
-
-
-
-      // PINK CHAM
-      image(pinkCham, -200,-300,1200,1100);
-      fill(0);
-        ellipse(constrainedX, constrainedY, 15, 15); // EYE  
-        
-      
-        
-    // BLUE CHAM
-      image(blueCham,-200,-300,1200,1100);
-       fill(0);
-       ellipse(constrainedX, constrainedY, 15, 15); // EYE 
-    
-
-
-    // VIOLET CHAM
-        image(violetCham,-200,-300,1200,1100);
-        fill(30,20,15);
-       ellipse(constrainedX, constrainedY, 15, 15); // EYE 
-    
-
-
-
-
-   // BROWN CHAM
-
-        image(brownCham,-200,-300,1200,1100);
-        fill(0);
-        ellipse(constrainedX, constrainedY, 15, 15); // EYE 
-      }
-
- 
+function draw() {
+  clear();
   
-  
+  // displaying green chameleon
+  if (selectedChameleon) {
+    image(selectedChameleon, -200, -300, 1200, 1100); // Display current chameleon image
+    let constrainedX = constrain(mouseX, 620, 650);
+    let constrainedY = constrain(mouseY, 184.5, 206.5);
+    fill(0);
+    ellipse(constrainedX, constrainedY, 15, 15); // EYE
+  }
+}
+
+//  change chameleon image based on mouse hover
+function changeChameleon(chameleonImage) {
+  selectedChameleon = chameleonImage;
+
+}
+
+// mouse hover actions
+document.getElementById("white-button").addEventListener("mouseover", function() {
+  changeChameleon(whiteCham);
+});
+document.getElementById("white-button").addEventListener("mouseout", function() {
+  changeChameleon(greenCham);
+});
+
+document.getElementById("pink-button").addEventListener("mouseover", function() {
+  changeChameleon(pinkCham);
+});
+document.getElementById("pink-button").addEventListener("mouseout", function() {
+  changeChameleon(greenCham);
+});
+
+document.getElementById("blue-button").addEventListener("mouseover", function() {
+  changeChameleon(blueCham);
+});
+document.getElementById("blue-button").addEventListener("mouseout", function() {
+  changeChameleon(greenCham);
+});
+
+document.getElementById("violet-button").addEventListener("mouseover", function() {
+  changeChameleon(violetCham);
+});
+document.getElementById("violet-button").addEventListener("mouseout", function() {
+  changeChameleon(greenCham);
+});
+
+document.getElementById("brown-button").addEventListener("mouseover", function() {
+  changeChameleon(brownCham);
+});
+document.getElementById("brown-button").addEventListener("mouseout", function() {
+  changeChameleon(greenCham);
+});
+
+
 
   </script>
 </div>
