@@ -109,8 +109,13 @@ function stopAudio(){
 <div class="pickYourColourP5Container">
   <script>
 
+let greenCham;
+let whiteCham; 
     function preload(){
-      greenCham = loadImage ("Images/UpdatedGreenNoEyes-01.png") 
+      greenCham = loadImage ("Images/UpdatedGreenNoEyes-01.png"); 
+      whiteCham = loadImage("Images/UpdatedWhiteNoEyes-01.png");
+      pinkCham = loadImage("Images/UpdatedPinkNoEyes-01.png")
+
     }
    
     function setup() {
@@ -120,14 +125,34 @@ function stopAudio(){
       function draw() {
         // global variable, give string value 
         // if global variable == true, then next chameleon
+
+        // GREEN CHAM
         image(greenCham, -200,-300,1200,1100);    // x, y, width, height 
         
         let constrainedX = constrain(mouseX, 620,650);
         let constrainedY = constrain(mouseY, 184.5, 206.5);
         
         fill(0);
-        ellipse(constrainedX, constrainedY, 15, 15); // EYE      // 640, 190, POS
+        ellipse(constrainedX, constrainedY, 15, 15); // EYE     
+
+
+        //WHITE CHAM
+        image(whiteCham, -200, -300,1200,1100);
+            
+        fill(0);
+        ellipse(constrainedX, constrainedY, 15, 15); // EYE      
+
+
+
+      // PINK CHAM
+      image(pinkCham, -200,-300,1200,1100);
+      fill(0);
+        ellipse(constrainedX, constrainedY, 15, 15); // EYE      
       }
+
+
+    // BLUE CHAM
+    
   </script>
 </div>
 
