@@ -111,12 +111,16 @@ function stopAudio(){
 
 let greenCham;
 let whiteCham; 
+let blueCham;
+let violetCham;
+let brownCham;
     function preload(){
       greenCham = loadImage ("Images/UpdatedGreenNoEyes-01.png"); 
       whiteCham = loadImage("Images/UpdatedWhiteNoEyes-01.png");
       pinkCham = loadImage("Images/UpdatedPinkNoEyes-01.png");
       blueCham = loadImage("Images/UpdatedBlueNoEyes-01.png");
-      violetCham
+      violetCham = loadImage("Images/UpdatedVioletNoEyes-01.png");
+      brownCham = loadImage("Images/UpdatedBrownNoEyes-01.png")
 
     }
    
@@ -124,6 +128,8 @@ let whiteCham;
      
        createCanvas(800,800);
       }
+
+
       function draw() {
         // global variable, give string value 
         // if global variable == true, then next chameleon
@@ -154,16 +160,26 @@ let whiteCham;
       
         
     // BLUE CHAM
-    image(blueCham,-200,-300,1200,1100);
-    fill(0);
-    ellipse(constrainedX, constrainedY, 15, 15); // EYE 
+      image(blueCham,-200,-300,1200,1100);
+       fill(0);
+       ellipse(constrainedX, constrainedY, 15, 15); // EYE 
     
 
 
     // VIOLET CHAM
-
+        image(violetCham,-200,-300,1200,1100);
+        fill(30,20,15);
+       ellipse(constrainedX, constrainedY, 15, 15); // EYE 
     
-  
+
+
+
+
+   // BROWN CHAM
+
+        image(brownCham,-200,-300,1200,1100);
+        fill(0);
+        ellipse(constrainedX, constrainedY, 15, 15); // EYE 
       }
 
  
