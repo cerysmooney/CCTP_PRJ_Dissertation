@@ -575,9 +575,9 @@ z-index: -1;
 
 
 #chooseNoiseContainer {
-  width: 100%; /* Ensure container takes full width */
-  max-width: 800px; /* Set maximum width to maintain readability */
-  margin: 0 auto; /* Center align the container */
+  width: 100%; 
+  max-width: 800px; 
+  margin: 0 auto;   
 }
 
 
@@ -665,6 +665,26 @@ z-index: -1;
 }
 
 
+
+.brownNoiseButton{
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #588157;
+  color:white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+}
+
+.brownNoiseButton:hover{
+  box-shadow: 10px 10px 10px brown ;
+  transform: scale(1.05);
+  background-color: burlywood;
+  color:black;
+}
+
 /* Chameleons and Visibility Settings */
 .colouredchameleons img {
   max-width: 100%;
@@ -688,116 +708,6 @@ z-index: -1;
   align-items: center;
 }
 
-.colourbutton {
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  background-color: #588157;
-  color: white;
-  font-size: 2em;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px #333;
-  transition: .2s;
-}
-
-.colourbutton:hover {
-  box-shadow: 10px 10px 10px lightgray;
-  transform: scale(1.05);
-  background-color: white;
-  color: black;
-}
-.colourbutton2 {
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  background-color: #588157;
-  color:white;
-  font-size: 2em;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px #333;
-  transition: .2s;
-}
-.colourbutton2:hover {
-  box-shadow: 10px 10px 10px lightcoral ;
-  transform: scale(1.05);
-  background-color: lightpink;
-  color:black;
-}
-
-.colourbutton3 {
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  background-color: #588157;
-  color:white;
-  font-size: 2em;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px #333;
-  transition: .2s;
-}
-.colourbutton3:hover {
-  box-shadow: 10px 10px 10px blue ;
-  transform: scale(1.05);
-  background-color: lightskyblue;
-  color:black;
-}
-
-
-.colourbutton4 {
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  background-color: #588157;
-  color:white;
-  font-size: 2em;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px #333;
-  transition: .2s;
-}
-.colourbutton4:hover {
-  box-shadow: 10px 10px 10px purple ;
-  transform: scale(1.05);
-  background-color: violet;
-  color:black;
-}
-
-
-.colourbutton5 {
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  background-color: #588157;
-  color:white;
-  font-size: 2em;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px #333;
-  transition: .2s;
-}
-
-.colourbutton5:hover {
-  box-shadow: 10px 10px 10px brown ;
-  transform: scale(1.05);
-  background-color: burlywood;
-  color:black;
-}
-
-.colourbutton6 {
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  background-color: #588157;
-  color:white;
-  font-size: 2em;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px #333;
-  transition: .2s;
-}
-.colourbutton6:hover {
-  box-shadow: 10px 10px 10px fuchsia ;
-  transform: scale(1.05);
-  background-color: white;
-  color:black;
-}
 
 /* Header */
 .pickyourbackgroundtext{
