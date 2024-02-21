@@ -572,6 +572,99 @@ z-index: -1;
   z-index: -1;
 }
 
+
+
+#chooseNoiseContainer {
+  width: 100%; /* Ensure container takes full width */
+  max-width: 800px; /* Set maximum width to maintain readability */
+  margin: 0 auto; /* Center align the container */
+}
+
+
+
+.whiteNoiseButton {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #588157;
+  color: white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+}
+
+.whiteNoiseButton:hover {
+  box-shadow: 10px 10px 10px lightgray;
+  transform: scale(1.05);
+  background-color: white;
+  color: black;
+}
+
+
+
+.pinkNoiseButton {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #588157;
+  color:white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+}
+
+.pinkNoiseButton:hover {
+  box-shadow: 10px 10px 10px lightcoral ;
+  transform: scale(1.05);
+  background-color: lightpink;
+  color:black;
+}
+
+
+
+.blueNoiseButton{
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #588157;
+  color:white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+}
+
+.blueNoiseButton:hover {
+  box-shadow: 10px 10px 10px blue ;
+  transform: scale(1.05);
+  background-color: lightskyblue;
+  color:black;
+}
+
+
+
+.violetNoiseButton{
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #588157;
+  color:white;
+  font-size: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+}
+
+.violetNoiseButton:hover {
+  box-shadow: 10px 10px 10px purple ;
+  transform: scale(1.05);
+  background-color: violet;
+  color:black;
+}
+
+
 /* Chameleons and Visibility Settings */
 .colouredchameleons img {
   max-width: 100%;

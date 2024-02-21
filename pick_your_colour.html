@@ -20,12 +20,14 @@
   </div>
   <body>
 
-  <div id="sketch-holder"></div>
+  <div id="chooseNoiseContainer"></div>
 
   <div id="colourbgcham"></div>
 
 
 
+
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -90,7 +92,7 @@
   function setup() {
     
     let canvas = createCanvas(windowWidth, windowHeight);
-    canvas.parent('sketch-holder'); 
+    canvas.parent('chooseNoiseContainer'); 
     // green cham as initial
     selectedChameleon = greenCham;
   
@@ -102,6 +104,8 @@
     // white noise
     let whiteButton = createButton('White Noise');
     whiteButton.position(10, yPosition);
+    whiteButton.class('whiteNoiseButton');
+
     whiteButton.mouseOver(function() {
       changeChameleon(whiteCham);
       if (!whiteSoundPlaying) {
@@ -115,9 +119,12 @@
       whiteSound.stop();
     });
   
+
     // pink noise
     let pinkButton = createButton('Pink Noise');
     pinkButton.position(whiteButton.x + whiteButton.width + buttonMargin, yPosition);
+    pinkButton.class('pinkNoiseButton');
+
     pinkButton.mouseOver(function() {
       changeChameleon(pinkCham);
       if (!pinkSoundPlaying) {
@@ -131,9 +138,12 @@
       pinkSound.stop();
     });
   
+
     // blue noise
     let blueButton = createButton('Blue Noise');
     blueButton.position(pinkButton.x + pinkButton.width + buttonMargin, yPosition);
+    blueButton.class('blueNoiseButton');
+
     blueButton.mouseOver(function() {
       changeChameleon(blueCham);
       if (!blueSoundPlaying) {
@@ -147,9 +157,11 @@
       blueSound.stop();
     });
   
+
     // violet noise
     let violetButton = createButton('Violet Noise');
     violetButton.position(blueButton.x + blueButton.width + buttonMargin, yPosition);
+    violetButton.class('violetNoiseButton');
     violetButton.mouseOver(function() {
       changeChameleon(violetCham);
       if (!violetSoundPlaying) {
