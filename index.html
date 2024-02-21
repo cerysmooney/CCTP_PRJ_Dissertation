@@ -97,7 +97,7 @@
 
     // Waveform Interaction
     function setup() {
-        let canvas = createCanvas(920, 456);
+        let canvas = createCanvas(720, 356);
         canvas.parent('p5CanvasContainer');
         osc = new p5.SinOsc(); // set frequency and type
         osc.amp(0.5);
@@ -147,7 +147,7 @@
         let instructionTextOpacity = 255; // instructions for interaction
 
         p.setup = function() {
-            let canvas = p.createCanvas(920, 456);
+            let canvas = p.createCanvas(720, 356);
             canvas.parent('frequencyP5Container');
             osc2 = new p5.Oscillator();
             osc2.setType('sine');
