@@ -29,8 +29,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
- 
-<script>
+ <script>
+  // Declare variables for chameleon images
   let greenCham;
   let whiteCham;
   let pinkCham;
@@ -39,17 +39,23 @@
   let brownCham;
   let selectedChameleon;
   
+  // Declare variables for sounds and their playing states
   let whiteSound;
   let whiteSoundPlaying = false;
-
+  
   let pinkSound;
   let pinkSoundPlaying = false;
-
+  
   let blueSound;
   let blueSoundPlaying = false;
   
-
-
+  let violetSound;
+  let violetSoundPlaying = false;
+  
+  let brownSound;
+  let brownSoundPlaying = false;
+  
+  // Preload function to load images and sounds
   function preload() {
     greenCham = loadImage("Images/UpdatedGreenNoEyes-01.png");
     whiteCham = loadImage("Images/UpdatedWhiteNoEyes-01.png");
@@ -60,35 +66,40 @@
   
     console.log("Preloading sounds...");
     whiteSound = loadSound("Audio/White Noise.mp3", loaded, loadError);
-    pinkSound = loadSound("Audio/Pink Noise.mp3", loaded,loadError);
+    pinkSound = loadSound("Audio/Pink Noise.mp3", loaded, loadError);
+    blueSound = loadSound("Audio/Blue Noise.mp3", loaded, loadError);
+    violetSound = loadSound("Audio/Violet Noise.mp3", loaded, loadError);
+    brownSound = loadSound("Audio/Brown Noise.mp3", loaded, loadError);
   }
   
+  // Callback function for successful loading of sounds
   function loaded() {
     console.log("Sound loaded successfully");
   }
   
+  // Callback function for loading errors
   function loadError() {
     console.log("Error loading sound");
   }
   
-
-
-
-  // Change chameleon image based on mouse hover
+  // Function to change chameleon image based on mouse hover
   function changeChameleon(chameleonImage) {
     selectedChameleon = chameleonImage;
   }
   
   function setup() {
+    
     let canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('sketch-holder'); 
-    selectedChameleon = greenCham; // initial chameleon image to green
+    // green cham as initial
+    selectedChameleon = greenCham;
   
-    // TEMP buttons
+    // Define button dimensions and position variables
     let buttonHeight = 30;
     let buttonMargin = 100;
     let yPosition = height - 150;
   
+    // white noise
     let whiteButton = createButton('White Noise');
     whiteButton.position(10, yPosition);
     whiteButton.mouseOver(function() {
@@ -100,72 +111,89 @@
     });
     whiteButton.mouseOut(function() {
       changeChameleon(greenCham);
-     whiteSoundPlaying = false;
-     whiteSound.stop();
+      whiteSoundPlaying = false;
+      whiteSound.stop();
     });
-
-
-
   
-    let pinkButton = createButton('Pink Chameleon');
+    // pink noise
+    let pinkButton = createButton('Pink Noise');
     pinkButton.position(whiteButton.x + whiteButton.width + buttonMargin, yPosition);
     pinkButton.mouseOver(function() {
-      
       changeChameleon(pinkCham);
-      if (!pinkSoundPlaying){
+      if (!pinkSoundPlaying) {
         pinkSound.play();
         pinkSoundPlaying = true;
       }
-
     });
-
     pinkButton.mouseOut(function() {
       changeChameleon(greenCham);
       pinkSoundPlaying = false;
       pinkSound.stop();
-
     });
   
-    let blueButton = createButton('Blue Chameleon');
+    // blue noise
+    let blueButton = createButton('Blue Noise');
     blueButton.position(pinkButton.x + pinkButton.width + buttonMargin, yPosition);
     blueButton.mouseOver(function() {
       changeChameleon(blueCham);
+      if (!blueSoundPlaying) {
+        blueSound.play();
+        blueSoundPlaying = true;
+      }
     });
     blueButton.mouseOut(function() {
       changeChameleon(greenCham);
+      blueSoundPlaying = false;
+      blueSound.stop();
     });
   
-    let violetButton = createButton('Violet Chameleon');
+    // violet noise
+    let violetButton = createButton('Violet Noise');
     violetButton.position(blueButton.x + blueButton.width + buttonMargin, yPosition);
     violetButton.mouseOver(function() {
       changeChameleon(violetCham);
+      if (!violetSoundPlaying) {
+        violetSound.play();
+        violetSoundPlaying = true;
+      }
     });
     violetButton.mouseOut(function() {
       changeChameleon(greenCham);
+      violetSoundPlaying = false;
+      violetSound.stop();
     });
   
-    let brownButton = createButton('Brown Chameleon');
+    // brown noise
+    let brownButton = createButton('Brown Noise');
     brownButton.position(violetButton.x + violetButton.width + buttonMargin, yPosition);
     brownButton.mouseOver(function() {
       changeChameleon(brownCham);
+      if (!brownSoundPlaying) {
+        brownSound.play();
+        brownSoundPlaying = true;
+      }
     });
     brownButton.mouseOut(function() {
       changeChameleon(greenCham);
+      brownSoundPlaying = false;
+      brownSound.stop();
     });
   }
   
   function draw() {
     clear();
+    // Display chameleon image
     if (selectedChameleon) {
-      image(selectedChameleon, -200, -300, 1200, 1100); // Display current chameleon image
+      image(selectedChameleon, -200, -300, 1200, 1100);
       let constrainedX = constrain(mouseX, 620, 650);
       let constrainedY = constrain(mouseY, 184.5, 206.5);
       fill(0);
-      ellipse(constrainedX, constrainedY, 15, 15); // EYE
+      ellipse(constrainedX, constrainedY, 15, 15);
     }
   }
-  </script>
-  
+
+</script>
+
 </div>
 
 </body>
