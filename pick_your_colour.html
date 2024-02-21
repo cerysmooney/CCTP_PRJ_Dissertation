@@ -20,11 +20,18 @@
   </div>
   <body>
 
+
+    <div class="connectionSecContainer">
+      <div class="connectionText">
+          <h1 class="H1Connection">Pick Your Coloured Noise..</h1>
+          <p class="noisetext2"> Hover over each button to hear how each noise sounds. You can also click the button to learn more!</p>
+      </div>
   <div id="chooseNoiseContainer"></div>
 
   <div id="colourbgcham"></div>
 
 
+  
 
 
   
@@ -98,13 +105,18 @@
       // Define button dimensions and position variables
       let buttonHeight = 30;
       let buttonMargin = 200; // spacing buttons
-      let yPosition = height - 150; // cham position
+      let yPosition = height - 105; // y position
     
       // white noise
       let whiteButton = createButton('White Noise');
       whiteButton.position(10, yPosition);
       whiteButton.class('whiteNoiseButton');
   
+
+      whiteButton.mouseClicked(function() {
+   window.location.href = 'white_noise.html';
+      });
+
       whiteButton.mouseOver(function() {
         changeChameleon(whiteCham);
         if (!whiteSoundPlaying) {
@@ -124,6 +136,12 @@
       pinkButton.position(whiteButton.x + whiteButton.width + buttonMargin, yPosition);
       pinkButton.class('pinkNoiseButton');
   
+
+
+      pinkButton.mouseClicked(function() {
+   window.location.href = 'pink_noise.html';
+      });
+
       pinkButton.mouseOver(function() {
         changeChameleon(pinkCham);
         if (!pinkSoundPlaying) {
@@ -143,6 +161,13 @@
       blueButton.position(pinkButton.x + pinkButton.width + buttonMargin, yPosition);
       blueButton.class('blueNoiseButton');
   
+
+
+      
+     blueButton.mouseClicked(function() {
+   window.location.href = 'blue_noise.html';
+      });
+
       blueButton.mouseOver(function() {
         changeChameleon(blueCham);
         if (!blueSoundPlaying) {
@@ -162,6 +187,13 @@
       violetButton.position(blueButton.x + blueButton.width + buttonMargin, yPosition);
       violetButton.class('violetNoiseButton');
   
+
+
+      
+      violetButton.mouseClicked(function() {
+   window.location.href = 'violet_noise.html';
+      });
+
       violetButton.mouseOver(function() {
         changeChameleon(violetCham);
         if (!violetSoundPlaying) {
@@ -180,6 +212,13 @@
       let brownButton = createButton('Brown Noise');
       brownButton.position(violetButton.x + violetButton.width + buttonMargin, yPosition);
       brownButton.class('brownNoiseButton');
+
+
+      
+      brownButton.mouseClicked(function() {
+   window.location.href = 'brown_noise.html';
+      });
+
       brownButton.mouseOver(function() {
         changeChameleon(brownCham);
         if (!brownSoundPlaying) {
