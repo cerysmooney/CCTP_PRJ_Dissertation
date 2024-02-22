@@ -101,7 +101,20 @@ section {
   
 }
 
+
+/* first body text for noise page */
+.noisetext {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: medium;
+}
+
 .noiseH1{
+  position: relative;
+  text-align: center;
+  color: purple;
+  display: block; /* Change display to block */
+  margin-top: 50px;
   font-size: xx-large;
 }
 
