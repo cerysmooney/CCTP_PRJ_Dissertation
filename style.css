@@ -536,15 +536,20 @@ z-index: -1;
 /* BG */
 
 #colourbgcham {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url("Images/tree.jpg");
-  height: 100vh;
-  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/tree.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  margin: 0; 
+  padding: 0; 
   z-index: -1;
 }
+
 
 
 
