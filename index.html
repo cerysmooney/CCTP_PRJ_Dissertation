@@ -20,13 +20,12 @@
 </div>
 
 <!-- Banner Section -->
-<!-- <div class="hero-image"> -->
+<div class="hero-image"> 
     <!-- <div class="hero-text">
         <h1>How is Noise Created?</h1>
         <p>Find out how we understand noise below!</p>
     </div> -->
-<!-- </div> -->
-
+</div>
 
 <!-- Waveform interaction Section -->
 <section id="sec-1">
@@ -37,22 +36,18 @@
                  As the waves of energy continue to travel, they create patterns of disturbance.</p>
                  <p> We visualise these vibrational disturbances with waveforms! </p>
         </div>
-
-        <!-- <div class="connectionSecContainer">
-            <div class="connectionText">
-                <h1 class="H1Connection">How do Noise and Colour Connect?</h1>
-                <p>Coloured noise is a way for us to understand the frequency patterns of both noise and light together.</p>
-                     <p> Take white for example. Just as the <i>colour</i> white contains all colours of the rainbow, white <i>noise</i>
-                      contains every audible frequency.</p>
-                     <p> We can use Power Spectral Density (PSD) to visualise more coloured noises! </p>
-            </div> -->
-            
-
         <div class="waveformImage">
             <img class="waveformChart" src="Images/eeee.jpg">
             <div class="textContainer">
                 
-                    <h1 class="noiseH1"> Waveform Terminology</h1>
+                <div class="noisetext2">
+                    <h1 class="noiseH1">Waveform Terminology</h1>
+                    <p>Frequency tells us the rate of these vibrations there are per second (measured in Hertz).</p>
+                    <p>As the frequency gets higher, more rapid vibrations occur and result in a higher pitch.
+                        The lower the frequency gets, the vibrations slow and result in a lower pitch. </p>
+                    <p> On average, the human ear can hear a range of frequencies starting from as low as 20 Hertz, to 20,000 Hertz!</p>
+                </div>
+                    <!-- <h1 class="noiseH1"> Waveform Terminology</h1>
                     <div class="noisetext2">
                     <p>Amplitude is the maximum disturbance a wave creates.</p>
                     <p>The larger the amplitude, the louder the noise is.
@@ -61,16 +56,43 @@
                 </div>
                 <div class="noisetext3">
                     <p>Wavelength is the distance between each crest of the wave.</p>
-                </div>
+                </div> -->
             </div>
         </div>
+        
         <div class="noiseimgplaceholder">
-            <h1 class="noiseH1">Try it Out!</h1>
-            <p class="noisetext2"> Press "Start" to see how different waveforms are made</p>
+            <div class="textContainer">
+                <h1 class="noiseH1">Try it Out!</h1>
+                <p class="noisetext2"> Press "Start" to see how different waveforms are made</p>
+                <button onclick="playOscillator()">Start Waveform</button> 
+                <button onclick="stopOscillator()">Stop Waveform</button>
+            </div>
             <div id="p5CanvasContainer" class="p5CanvasContainer"></div>
-            <button onclick="playOscillator()">Start Waveform</button> 
-            <button onclick="stopOscillator()">Stop Waveform</button>
         </div>
+        
+
+        <div class="sec-2Container">
+            <div class="freqeuncyContainer">
+                <div id="frequencyP5Container" class="frequencyP5Container"></div>
+                <div class="noiseButtonContainer">
+                    <button onclick="startPlayingOscillator()">Start Oscillator</button>
+                    <button onclick="stopPlayingOscillator()">Stop Oscillator</button>
+                </div>
+            </div>
+            <div class="noisetext2">
+                <h1 class="noiseH1">How does Frequency fit in?</h1>
+                <p>Frequency tells us the rate of these vibrations there are per second (measured in Hertz).</p>
+                <p>As the frequency gets higher, more rapid vibrations occur and result in a higher pitch.
+                    The lower the frequency gets, the vibrations slow and result in a lower pitch. </p>
+                <p> On average, the human ear can hear a range of frequencies starting from as low as 20 Hertz, to 20,000 Hertz!</p>
+            </div>
+        </div>
+
+
+
+
+
+
     </div>
 </section>
 
@@ -78,8 +100,15 @@
 
 <!-- Frequency Info section -->
 <!-- Please add more -->
-<section id="sec-2">
-    <div class="sec-2Container">
+<!-- <section id="sec-2"> -->
+    <!-- <div class="sec-2Container">
+        <div class="freqeuncyContainer">
+            <div id="frequencyP5Container" class="frequencyP5Container"></div>
+            <div class="noiseButtonContainer">
+                <button onclick="startPlayingOscillator()">Start Oscillator</button>
+                <button onclick="stopPlayingOscillator()">Stop Oscillator</button>
+            </div>
+        </div>
         <div class="noisetext2">
             <h1 class="noiseH1">How does Frequency fit in?</h1>
             <p>Frequency tells us the rate of these vibrations there are per second (measured in Hertz).</p>
@@ -87,16 +116,8 @@
                 The lower the frequency gets, the vibrations slow and result in a lower pitch. </p>
             <p> On average, the human ear can hear a range of frequencies starting from as low as 20 Hertz, to 20,000 Hertz!</p>
         </div>
-        <div class="freqeuncyContainer">
-            <!-- <h1>Move Your Mouse to hear the audible frequency range!</h1> -->
-            <div id="frequencyP5Container" class="frequencyP5Container"></div>
-            <div class="noiseButtonContainer">
-            <button onclick="startPlayingOscillator()">Start Oscillator</button>
-            <button onclick="stopPlayingOscillator()">Stop Oscillator</button>
-        </div>
-        </div>
-    </div>
-</section>
+    </div> -->
+<!-- </section> -->
 <!-- P5.JS sound and complete library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

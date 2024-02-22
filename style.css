@@ -51,7 +51,7 @@ body, html {
   
 }
 
-/* Responsive adjustments using media queries */
+/* responsive */
 @media screen and (max-width: 768px) {
   
   .hero-image {
@@ -77,49 +77,35 @@ color: white;
 
 
 
-.whatIsNoiseP5container {
-  width: 100%;
-  height: 100vh;
+/* Common styles */
+.noisetext,
+.noisetext2,
+.noisetext3 {
+  font-size: medium; 
 }
 
-section {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Banner Section */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/noiiise.png");
+  height: 45vh; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
+/* Waveform interaction Section */
 #sec-1 {
   background: linear-gradient(45deg, #000000, #333333 45%, #000000);
   background-size: 400% 400%;
   animation: gradientAnimation 8s ease infinite;
   position: relative;
   color: white;
-  padding: 50px 0;
+  padding: 5% 0;
   text-align: center;
-  
 }
 
-
-/* first body text for noise page */
-.noisetext {
-  margin-top: 20px;
-  margin-left: 20px;
-  font-size: medium;
-}
-
-.noiseH1{
-  position: relative;
-  text-align: center;
-  color: purple;
-  display: block; /* Change display to block */
-  margin-top: 50px;
-  font-size: xx-large;
-}
-
-
-#sec-1Container {
+.sec-1Container {
   z-index: 1;
   position: relative;
 }
@@ -127,52 +113,35 @@ section {
 .waveformImage {
   display: flex;
   align-items: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  justify-content: center;
+  margin-top: 180px; 
+  margin-left: 20px;
 }
 
-
-.waveformChart{
-  max-width: 65%; 
+.waveformChart {
+  max-width: 100%; 
   height: auto;
   display: block;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 0 auto; 
 }
 
 .textContainer {
-  margin-left: 60px;
-  
+  margin: 0 auto; 
 }
 
-.noisetext3 {
-  margin-top: 20px;
-  font-size: medium;
-}
-
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/noiiise.png");
-  height: 45%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+.noiseimgplaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 180px; 
+  margin-right: 20px;
 }
 
 .noiseButtonContainer {
   display: flex;
   justify-content: center;
 }
+
 .button {
   background-color: #666;
   color: white;
@@ -192,15 +161,26 @@ section {
   background-color: #555;
 }
 
+/* Frequency Info section */
 #sec-2 {
-  /* background-color: #333333; */
   background: linear-gradient(45deg, #000000, #333333 55%, #000000);
   background-size: 400% 400%;
   animation: gradientAnimation 8s ease infinite;
   position: relative;
   color: white;
-  padding: 50px 0;
+  padding: 5% 0;
   text-align: center;
+}
+
+.sec-2Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 180px; /* Adjust margin as needed */
+}
+
+.freqeuncyContainer {
+  margin: 20px; /* Adjust margin as needed */
 }
 
 .noisetext2 {
@@ -209,31 +189,12 @@ section {
   font-size: medium;
 }
 
-.sec-2Container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-  margin-left: 20px;
-  margin-bottom: 100px;
-  /* background-color: #666; */
-  
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .waveformChart {
+    width: 90%; /* Adjust width for smaller screens */
+  }
 }
-
-.freqeuncyContainer {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.frequencyP5Container {
-  margin-right: 20px; /* Adjust margin as needed */
-}
-.noiseimgplaceholder {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-
 
 /* What is COlour Page
  */
