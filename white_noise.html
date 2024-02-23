@@ -35,6 +35,7 @@
       </div> -->
       
 
+      
  <div class="whiteNoiseHeaderContainer">
   <div class="whiteNoiseFirstSectionText">
  <h1 class="whiteH1"> White Noise </h1>
@@ -42,52 +43,75 @@
   <p class="firstBodyText"> This means that every frequency (ranging from 20 Hertz to 20,000 Hertz) can be heard at an equal level!</p>
 </div>
   </div>
-
+<!-- 
   <div class="whiteImgContainer">
   <div class="placeholderWhite">
     <img src="Images/White/White Noise.jpg" width="500px" height="300px">
    </div>
-  </div>
+  </div> -->
 
   
+  <div class="tonguedChameleon">
+    <div class="tonguedText">
+        <h1 class="tonguedH1">What does it sound like?</h1>
+        <p class="tonguedBody">White noise can be compared to listening to TV static or a vaccuum buzzing. </p>
+        <p class="tonguedBody">Hover over the chameleon to hear for yourself!</p>
+    </div>
+    <div class="whiteChameleonContainer" onmouseenter="playVideo()" onmouseleave="pauseVideo()">
+      <video id="hoverVideo" src="Videos/whiteChameleon.mp4"></video>
+      <!-- <img class="whiteChameleonPgBranch" src="Images/leaf_Leaf.png"> -->
+      
+      <!-- <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
+      <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button> -->
+      <audio id="whiteNoiseAudio">
+        <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
+      </audio>
+    </div>
+</div>
 
- <div class="whiteChameleonContainer" onmouseenter="playVideo()" onmouseleave="pauseVideo()">
-   <video id="hoverVideo" src="Videos/Animating Chameleon.mp4"></video>
-   <!-- <img class="whiteChameleonPgBranch" src="Images/leaf_Leaf.png"> -->
-   
-   <!-- <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
-   <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button> -->
-   <audio id="whiteNoiseAudio">
-     <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
-   </audio>
- </div>
  
  <script>
-   var audio = document.getElementById("whiteNoiseAudio");
-   var video = document.getElementById("hoverVideo");
+  var audio = document.getElementById("whiteNoiseAudio");
+  var video = document.getElementById("hoverVideo");
+  var isPlaying = false;
 
-   function playNoise(){
-     audio.play();
-   }
+  function playNoise(){
+    audio.play();
+  }
 
-   function stopNoise(){
-     audio.pause();
-     audio.currentTime = 0;
-   }
+  function stopNoise(){
+    audio.pause();
+    audio.currentTime = 0;
+  }
 
-   // JavaScript functions for video hover
-   function playVideo() {
-     video.play();
-     audio.play();
-   }
+  // JavaScript functions for video hover
+  function playVideo() {
+    video.play();
+    if (!isPlaying) {
+      audio.play();
+      isPlaying = true;
+    }
+  }
 
-   function pauseVideo() {
-     video.pause();
-     audio.pause();
-     audio.currentTime = 0;
-   }
- </script>
+  function pauseVideo() {
+    video.pause();
+    video.currentTime = 0; // Reset video to beginning
+    audio.pause();
+    audio.currentTime = 0;
+    isPlaying = false;
+  }
+</script>
 
+
+<div class="whiteNoiseHeaderContainer">
+  <div class="whiteNoiseFirstSectionText">
+ <h1 class="whiteH1"> How did White Noise get its name? </h1>
+  <p class="firstBodyText"> If we look at the colour white, we can see that it contains all visible colours to the human eye.</p>
+  <img class="psdImage" src="Images/rgbPlaceholder.jpg">
+  <p class="firstBodyText"> From listening to this noise, we hear that it contains all audible frequencies that humans can hear. </p>
+  <p class="firstBodyText"> It is called  White Noise simply by the connection of the two functionalities! </p>
+</div>
+  </div>
  <!-- First info section -->
 <!-- <h1 class="whiteNoiseInfoHead"> White Noise Info</h2> -->
 <!-- <p class="whiteNoiseInfoBody"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur atque quidem dolorum repudiandae eaque dolores 

@@ -749,6 +749,27 @@ animation: gradientAnimation 10s infinite linear;
 }
 
 
+
+.tonguedChameleon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 180px; 
+  margin-right: 20px;
+}
+
+.tonguedText {
+  margin: 0 auto; 
+}
+
+.tonguedBody{
+  font-size: medium; 
+}
+
+.tonguedH1 {
+  color: #333333;
+}
+
 /* Text */
 .whiteH1 {
   position: relative;
@@ -815,9 +836,10 @@ margin-bottom: 100px;
 .whiteChameleonContainer {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  max-width: 100%;
+  justify-content: center;
+  margin-right: 20px;
 }
+
 
 #hoverVideo {
   width: 100%;
