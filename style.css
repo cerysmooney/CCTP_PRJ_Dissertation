@@ -536,7 +536,7 @@ z-index: -1;
 /* BG */
 
 #colourbgcham {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/tree.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/pexels-thomas-balabaud-3693789.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -725,21 +725,47 @@ animation: gradientAnimation 10s infinite linear;
 
 }
 
+
+#whiteNoiseHeaderContainer {
+  z-index: 1;
+  position: relative;
+}
+
+.whiteNoiseFirstSectionText {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: medium;
+  color: #333;
+}
+
+
+.firstBodyText {
+  text-align: center;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: balance;
+}
+
+
 /* Text */
 .whiteH1 {
-font-size: 45px;
-text-align: center;
-justify-content: center;
-display: flex;
+  position: relative;
+  text-align: center;
+  color: #333;
+  display: block; /* Change display to block */
+  margin-top: 50px;
+  font-size: xx-large;
 }
 
 .whiteNoiseInfoHead {
-  text-align: left;
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  padding-top: 200px;
-  padding-left: 20px;
+  position: relative;
+  text-align: center;
+  color: white;
+  display: block; /* Change display to block */
+  margin-top: 50px;
+  font-size: xx-large;
 }
 
 .whiteNoiseInfoBody {

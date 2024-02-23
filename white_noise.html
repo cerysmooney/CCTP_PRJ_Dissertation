@@ -6,7 +6,7 @@
   <link rel="icon" href="Images/icon-06.png" type="image/x-icon">
   <title> White Noise </title>
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!-- <div class="bgWhiteNoise"> -->
   <div class="topnav">
     <a href="index.html">What is Noise?</a>
@@ -24,17 +24,41 @@
 <body>
 
  <!-- Header, audio buttons and functions and chameleon/placeholder -->
+ <!-- <section id="connectionSec">
+  <div class="connectionSecContainer">
+      <div class="connectionText">
+          <h1 class="H1Connection">How do Noise and Colour Connect?</h1>
+          <p>Coloured noise is a way for us to understand the frequency patterns of both noise and light together.</p>
+               <p> Take white for example. Just as the <i>colour</i> white contains all colours of the rainbow, white <i>noise</i>
+                contains every audible frequency.</p>
+               <p> We can use Power Spectral Density (PSD) to visualise more coloured noises! </p>
+      </div> -->
+      
+
+ <div class="whiteNoiseHeaderContainer">
+  <div class="whiteNoiseFirstSectionText">
  <h1 class="whiteH1"> White Noise </h1>
- <div class="whiteChameleonContainer" onmouseenter="playVideo()" onmouseleave="pauseVideo()">
-   <video id="hoverVideo" src="Videos/Animating Chameleon.mp4"></video>
+  <p class="firstBodyText"> White Noise is created by combining all of the audible sound frequencies at once.</p>
+  <p class="firstBodyText"> This means that every frequency (ranging from 20 Hertz to 20,000 Hertz) can be heard at an equal level!</p>
+</div>
+  </div>
+
+  <div class="placeholderWhite">
+    <img src="Images/White/White Noise.jpg">
+   </div>
+
+  
+
+ <!-- <div class="whiteChameleonContainer" onmouseenter="playVideo()" onmouseleave="pauseVideo()">
+   <video id="hoverVideo" src="Videos/Animating Chameleon.mp4"></video> -->
    <!-- <img class="whiteChameleonPgBranch" src="Images/leaf_Leaf.png"> -->
    
    <!-- <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
    <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button> -->
-   <audio id="whiteNoiseAudio">
+   <!-- <audio id="whiteNoiseAudio">
      <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
    </audio>
- </div>
+ </div> -->
  
  <script>
    var audio = document.getElementById("whiteNoiseAudio");
@@ -63,9 +87,9 @@
  </script>
 
  <!-- First info section -->
-<h2 class="whiteNoiseInfoHead"> White Noise Info</h2>
-<p class="whiteNoiseInfoBody"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur atque quidem dolorum repudiandae eaque dolores 
- fuga repellendus aliquid itaque, quae officiis praesentium et voluptates! Quis praesentium officia aspernatur voluptatibus necessitatibus!</p>
+<!-- <h1 class="whiteNoiseInfoHead"> White Noise Info</h2> -->
+<!-- <p class="whiteNoiseInfoBody"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur atque quidem dolorum repudiandae eaque dolores 
+ fuga repellendus aliquid itaque, quae officiis praesentium et voluptates! Quis praesentium officia aspernatur voluptatibus necessitatibus!</p> -->
 
  <!-- <a href="#toImageGrid">
  <div class="scroll-down-white"></div>
@@ -91,12 +115,6 @@
  itaque quae. Cum odio provident nobis delectus accusantium, similique amet non! Laborum hic commodi cum labore sunt debitis vel!</p>
 
 
- <!-- <a href="#toSection2Head">
- <div class="scroll-down-white2"></div>
-</a> -->
-
-
-<a id="toSection2Head"></a>
 <h2 class="whiteNoiseInfoHeadSection2"> White Noise Info</h2>
 
 
@@ -105,21 +123,21 @@
 </div>
 
 <div class="whiteNoiseP5Container">
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  <script>
-   function setup() {
-     createCanvas(800, 800);
-   }
 
-   function draw() {
-     background(60); 
-     // fill(255, 0, 0);
 
-     // Constrain the mouse position within the canvas boundaries
-     var x = constrain(mouseX, 10, width - 50); // 50 is the minimum x-coordinate, width - 50 is the maximum x-coordinate
-     var y = constrain(mouseY, 10, height - 50); // 50 is the minimum y-coordinate, height - 50 is the maximum y-coordinate
+function setup() {
+}
 
-     ellipse(x, y, 100, 100);
-   }
+function draw(){
+
+}
+
  </script>
 </div>
    <!-- This div is for the background gradient -->
