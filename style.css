@@ -921,14 +921,14 @@ margin-bottom: 100px;
 /* Image Grid */
 
 .imageGrid {
-  padding-top: 200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  padding: 20px; /* Add padding to all sides */
+}
 
+.imageGrid > div {
+  margin: 0 10px; /* Add spacing between grid items */
 }
 
 
