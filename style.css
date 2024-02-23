@@ -718,8 +718,8 @@ z-index: -1;
   background-position: center;
   position: fixed;
   top: 0;
-background: rgb(255,255,255);
-background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 62%, rgba(153,153,153,1) 100%);
+background: rgb(255, 255, 255);
+background: linear-gradient(180deg, rgb(162, 195, 206) 0%, rgba(240,240,240,1) 62%, rgba(153,153,153,1) 100%);
 overflow-y: auto;
 animation: gradientAnimation 10s infinite linear;
 
@@ -741,7 +741,7 @@ animation: gradientAnimation 10s infinite linear;
 
 .firstBodyText {
   text-align: center;
-  color: red;
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -755,7 +755,7 @@ animation: gradientAnimation 10s infinite linear;
   align-items: center;
   justify-content: center;
   margin-top: 180px; 
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .tonguedText {
@@ -769,6 +769,17 @@ animation: gradientAnimation 10s infinite linear;
 .tonguedH1 {
   color: #333333;
 }
+
+
+
+.nameSectionWhiteNoise {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 180px; 
+  margin-right: 20px;
+}
+
 
 /* Text */
 .whiteH1 {
