@@ -43,22 +43,24 @@
 </div>
   </div>
 
+  <div class="whiteImgContainer">
   <div class="placeholderWhite">
-    <img src="Images/White/White Noise.jpg">
+    <img src="Images/White/White Noise.jpg" width="500px" height="300px">
    </div>
+  </div>
 
   
 
- <!-- <div class="whiteChameleonContainer" onmouseenter="playVideo()" onmouseleave="pauseVideo()">
-   <video id="hoverVideo" src="Videos/Animating Chameleon.mp4"></video> -->
+ <div class="whiteChameleonContainer" onmouseenter="playVideo()" onmouseleave="pauseVideo()">
+   <video id="hoverVideo" src="Videos/Animating Chameleon.mp4"></video>
    <!-- <img class="whiteChameleonPgBranch" src="Images/leaf_Leaf.png"> -->
    
    <!-- <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
    <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button> -->
-   <!-- <audio id="whiteNoiseAudio">
+   <audio id="whiteNoiseAudio">
      <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
    </audio>
- </div> -->
+ </div>
  
  <script>
    var audio = document.getElementById("whiteNoiseAudio");
@@ -131,14 +133,63 @@
  <script>
 
 
-function setup() {
-}
+// let pixels = [];
 
-function draw(){
+// function setup() {
+//   createCanvas(720, 356);
+  
+//   // Create a grid of pixels
+//   for (let x = 0; x < width; x += 10) {
+//     for (let y = 0; y < height; y += 10) {
+//       pixels.push(new Pixel(x, y));
+//     }
+//   }
+// }
 
-}
+// function draw() {
+//   // background(0);
+  
+//   // Update and display each pixel
+//   for (let i = 0; i < pixels.length; i++) {
+//     pixels[i].update();
+//     pixels[i].display();
+//   }
+// }
 
- </script>
+// class Pixel {
+//   constructor(x, y) {
+//     this.x = x;
+//     this.y = y;
+//     this.vx = random(-3, 3); // Increase velocity range for faster movement
+//     this.vy = random(-3, 3); // Increase velocity range for faster movement
+//     this.grayValue = random(100, 255);
+//     this.size = 8;
+//   }
+  
+//   update() {
+//     this.x += this.vx;
+//     this.y += this.vy;
+    
+//     // Add some randomness to velocity
+//     this.vx += random(-0.5, 0.5); // Adjust the randomness to increase or decrease speed
+//     this.vy += random(-0.5, 0.5); // Adjust the randomness to increase or decrease speed
+    
+//     // Wrap around edges
+//     if (this.x < 0) this.x = width;
+//     if (this.x > width) this.x = 0;
+//     if (this.y < 0) this.y = height;
+//     if (this.y > height) this.y = 0;
+//   }
+  
+//   display() {
+    
+//     fill(this.grayValue);
+//     rect(this.x, this.y, this.size, this.size);
+//   }
+// }
+
+
+//  </script>
 </div>
    <!-- This div is for the background gradient -->
 <!-- </div> -->

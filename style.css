@@ -759,6 +759,16 @@ animation: gradientAnimation 10s infinite linear;
   font-size: xx-large;
 }
 
+
+.whiteImgContainer{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 100px;
+margin-bottom: 100px;
+}
+
+
 .whiteNoiseInfoHead {
   position: relative;
   text-align: center;
