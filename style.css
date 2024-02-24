@@ -735,13 +735,13 @@ animation: gradientAnimation 10s infinite linear;
   margin-top: 20px;
   margin-left: 20px;
   font-size: medium;
-  color: #333;
+  color: black;
 }
 
 
 .firstBodyText {
   text-align: center;
-  color: #333;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -767,7 +767,7 @@ animation: gradientAnimation 10s infinite linear;
 }
 
 .tonguedH1 {
-  color: #333333;
+  color: black;
 }
 
 
@@ -785,7 +785,7 @@ animation: gradientAnimation 10s infinite linear;
 .whiteH1 {
   position: relative;
   text-align: center;
-  color: #333;
+  color: black;
   display: block; /* Change display to block */
   margin-top: 50px;
   font-size: xx-large;

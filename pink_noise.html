@@ -23,11 +23,150 @@
 </div>
 
 
+<!-- CHANGE CONTAINERS TO PINK RELATED NAMES -->
+<div class="whiteNoiseHeaderContainer">
+  <div class="whiteNoiseFirstSectionText">
+ <h1 class="whiteH1"> Pink Noise </h1>
+  <p class="firstBodyText"> In Pink Noise, lower frequencies are much more audible than higher ones. </p>
+  <p class="firstBodyText"> With these deeper tones emphazised, we can imagine that this noise (if visible) would have a warmer colour to it, giving it the name Pink Noise! </p>
+</div>
+  </div>
+
+
+
+
+
+
+  
+<!-- CHANGE CONTAINER NAMES AND SUCH -->
+  <div class="psdSec">
+    <div class="psdSecContainer">
+        <div class="psdText">
+            <h1 class="H1PSD"> Pink Noise on a PSD Chart </h1>
+            <p>A PSD chart allows us to see the distribution of frequencies (vibrations) in noise. 
+             <p>  X shows us the specific frequency and Y shows us the presence at the specfic frequency </p>
+        </div> 
+    </div>
+     <img class="psdImage" src="Images/Pink/Pink Noise.jpg" width="600px" height="600px">
+     <div class="psdText">
+      <p> Noises with higher present frequencies are associated with higher light frequencies, such as violet (with a light spectrum of 400nm).
+      </p>
+      <p> Similarly, noises with lower present frequencies are connected with lower light frequencies, such as red (with a light spectrum of 700nm).</p>
+     </div>
+</div>
+
+
+
+
+
+<div class="waveformImage">
+  <div class="whiteChameleonContainer" onmouseenter="playVideo()" onmouseleave="pauseVideo()">
+    <video id="hoverVideo" src="Videos/whiteChameleon.mp4"></video>
+    <!-- <img class="whiteChameleonPgBranch" src="Images/leaf_Leaf.png"> -->
+    
+    <!-- <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
+    <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button> -->
+    <audio id="whiteNoiseAudio">
+      <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
+    </audio>
+  </div>
+  <div class="textContainer">
+      
+      <div class="noisetext2">
+          <h1 class="noiseH1"> What does it Sound Like?</h1>
+          <p>Frequency tells us the rate of these vibrations there are per second (measured in Hertz).</p>
+          <p>Hover over chameleon to find out! </p>
+      </div>
+  </div>
+</div>
+
+<!-- <div class="tonguedChameleon">
+  <div class="tonguedText">
+      <h1 class="tonguedH1">What does it sound like?</h1>
+      <p class="tonguedBody">White noise can be compared to listening to TV static or a vaccuum buzzing. </p>
+      <p class="tonguedBody">Hover over the chameleon to hear for yourself!</p>
+  </div>
+  <div class="whiteChameleonContainer" onmouseenter="playVideo()" onmouseleave="pauseVideo()">
+    <video id="hoverVideo" src="Videos/whiteChameleon.mp4"></video>
+   <img class="whiteChameleonPgBranch" src="Images/leaf_Leaf.png"> -->
+    
+    <!-- <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
+    <button class="playButton" onClick="stopNoise()">◼ Stop Noise</button> -->
+    <!-- <audio id="whiteNoiseAudio">
+      <source id="whiteNoiseSource" src="Audio/White Noise.mp3"  type="audio/mp3" alt="White Noise">
+    </audio>
+  </div>
+</div> --> 
+
+
+<script>
+var audio = document.getElementById("whiteNoiseAudio");
+var video = document.getElementById("hoverVideo");
+var isPlaying = false;
+
+function playNoise(){
+  audio.play();
+}
+
+function stopNoise(){
+  audio.pause();
+  audio.currentTime = 0;
+}
+
+// JavaScript functions for video hover
+function playVideo() {
+  video.play();
+  if (!isPlaying) {
+    audio.play();
+    isPlaying = true;
+  }
+}
+
+function pauseVideo() {
+  video.pause();
+  video.currentTime = 0; // Reset video to beginning
+  audio.pause();
+  audio.currentTime = 0;
+  isPlaying = false;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<div class="nameSectionWhiteNoise">  
+  <div class="whiteNoiseFirstSectionText">
+ <h1 class="whiteH1"> What are the Benefits of Listening to Pink Noise? </h1>
+  <p class="firstBodyText"> Recent studies show that listening to this noise could lead to many improvements!</p>
+  <div class="imageGrid">
+    <div class="imageGrid1">
+      <img src="https://placebear.com/600/600">
+      <p class="firstBodyText"> Sleeping Better </p>
+     </div>
+   
+   
+     
+     <div class="imageGrid3">
+      <img src="https://placebear.com/600/600">
+      <p class="firstBodyText"> Block out environmental noise</p>
+     </div>
+   </div>
+  
+</div>
+  </div>
+
+
 
 
 
    <!-- Header, chameleon/placeholder, and audio buttons -->
-   <h1 class="pinkH1"> Pink Noise </h1>
+   <!-- <h1 class="pinkH1"> Pink Noise </h1>
    <div class="pinkChameleonContainer">
      <img class="pinkChameleonPg" src="Images/PinkChameleon-05.png">
      <button class="playButton" onClick="playNoise()">▶ Play Noise</button>
@@ -35,9 +174,9 @@
      <audio id="pinkNoiseAudio" loop>
      <source id="pinkNoiseSource" src="Audio/Pink Noise.mp3 "  type="audio/mp3" alt="Pink Noise">
    </audio>
-   </div>
+   </div> -->
 
-   <script>
+   <!-- <script>
     var audio = document.getElementById("pinkNoiseAudio");
     function playNoise(){
       
@@ -50,18 +189,12 @@
       audio.currentTime = 0;
     }
 
-  </script>
-<div class="pinkNoiseInfoContainer">
-  <!-- <h2 class="pinkNoiseInfoHead">Pink Noise Info</h2> -->
-  <p class="pinkNoiseInfoBody"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum ex sequi magni nemo velit modi delectus nesciunt, voluptates incidunt expedita exercitationem error impedit eveniet similique nostrum. Architecto sapiente necessitatibus 
-    repellendus et sunt unde temporibus reiciendis, repellat rerum dicta quas fugit. Nisi, molestias provident voluptas iusto earum perspiciatis fuga rem odit?</p>
-
-    <img class="placebearPink" src="Images/Pink/Pink Noise.jpg">
-   </div>
+  </script> -->
 
 
 
-   <div class="pinkContainer">
+
+   <!-- <div class="pinkContainer">
     <h1 class="anotherPinkH1"> Another Header About Pink Noise </h1>
     <div class="pinkImgPlaceholder">
       <img src="https://placebear.com/700/500" alt="placeholder">
@@ -85,7 +218,7 @@
     <div class="noisetext2">
       <p> Lorem ipsum dolor sit amet.</p> 
     </div>
-   </div>
+   </div> -->
 
 
 
