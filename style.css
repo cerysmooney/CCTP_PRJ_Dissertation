@@ -237,28 +237,29 @@ color: white;
 
 .prismSection {
   display: flex;
+  flex-direction: column; /* Stack items vertically */
   justify-content: center;
-  align-items: center; 
-  margin-top: 50px; 
+  align-items: center;
+  margin-top: 100px;
 }
 
-.tryItOut{
+.prismContainer {
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.tryItOut {
   text-align: center;
   color: white;
-  display: block; 
-  margin-top: 50px;
   font-size: xx-large;
 }
 
 .textContainer {
-  margin-bottom: 60px;
-  margin-left: 20px;
+  margin-bottom: 20px; /* Adjust as needed */
   color: whitesmoke;
+  text-align: center;
 }
 
-.prismContainer{
-  margin-left: 105px;
-}
+
 
 /* first body text */
 .whatiscolourtext {
@@ -281,6 +282,17 @@ font-size: medium;
   margin-top: 100px;
 }
 
+
+.vslText {
+  text-align: center;
+  color: white;
+  display: block;
+  margin-top: 50px;
+  font-size: xx-large;
+  
+  /* background-color: #333; */
+}
+
 .lsChartImage {
   max-width: 65%;
   height: auto;
@@ -291,9 +303,10 @@ font-size: medium;
 
 /* colour wheel info */
 .colourcontainer2 {
+  /* background: rgba(51, 51, 51, 0.5); */
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-top: 20px;
 }
 
 /* H1 */
@@ -301,7 +314,7 @@ font-size: medium;
   text-align: center;
   color: whitesmoke;
   display: block;
-  margin-top: 70px;
+  margin-top: 100px;
   font-size: xx-large;
   /* background-color: #333; */
 }
@@ -314,12 +327,12 @@ font-size: medium;
 }
 
 .frequencyTextContainer {
-  background: rgba(51, 51, 51, 0.5);
+  /* background: rgba(51, 51, 51, 0.5); */
   display: flex;
   flex-direction: column; 
-  justify-content: left;
-  align-items: left;
-  /* margin-left: 20px; Adjust the margin as needed */
+  justify-content: center;
+  align-items: center;
+ margin-bottom: 50px;
 }
 
 /* body text */
