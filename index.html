@@ -37,7 +37,7 @@
                  <p> We visualise these vibrational disturbances with waveforms! </p>
         </div>
         <div class="waveformImage">
-            <img class="waveformChart" src="Images/waveformImg.jpg">
+            <img class="waveformChart" src="Images/MyWaveformImg-01.jpg" width="720px" height="356px">
             <div class="textContainer">
                 
                 <div class="noisetext2">
@@ -187,7 +187,7 @@
         };
 
         p.draw = function() {
-            p.background(220);
+            p.background(255);
             if (isOscillatorStarted) {
                 let f = p.constrain(p.map(p.mouseX, 0, p.width, minFrequency, maxFrequency), minFrequency, maxFrequency);
                 osc2.freq(f);

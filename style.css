@@ -105,6 +105,14 @@ color: white;
   text-align: center;
 }
 
+.noiseH1{
+text-align: center;
+color: white;
+display: block;
+margin-top: 50px;
+font-size: xx-large;
+}
+
 .sec-1Container {
   z-index: 1;
   position: relative;
