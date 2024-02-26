@@ -1127,16 +1127,18 @@ margin-bottom: 100px;
 /* Background */
 
 .bgPinkNoise {
-  background-image: url("Images/PinkBG.jpg");
-  min-height: 100vh;
   width: 100%;
+  height: 100vh;
   background-size: cover;
   background-position: center;
-  position: absolute;
-  
-  
-
+  position: fixed;
+  top: 0;
+background: rgb(255, 255, 255);
+background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("Images/pink-paint-brush-textured-background.jpg");
+overflow-y: auto;
+/* animation: gradientAnimation 10s infinite linear;} */
 }
+
 
 
 
