@@ -947,7 +947,12 @@ margin-bottom: 100px;
 #hoverVideo {
   width: 100%;
   max-width: 800px;  
+  border: 10px purple;
   /* changes size */
+}
+
+.hoverVideoCham{
+  border: 10px purple;
 }
 
 
