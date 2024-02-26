@@ -46,7 +46,21 @@
 
 
 
-  <div class="waveformImage">
+<div class="psdWhiteNoise">
+  <img class="waveformChart" src="Images/White/White Noise.jpg" width="600px" height="600px">
+<div class="psdWhiteTextContainer">
+<div class="whiteTextBodyTwo">
+  <h1 class="whitePSDH1">White Noise on the PSD Chart</h1>
+  <p>Frequency tells us the rate of these vibrations there are per second (measured in Hertz).</p>
+  <p>As the frequency gets higher, more rapid vibrations occur and result in a higher pitch.
+      The lower the frequency gets, the vibrations slow and result in a lower pitch. </p>
+  <p> On average, the human ear can hear a range of frequencies starting from as low as 20 Hertz, to 20,000 Hertz!</p>
+</div>
+</div>
+</div>
+
+
+  <!-- <div class="waveformImage">
     <img class="waveformChart" src="Images/White/White Noise.jpg" width="600px" height="600px">
     <div class="textContainer">
         
@@ -58,7 +72,7 @@
             <p> On average, the human ear can hear a range of frequencies starting from as low as 20 Hertz, to 20,000 Hertz!</p>
         </div>
     </div>
-  </div>
+  </div> -->
 
 
   
@@ -118,26 +132,58 @@
 <div class="nameSectionWhiteNoise">  
   <div class="whiteNoiseFirstSectionText">
  <h1 class="whiteH1"> What are the Benefits of Listening to White Noise? </h1>
-  <p class="firstBodyText"> Recent studies show that listening to this noise could lead to many improvements!</p>
+  <p class="firstBodyText"> Hover over each image to learn more about what White Noise can do for you.</p>
   <div class="imageGrid">
     <div class="imageGrid1">
-      <img src="https://placebear.com/600/600">
-      <p class="firstBodyText"> Sleeping Better </p>
-     </div>
+      <p class="firstBodyText"> Improve Sleep Quality</p>
+      <img src="Images/hamza-bounaim-_VnJ1YFTZvQ-unsplash.jpg" width="600px" height="600px">
+      <div class="message">A recent systematic review combinining 36 studies of white noise concluded that 50% of those listening to the noise
+        while sleeping had a more restful sleep, and woke up less during the night. This improved their day-to-day schedules largely. You can read more about this review <a href=https://www.sciencedirect.com/science/article/pii/S1087079220301283?casa_token=v8EVe_ETGMYAAAAA:3OEXsTQPz3CYSMOoyOKTbZfh2VqmTLGWKpzSfRmA29aBZhWZurTHjB5PP-hpNYY5DFbKdBWK7A> here!</a></div>
+    </div>
    
    
      
-     <div class="imageGrid3">
-      <img src="https://placebear.com/600/600">
-      <p class="firstBodyText"> Block out environmental noise</p>
-     </div>
+    
+<div class="imageGrid3">
+  <p class="firstBodyText">Block Out Environmental Noises</p>
+  <img src="Images/placeholderPexels.jpg" width="600px" height="600px">
+  <div class="message">Since white noise consists of every audible frequency the human can hear, it acts as a natural block, tuning out other environmental noises.
+    This may be beneficial when trying to focus! You can learn more about the noise's studying benefits <a href=https://www.nature.com/articles/s41598-022-18862-w> here!</a>
+  </div>
+</div>
+
    </div>
   
 </div>
   </div>
 
 
+  <script>
+    // individual elements
+    const imageGrid1 = document.querySelector('.imageGrid1');
+    const imageGrid3 = document.querySelector('.imageGrid3');
+  
+    // picking individual messages
+    const message1 = imageGrid1.querySelector('.message');
+    const message3 = imageGrid3.querySelector('.message');
+  
 
+    imageGrid1.addEventListener('mouseover', function() {
+      message1.style.display = 'block';
+    });
+  
+    imageGrid1.addEventListener('mouseout', function() {
+      message1.style.display = 'none';
+    });
+  
+    imageGrid3.addEventListener('mouseover', function() {
+      message3.style.display = 'block';
+    });
+  
+    imageGrid3.addEventListener('mouseout', function() {
+      message3.style.display = 'none';
+    });
+  </script>
 
  <!-- First info section -->
 <!-- <h1 class="whiteNoiseInfoHead"> White Noise Info</h2> -->

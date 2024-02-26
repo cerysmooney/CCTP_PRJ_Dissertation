@@ -150,6 +150,25 @@ font-size: xx-large;
   justify-content: center;
 }
 
+.noiseButton {
+  padding: 5px; /* Adjust padding */
+  text-align: center;
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+  font-size: 1.5em; /* Adjust font size */
+  border-radius: 3px; /* Adjust border radius */
+  box-shadow: 1px 1px 1px #333;
+  transition: .2s;
+}
+.noiseButton:hover {
+  box-shadow: 5px 5px 5px lightgray;
+  transform: scale(1.05);
+  background-color: white;
+  color: black;
+}
+
+
 .button {
   background-color: #666;
   color: white;
@@ -740,10 +759,9 @@ z-index: -1;
   position: fixed;
   top: 0;
 background: rgb(255, 255, 255);
-background: linear-gradient(180deg, rgb(162, 195, 206) 0%, rgba(240,240,240,1) 62%, rgba(153,153,153,1) 100%);
+background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("Images/pexels-kseniya-lapteva-9175713.jpg");
 overflow-y: auto;
-animation: gradientAnimation 10s infinite linear;
-
+/* animation: gradientAnimation 10s infinite linear;} */
 }
 
 
@@ -758,6 +776,58 @@ animation: gradientAnimation 10s infinite linear;
   font-size: medium;
   color: black;
 }
+
+
+.psdWhiteNoise {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 180px; 
+  margin-left: 20px;
+  border: 20px rgb(191, 191, 191);
+  border-style:groove;
+  padding: 20px;
+  /* border-right: #333; */
+}
+
+
+.psdWhiteImage{
+  max-width: 100%; 
+height: auto;
+display: block;
+margin: 0 auto; 
+
+
+} 
+
+.psdWhiteTextContainer {
+  margin: 0 auto; 
+}
+
+.whiteTextBodyTwo {
+  font-size: medium; 
+  text-align: center;
+color: black;
+display: block;
+}
+
+.whitePSDH1{
+text-align: center;
+color: black;
+display: block;
+margin-top: 50px;
+font-size: xx-large;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .firstBodyText {
@@ -776,6 +846,7 @@ animation: gradientAnimation 10s infinite linear;
   align-items: center;
   justify-content: center;
   margin-top: 180px; 
+  
   /* margin-right: 20px; */
 }
 
@@ -943,15 +1014,50 @@ margin-bottom: 100px;
 
 .imageGrid {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  padding: 20px; /* Add padding to all sides */
+  align-items: center;
+  height: 100vh;
+}
+.imageGrid1 {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
 }
 
-.imageGrid > div {
-  margin: 0 10px; /* Add spacing between grid items */
+.imageGrid1:hover .message {
+  display: block;
+}
+.imageGrid1 img {
+  transition: filter 0.5s ease; /* Smooth transition */
+}
+.imageGrid1:hover img {
+  filter: blur(5px); /* Adjust blur radius as needed */
 }
 
+.imageGrid3 {
+  position: relative;
+  display: inline-block;
+}
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  display: none;
+}
+.imageGrid3:hover .message {
+  display: block;
+}
+.imageGrid3 img {
+  transition: filter 0.5s ease; /* Smooth transition */
+}
+.imageGrid3:hover img {
+  cursor: pointer;
+  filter: blur(5px); /* Adjust blur radius as needed */
+}
 
 /* Another Scrolly Thing */
 
