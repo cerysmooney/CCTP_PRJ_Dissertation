@@ -1232,15 +1232,92 @@ overflow-y: auto;
   }
 
 
+.blueNoiseHeaderContainer {
+  z-index: 1;
+  position: relative;
+}
+
+
+.firstBlueBody{
+  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: balance;
+  font-size: medium;
+}
 
   /* Text Stuffs */
 .blueH1 {
-  font-size: 45px;
+  position: relative;
   text-align: center;
-  justify-content: center;
-  display: flex;
+  color: black;
+  display: block; /* Change display to block */
+  margin-top: 50px;
+  font-size: xx-large;
   }
   
+.bluePSDSec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* .bluePSDContainer {
+  
+} */
+
+
+.bluePSDText {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: medium;
+}
+
+
+.blueH1PSD {
+  position: relative;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  display: block; /* Change display to block */
+  margin-top: 50px;
+  font-size: xx-large;
+}
+
+
+.bluePSDImage {
+  max-width: 65%; 
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+
+
+
+.blueTonguedChameleon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 180px; 
+}
+
+.blueTonguedText {
+  margin: 0 auto; 
+}
+
+.blueTonguedH1 {
+  color: black;
+}
+
+.blueTonguedBody {
+  font-size: medium; 
+}
+
   .blueNoiseInfoHead {
     font-size: 35px;
     text-align: right;
@@ -1284,12 +1361,6 @@ overflow-y: auto;
   }
 
 
-  /* Chameleon Img */
-.blueChameleonContainer {
-  margin: 0 auto;
-  padding-left: 550px;
-  }
-  
   .blueChameleonPg {
     max-width: 100%;
     height: 200px;
