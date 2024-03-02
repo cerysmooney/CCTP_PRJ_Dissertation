@@ -1273,6 +1273,7 @@ overflow-y: auto;
 
 .bluePSDText {
   text-align: center;
+  /* align-items: center; */
   color: rgb(0, 0, 0);
   font-size: medium;
 }
@@ -1304,6 +1305,7 @@ overflow-y: auto;
   align-items: center;
   justify-content: center;
   margin-top: 180px; 
+  margin-right: 20px;
 }
 
 .blueTonguedText {
@@ -1317,6 +1319,17 @@ overflow-y: auto;
 .blueTonguedBody {
   font-size: medium; 
 }
+
+
+
+.blueChameleonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+
 
   .blueNoiseInfoHead {
     font-size: 35px;
