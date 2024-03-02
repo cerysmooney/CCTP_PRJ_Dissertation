@@ -1273,7 +1273,7 @@ overflow-y: auto;
 
 .bluePSDText {
   text-align: center;
-  /* align-items: center; */
+  align-items: center;
   color: rgb(0, 0, 0);
   font-size: medium;
 }
