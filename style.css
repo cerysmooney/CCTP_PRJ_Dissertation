@@ -1265,9 +1265,9 @@ overflow-y: auto;
     position: fixed;
     top: 0;
   background: rgb(255, 255, 255);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("Images/Blue/watercolor-5062356_1920.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("Images/Blue/blueBG.jpg");
   overflow-y: auto;
-  /* animation: gradientAnimation 10s infinite linear;} */
+  background-size: 120%;
   }
 
 
@@ -1516,14 +1516,15 @@ padding-bottom: 20px;
 /* BG */
 .bgBrownNoise{
   width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-background: rgb(255,255,255);
-background: linear-gradient(180deg, #D2B48C, #C19A6B, #A0522D);
-overflow-y: auto;
-animation: gradientAnimation 10s infinite alternate;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+  background: rgb(255, 255, 255);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("Images/Brown/brownBGFreePik.jpg");
+  overflow-y: auto;
+  background-size: 120%;
 }
 
 @keyframes gradientAnimation {
