@@ -1357,6 +1357,7 @@ overflow-y: auto;
 
 .blueTonguedBody {
   font-size: medium; 
+  text-wrap: balance;
 }
 
 
