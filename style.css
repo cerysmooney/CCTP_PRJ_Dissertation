@@ -1523,7 +1523,7 @@ padding-bottom: 20px;
     position: fixed;
     top: 0;
   background: rgb(255, 255, 255);
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("Images/Brown/brownBGFreePik.jpg"); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("Images/Brown/BrownBGAS.jpeg");
   overflow-y: auto;
   background-size: 120%;
 }
