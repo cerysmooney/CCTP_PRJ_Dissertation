@@ -1523,7 +1523,7 @@ padding-bottom: 20px;
     position: fixed;
     top: 0;
   background: rgb(255, 255, 255);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("Images/Brown/brownBGFreePik.jpg");
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("Images/Brown/brownBGFreePik.jpg"); */
   overflow-y: auto;
   background-size: 120%;
 }
@@ -1544,14 +1544,14 @@ padding-bottom: 20px;
 .brownH1 {
   position: relative;
   text-align: center;
-  color: whitesmoke;
+  color: rgb(0, 0, 0);
   display: block; /* Change display to block */
   margin-top: 50px;
   font-size: xx-large;
 }
 .firstBrownBodyText{
   text-align: center;
-  color: whitesmoke;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1570,13 +1570,13 @@ padding-bottom: 20px;
 .brownPSDText {
   text-align: center;
   align-items: center;
-  color: whitesmoke;
+  color: rgb(0, 0, 0);
   font-size: medium;
 }
 .brownH1PSD {
   position: relative;
   text-align: center;
-  color: whitesmoke;
+  color: rgb(0, 0, 0);
   display: block; /* Change display to block */
   margin-top: 50px;
   font-size: xx-large;
@@ -1600,7 +1600,7 @@ padding-bottom: 20px;
 
   .brownBgText{
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: left;
     align-items: left;
@@ -1610,7 +1610,7 @@ padding-bottom: 20px;
 
   .brownBodyText {
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: left;
     align-items: left;
