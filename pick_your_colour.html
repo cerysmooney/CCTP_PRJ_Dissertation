@@ -30,8 +30,8 @@
 
   <div id="colourbgcham"></div>
 
-
-  
+<!-- 
+   <img class="bluePSDImage" src="Images/White/myWhiteNoiseGraph.jpg" width="600px" height="600px"> -->
 
 
   
@@ -39,7 +39,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
-    // Declare variables for chameleon images
+    // variables for chameleon images
     let greenCham;
     let whiteCham;
     let pinkCham;
@@ -47,22 +47,14 @@
     let violetCham;
     let brownCham;
     let selectedChameleon;
+    let whitePSD; // for white noise graph image
     
-    // Declare variables for sounds and their playing states
+    // variables for sounds
     let whiteSound;
-    let whiteSoundPlaying = false;
-    
     let pinkSound;
-    let pinkSoundPlaying = false;
-    
     let blueSound;
-    let blueSoundPlaying = false;
-    
     let violetSound;
-    let violetSoundPlaying = false;
-    
     let brownSound;
-    let brownSoundPlaying = false;
     
     // Preload function to load images and sounds
     function preload() {
@@ -72,25 +64,18 @@
       blueCham = loadImage("Images/UpdatedBlueNoEyes-01.png");
       violetCham = loadImage("Images/UpdatedVioletNoEyes-01.png");
       brownCham = loadImage("Images/UpdatedBrownNoEyes-01.png");
+      whitePSD = loadImage("Images/White/myWhiteNoiseGraph.jpg");
     
       console.log("Preloading sounds...");
-      whiteSound = loadSound("Audio/White Noise.mp3", loaded, loadError);
-      pinkSound = loadSound("Audio/Pink Noise.mp3", loaded, loadError);
-      blueSound = loadSound("Audio/Blue Noise.mp3", loaded, loadError);
-      violetSound = loadSound("Audio/Violet Noise.mp3", loaded, loadError);
-      brownSound = loadSound("Audio/Brown Noise.mp3", loaded, loadError);
+      whiteSound = loadSound("Audio/White Noise.mp3");
+      pinkSound = loadSound("Audio/Pink Noise.mp3");
+      blueSound = loadSound("Audio/Blue Noise.mp3");
+      violetSound = loadSound("Audio/Violet Noise.mp3");
+      brownSound = loadSound("Audio/Brown Noise.mp3");
     }
     
- 
-    function loaded() {
-      console.log("Sound loaded successfully");
-    }
-    
-    function loadError() {
-      console.log("Error loading sound");
-    }
-    
-    // Function to change chameleon image based on mouse hover
+
+    // change chameleon image based on mouse hover
     function changeChameleon(chameleonImage) {
       selectedChameleon = chameleonImage;
     }
@@ -112,130 +97,83 @@
       whiteButton.position(100, yPosition);
       whiteButton.class('whiteNoiseButton');
   
-
       whiteButton.mouseClicked(function() {
-   window.location.href = 'white_noise.html';
-      });
-
-      whiteButton.mouseOver(function() {
+        stopAllSounds();
+        whiteSound.play();
         changeChameleon(whiteCham);
-        if (!whiteSoundPlaying) {
-          whiteSound.play();
-          whiteSoundPlaying = true;
-        }
-      });
-      whiteButton.mouseOut(function() {
-        changeChameleon(greenCham);
-        whiteSoundPlaying = false;
-        whiteSound.stop();
+        showWhitePSD(); // showing whitePSD on white mouse clicked
       });
     
-  
       // pink noise
       let pinkButton = createButton('Pink Noise');
       pinkButton.position(whiteButton.x + whiteButton.width + buttonMargin, yPosition);
       pinkButton.class('pinkNoiseButton');
   
-
-
       pinkButton.mouseClicked(function() {
-   window.location.href = 'pink_noise.html';
-      });
-
-      pinkButton.mouseOver(function() {
+        stopAllSounds();
+        pinkSound.play();
         changeChameleon(pinkCham);
-        if (!pinkSoundPlaying) {
-          pinkSound.play();
-          pinkSoundPlaying = true;
-        }
-      });
-      pinkButton.mouseOut(function() {
-        changeChameleon(greenCham);
-        pinkSoundPlaying = false;
-        pinkSound.stop();
+        hideWhitePSD(); // way to hide whitePSD
       });
     
-  
       // blue noise
       let blueButton = createButton('Blue Noise');
       blueButton.position(pinkButton.x + pinkButton.width + buttonMargin, yPosition);
       blueButton.class('blueNoiseButton');
   
-
-
-      
-     blueButton.mouseClicked(function() {
-   window.location.href = 'blue_noise.html';
-      });
-
-      blueButton.mouseOver(function() {
+      blueButton.mouseClicked(function() {
+        stopAllSounds();
+        blueSound.play();
         changeChameleon(blueCham);
-        if (!blueSoundPlaying) {
-          blueSound.play();
-          blueSoundPlaying = true;
-        }
-      });
-      blueButton.mouseOut(function() {
-        changeChameleon(greenCham);
-        blueSoundPlaying = false;
-        blueSound.stop();
+        hideWhitePSD(); // way to hide whitePSD
       });
     
-  
       // violet noise
       let violetButton = createButton('Violet Noise');
       violetButton.position(blueButton.x + blueButton.width + buttonMargin, yPosition);
       violetButton.class('violetNoiseButton');
   
-
-
-      
       violetButton.mouseClicked(function() {
-   window.location.href = 'violet_noise.html';
-      });
-
-      violetButton.mouseOver(function() {
+        stopAllSounds();
+        violetSound.play();
         changeChameleon(violetCham);
-        if (!violetSoundPlaying) {
-          violetSound.play();
-          violetSoundPlaying = true;
-        }
-      });
-      violetButton.mouseOut(function() {
-        changeChameleon(greenCham);
-        violetSoundPlaying = false;
-        violetSound.stop();
+        hideWhitePSD(); // way to hide whitePSD
       });
     
-  
       // brown noise
       let brownButton = createButton('Brown Noise');
       brownButton.position(violetButton.x + violetButton.width + buttonMargin, yPosition);
       brownButton.class('brownNoiseButton');
-
-
-      
+  
       brownButton.mouseClicked(function() {
-   window.location.href = 'brown_noise.html';
-      });
-
-      brownButton.mouseOver(function() {
+        stopAllSounds();
+        brownSound.play();
         changeChameleon(brownCham);
-        if (!brownSoundPlaying) {
-          brownSound.play();
-          brownSoundPlaying = true;
-        }
-      });
-      brownButton.mouseOut(function() {
-        changeChameleon(greenCham);
-        brownSoundPlaying = false;
-        brownSound.stop();
+        hideWhitePSD(); // way to hide whitePSD
       });
     }
     
+    // stop the sounds from playing when another button is pressed
+    function stopAllSounds() {
+      whiteSound.stop();
+      pinkSound.stop();
+      blueSound.stop();
+      violetSound.stop();
+      brownSound.stop();
+    }
+    
+    // showing whitePSD
+    function showWhitePSD() {
+      image(whitePSD, 0, 0, width, height);
+    }
+    
+    // hiding whitePSD
+    function hideWhitePSD() {
+      clear(); // Clear the canvas to hide the image
+    }
+
+    // Function to draw the chameleon image
     function draw() {
-      clear();
-      // Display chameleon image
       if (selectedChameleon) {
         image(selectedChameleon, -200, -300, 1200, 1100);
         let constrainedX = constrain(mouseX, 620, 650);
@@ -244,8 +182,8 @@
         ellipse(constrainedX, constrainedY, 15, 15);
       }
     }
-  
-  </script>
+</script>
+
 
 </div>
 
