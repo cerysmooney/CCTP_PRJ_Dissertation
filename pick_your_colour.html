@@ -64,7 +64,14 @@
       blueCham = loadImage("Images/UpdatedBlueNoEyes-01.png");
       violetCham = loadImage("Images/UpdatedVioletNoEyes-01.png");
       brownCham = loadImage("Images/UpdatedBrownNoEyes-01.png");
+
+
       whitePSD = loadImage("Images/White/myWhiteNoiseGraph.jpg");
+      pinkPSD = loadImage("Images/Pink/myPinkNoiseGraph.jpg");
+      bluePSD = loadImage("Images/Blue/myBlueNoiseGraph.jpg");
+      brownPSD = loadImage("Images/Brown/brownNoiseGraph.jpg");
+      violetPSD = loadImage("Images/Violet/Violet Noise.jpg");
+
     
       console.log("Preloading sounds...");
       whiteSound = loadSound("Audio/White Noise.mp3");
@@ -82,7 +89,7 @@
     
     function setup() {
       
-      let canvas = createCanvas(1080,720);
+      let canvas = createCanvas(1080,3000);
       canvas.parent('chooseNoiseContainer'); 
       // green cham as initial
       selectedChameleon = greenCham;
@@ -90,7 +97,7 @@
       // Define button dimensions and position variables
       let buttonHeight = 30;
       let buttonMargin = 190; // spacing buttons
-      let yPosition = height - 105; // y position
+      let yPosition = height - 2370; // y position
     
       // white noise
       let whiteButton = createButton('White Noise');
@@ -113,7 +120,7 @@
         stopAllSounds();
         pinkSound.play();
         changeChameleon(pinkCham);
-        hideWhitePSD(); // way to hide whitePSD
+        showPinkPSD();
       });
     
       // blue noise
@@ -164,13 +171,32 @@
     
     // showing whitePSD
     function showWhitePSD() {
-      image(whitePSD, 0, 0, width, height);
-    }
-    
+  let psdWidth = 600; 
+  let psdHeight = 600; 
+  let xPosition = 120; 
+  let yPosition = 630; 
+
+
+  image(whitePSD, xPosition, yPosition, psdWidth, psdHeight);
+}
+
+
     // hiding whitePSD
     function hideWhitePSD() {
-      clear(); // Clear the canvas to hide the image
+      clear();
     }
+
+    
+function showPinkPSD() {
+  let psdWidth = 600; 
+  let psdHeight = 600; 
+  let xPosition = 120; 
+  let yPosition = 630; 
+  image(pinkPSD, xPosition, yPosition, psdWidth, psdHeight);
+}
+    
+
+
 
     // Function to draw the chameleon image
     function draw() {
@@ -181,6 +207,7 @@
         fill(0);
         ellipse(constrainedX, constrainedY, 15, 15);
       }
+      
     }
 </script>
 
