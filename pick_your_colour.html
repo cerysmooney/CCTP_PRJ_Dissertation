@@ -115,6 +115,25 @@
         showWhitePSD(); // showing whitePSD on white mouse clicked
       });
     
+
+
+   // showing whitePSD
+   function showWhitePSD() {
+
+let psdWidth = 600; 
+let psdHeight = 600; 
+let xPosition = 0; 
+let yPosition = 630; 
+image(whitePSD, xPosition, yPosition, psdWidth, psdHeight);
+}
+
+function hideWhitePSD(){
+clear();
+}
+
+
+
+
       // pink noise
       let pinkButton = createButton('Pink Noise');
       pinkButton.position(whiteButton.x + whiteButton.width + buttonMargin, yPosition);
@@ -131,6 +150,26 @@
         showPinkPSD();
       });
     
+
+    // showing pinkPSD
+    function showPinkPSD() {
+ 
+ let psdWidth = 600; 
+ let psdHeight = 600; 
+ let xPosition = 120; 
+ let yPosition = 630; 
+ image(pinkPSD, xPosition, yPosition, psdWidth, psdHeight);
+}
+function hidePinkPSD(){
+ clear();
+}
+
+
+
+
+
+
+
       // blue noise
       let blueButton = createButton('Blue Noise');
       blueButton.position(pinkButton.x + pinkButton.width + buttonMargin, yPosition);
@@ -147,6 +186,25 @@
         showBluePSD();
       });
     
+
+    // showing bluePSD
+    function showBluePSD() {
+
+let psdWidth = 600; 
+let psdHeight = 600; 
+let xPosition = 120; 
+let yPosition = 630; 
+image(bluePSD, xPosition, yPosition, psdWidth, psdHeight);
+}
+
+function hideBluePSD(){
+clear();
+}
+
+
+
+
+
       // violet noise
       let violetButton = createButton('Violet Noise');
       violetButton.position(blueButton.x + blueButton.width + buttonMargin, yPosition);
@@ -163,6 +221,22 @@
         showVioletPSD();
       });
     
+    // showing violetPSD
+    function showVioletPSD() {
+
+let psdWidth = 600; 
+let psdHeight = 600; 
+let xPosition = 120; 
+let yPosition = 630; 
+image(violetPSD, xPosition, yPosition, psdWidth, psdHeight);
+}
+
+function hideVioletPSD(){
+clear();
+}
+
+
+
       // brown noise
       let brownButton = createButton('Brown Noise');
       brownButton.position(violetButton.x + violetButton.width + buttonMargin, yPosition);
@@ -179,6 +253,23 @@
         showBrownPSD();
       });
     }
+
+
+    // showing brownPSD
+    function showBrownPSD() {
+  
+  let psdWidth = 600; 
+  let psdHeight = 600; 
+  let xPosition = 120; 
+  let yPosition = 630; 
+  image(brownPSD, xPosition, yPosition, psdWidth, psdHeight);
+}
+
+function hideBrownPSD(){
+  clear();
+}
+
+
     
     // stop the sounds from playing when another button is pressed
     function stopAllSounds() {
@@ -188,76 +279,9 @@
       violetSound.stop();
       brownSound.stop();
     }
-    
-    // showing whitePSD
-    function showWhitePSD() {
-
-      let psdWidth = 600; 
-      let psdHeight = 600; 
-      let xPosition = 120; 
-      let yPosition = 630; 
-      image(whitePSD, xPosition, yPosition, psdWidth, psdHeight);
-    }
-    
-    function hideWhitePSD(){
-      clear();
-    }
-
-
-    // showing pinkPSD
-    function showPinkPSD() {
- 
-      let psdWidth = 600; 
-      let psdHeight = 600; 
-      let xPosition = 120; 
-      let yPosition = 630; 
-      image(pinkPSD, xPosition, yPosition, psdWidth, psdHeight);
-    }
-    function hidePinkPSD(){
-      clear();
-    }
-    
-    // showing bluePSD
-    function showBluePSD() {
-
-      let psdWidth = 600; 
-      let psdHeight = 600; 
-      let xPosition = 120; 
-      let yPosition = 630; 
-      image(bluePSD, xPosition, yPosition, psdWidth, psdHeight);
-    }
-
-    function hideBluePSD(){
-      clear();
-    }
-    
-    // showing violetPSD
-    function showVioletPSD() {
-
-      let psdWidth = 600; 
-      let psdHeight = 600; 
-      let xPosition = 120; 
-      let yPosition = 630; 
-      image(violetPSD, xPosition, yPosition, psdWidth, psdHeight);
-    }
-
-    function hideVioletPSD(){
-      clear();
-    }
-    
-    // showing brownPSD
-    function showBrownPSD() {
   
-      let psdWidth = 600; 
-      let psdHeight = 600; 
-      let xPosition = 120; 
-      let yPosition = 630; 
-      image(brownPSD, xPosition, yPosition, psdWidth, psdHeight);
-    }
+
     
-    function hideBrownPSD(){
-      clear();
-    }
 
     
     // Function to draw the chameleon image
