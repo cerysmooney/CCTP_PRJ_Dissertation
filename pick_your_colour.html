@@ -132,7 +132,7 @@
         stopAllSounds();
         blueSound.play();
         changeChameleon(blueCham);
-        hideWhitePSD(); // way to hide whitePSD
+        showBluePSD();
       });
     
       // violet noise
@@ -144,7 +144,7 @@
         stopAllSounds();
         violetSound.play();
         changeChameleon(violetCham);
-        hideWhitePSD(); // way to hide whitePSD
+        showVioletPSD();
       });
     
       // brown noise
@@ -196,7 +196,23 @@ function showPinkPSD() {
 }
     
 
+function showBluePSD(){
+  let psdWidth = 600; 
+  let psdHeight = 600; 
+  let xPosition = 120; 
+  let yPosition = 630; 
+  image(bluePSD, xPosition, yPosition, psdWidth, psdHeight);
+}
 
+
+
+function showVioletPSD(){
+  let psdWidth = 600; 
+  let psdHeight = 600; 
+  let xPosition = 120; 
+  let yPosition = 630; 
+  image(violetPSD, xPosition, yPosition, psdWidth, psdHeight);
+}
 
     // Function to draw the chameleon image
     function draw() {
@@ -209,6 +225,8 @@ function showPinkPSD() {
       }
       
     }
+
+
 </script>
 
 
