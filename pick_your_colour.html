@@ -105,6 +105,10 @@
       whiteButton.class('whiteNoiseButton');
   
       whiteButton.mouseClicked(function() {
+        hideBrownPSD();
+        hideVioletPSD();
+        hidePinkPSD();
+        hideBluePSD();
         stopAllSounds();
         whiteSound.play();
         changeChameleon(whiteCham);
@@ -117,6 +121,10 @@
       pinkButton.class('pinkNoiseButton');
   
       pinkButton.mouseClicked(function() {
+        hideBrownPSD();
+        hideVioletPSD();
+        hideBluePSD();
+        hideWhitePSD();
         stopAllSounds();
         pinkSound.play();
         changeChameleon(pinkCham);
@@ -129,6 +137,10 @@
       blueButton.class('blueNoiseButton');
   
       blueButton.mouseClicked(function() {
+        hideBrownPSD();
+        hideVioletPSD();
+        hidePinkPSD();
+        hideWhitePSD();
         stopAllSounds();
         blueSound.play();
         changeChameleon(blueCham);
@@ -142,6 +154,9 @@
   
       violetButton.mouseClicked(function() {
         hideBrownPSD();
+        hideBluePSD();
+        hidePinkPSD();
+        hideWhitePSD();
         stopAllSounds();
         violetSound.play();
         changeChameleon(violetCham);
@@ -154,7 +169,10 @@
       brownButton.class('brownNoiseButton');
   
       brownButton.mouseClicked(function() {
-        hideBrownPSD();
+        hideBluePSD();
+        hidePinkPSD();
+        hideWhitePSD();
+        hideVioletPSD();
         stopAllSounds();
         brownSound.play();
         changeChameleon(brownCham);
@@ -181,6 +199,11 @@
       image(whitePSD, xPosition, yPosition, psdWidth, psdHeight);
     }
     
+    function hideWhitePSD(){
+      clear();
+    }
+
+
     // showing pinkPSD
     function showPinkPSD() {
  
@@ -189,6 +212,9 @@
       let xPosition = 120; 
       let yPosition = 630; 
       image(pinkPSD, xPosition, yPosition, psdWidth, psdHeight);
+    }
+    function hidePinkPSD(){
+      clear();
     }
     
     // showing bluePSD
@@ -199,6 +225,10 @@
       let xPosition = 120; 
       let yPosition = 630; 
       image(bluePSD, xPosition, yPosition, psdWidth, psdHeight);
+    }
+
+    function hideBluePSD(){
+      clear();
     }
     
     // showing violetPSD
