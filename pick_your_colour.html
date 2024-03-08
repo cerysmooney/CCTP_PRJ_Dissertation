@@ -99,34 +99,43 @@
       let buttonMargin = 190; // spacing buttons
       let yPosition = height - 2370; // y position
     
-      // white noise
       let whiteButton = createButton('White Noise');
-      whiteButton.position(100, yPosition);
-      whiteButton.class('whiteNoiseButton');
-  
-      whiteButton.mouseClicked(function() {
-        hideBrownPSD();
-        hideVioletPSD();
-        hidePinkPSD();
-        hideBluePSD();
-        stopAllSounds();
-        whiteSound.play();
-        changeChameleon(whiteCham);
-        showWhitePSD(); // showing whitePSD on white mouse clicked
-      });
-    
+whiteButton.position(100, yPosition);
+whiteButton.class('whiteNoiseButton');
 
+whiteButton.mouseClicked(function() {
+  hideBrownPSD();
+  hideVioletPSD();
+  hidePinkPSD();
+  hideBluePSD();
+  stopAllSounds();
+  whiteSound.play();
+  changeChameleon(whiteCham);
+  showWhitePSD(); // showing whitePSD on white mouse clicked
+});
 
-   // showing whitePSD
-   function showWhitePSD() {
-
-let psdWidth = 600; 
-let psdHeight = 600; 
-let xPosition = 0; 
-let yPosition = 630; 
-image(whitePSD, xPosition, yPosition, psdWidth, psdHeight);
+// Function to hide white PSD
+function hideWhitePSD(){
+  clear();
 }
 
+// showing whitePSD
+function showWhitePSD() {
+  let psdWidth = 600; 
+  let psdHeight = 600; 
+  let xPosition = 120; 
+  let yPosition = 630; 
+  
+  image(whitePSD, xPosition, yPosition, psdWidth, psdHeight);
+  
+ // text header above noise image
+  fill(230); 
+  textSize(40); 
+  textAlign(LEFT, BOTTOM); 
+  let textX = xPosition; //x position aligned with psd image
+  let textY = yPosition - 30; // y pos for being above psd image
+  text("This is the Header for White Noise", textX, textY);
+}
 function hideWhitePSD(){
 clear();
 }
@@ -159,6 +168,14 @@ clear();
  let xPosition = 120; 
  let yPosition = 630; 
  image(pinkPSD, xPosition, yPosition, psdWidth, psdHeight);
+
+
+ fill(230); 
+  textSize(40); 
+  textAlign(LEFT, BOTTOM); 
+  let textX = xPosition; //x position aligned with psd image
+  let textY = yPosition - 30; // y pos for being above psd image
+  text("This is the Header for Pink Noise", textX, textY);
 }
 function hidePinkPSD(){
  clear();
@@ -195,6 +212,14 @@ let psdHeight = 600;
 let xPosition = 120; 
 let yPosition = 630; 
 image(bluePSD, xPosition, yPosition, psdWidth, psdHeight);
+
+
+fill(230); 
+  textSize(40); 
+  textAlign(LEFT, BOTTOM); 
+  let textX = xPosition; //x position aligned with psd image
+  let textY = yPosition - 30; // y pos for being above psd image
+  text("This is the Header for Blue Noise", textX, textY);
 }
 
 function hideBluePSD(){
@@ -229,6 +254,14 @@ let psdHeight = 600;
 let xPosition = 120; 
 let yPosition = 630; 
 image(violetPSD, xPosition, yPosition, psdWidth, psdHeight);
+
+
+fill(230); 
+  textSize(40); 
+  textAlign(LEFT, BOTTOM); 
+  let textX = xPosition; //x position aligned with psd image
+  let textY = yPosition - 30; // y pos for being above psd image
+  text("This is the Header for Violet Noise", textX, textY);
 }
 
 function hideVioletPSD(){
@@ -263,11 +296,20 @@ clear();
   let xPosition = 120; 
   let yPosition = 630; 
   image(brownPSD, xPosition, yPosition, psdWidth, psdHeight);
+
+  
+ fill(230); 
+  textSize(40); 
+  textAlign(LEFT, BOTTOM); 
+  let textX = xPosition; //x position aligned with psd image
+  let textY = yPosition - 30; // y pos for being above psd image
+  text("This is the Header for Brown Noise", textX, textY);
 }
 
 function hideBrownPSD(){
   clear();
 }
+
 
 
     
