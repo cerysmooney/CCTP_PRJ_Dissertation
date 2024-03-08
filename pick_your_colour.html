@@ -141,6 +141,7 @@
       violetButton.class('violetNoiseButton');
   
       violetButton.mouseClicked(function() {
+        hideBrownPSD();
         stopAllSounds();
         violetSound.play();
         changeChameleon(violetCham);
@@ -153,10 +154,11 @@
       brownButton.class('brownNoiseButton');
   
       brownButton.mouseClicked(function() {
+        hideBrownPSD();
         stopAllSounds();
         brownSound.play();
         changeChameleon(brownCham);
-        hideWhitePSD(); // way to hide whitePSD
+        showBrownPSD();
       });
     }
     
@@ -171,51 +173,66 @@
     
     // showing whitePSD
     function showWhitePSD() {
-  let psdWidth = 600; 
-  let psdHeight = 600; 
-  let xPosition = 120; 
-  let yPosition = 630; 
 
+      let psdWidth = 600; 
+      let psdHeight = 600; 
+      let xPosition = 120; 
+      let yPosition = 630; 
+      image(whitePSD, xPosition, yPosition, psdWidth, psdHeight);
+    }
+    
+    // showing pinkPSD
+    function showPinkPSD() {
+ 
+      let psdWidth = 600; 
+      let psdHeight = 600; 
+      let xPosition = 120; 
+      let yPosition = 630; 
+      image(pinkPSD, xPosition, yPosition, psdWidth, psdHeight);
+    }
+    
+    // showing bluePSD
+    function showBluePSD() {
 
-  image(whitePSD, xPosition, yPosition, psdWidth, psdHeight);
-}
+      let psdWidth = 600; 
+      let psdHeight = 600; 
+      let xPosition = 120; 
+      let yPosition = 630; 
+      image(bluePSD, xPosition, yPosition, psdWidth, psdHeight);
+    }
+    
+    // showing violetPSD
+    function showVioletPSD() {
 
+      let psdWidth = 600; 
+      let psdHeight = 600; 
+      let xPosition = 120; 
+      let yPosition = 630; 
+      image(violetPSD, xPosition, yPosition, psdWidth, psdHeight);
+    }
 
-    // hiding whitePSD
-    function hideWhitePSD() {
+    function hideVioletPSD(){
+      clear();
+    }
+    
+    // showing brownPSD
+    function showBrownPSD() {
+  
+      let psdWidth = 600; 
+      let psdHeight = 600; 
+      let xPosition = 120; 
+      let yPosition = 630; 
+      image(brownPSD, xPosition, yPosition, psdWidth, psdHeight);
+    }
+    
+    function hideBrownPSD(){
       clear();
     }
 
     
-function showPinkPSD() {
-  let psdWidth = 600; 
-  let psdHeight = 600; 
-  let xPosition = 120; 
-  let yPosition = 630; 
-  image(pinkPSD, xPosition, yPosition, psdWidth, psdHeight);
-}
-    
-
-function showBluePSD(){
-  let psdWidth = 600; 
-  let psdHeight = 600; 
-  let xPosition = 120; 
-  let yPosition = 630; 
-  image(bluePSD, xPosition, yPosition, psdWidth, psdHeight);
-}
-
-
-
-function showVioletPSD(){
-  let psdWidth = 600; 
-  let psdHeight = 600; 
-  let xPosition = 120; 
-  let yPosition = 630; 
-  image(violetPSD, xPosition, yPosition, psdWidth, psdHeight);
-}
-
     // Function to draw the chameleon image
     function draw() {
+
       if (selectedChameleon) {
         image(selectedChameleon, -200, -300, 1200, 1100);
         let constrainedX = constrain(mouseX, 620, 650);
@@ -223,10 +240,7 @@ function showVioletPSD(){
         fill(0);
         ellipse(constrainedX, constrainedY, 15, 15);
       }
-      
     }
-
-
 </script>
 
 
