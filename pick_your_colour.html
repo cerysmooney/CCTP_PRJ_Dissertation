@@ -128,25 +128,31 @@ function showWhitePSD() {
   
   image(whitePSD, xPosition, yPosition, psdWidth, psdHeight);
   
- // text header above noise image
+  // text header above noise image
   fill(255); 
   textSize(32); 
-  textAlign(LEFT, BOTTOM); 
-  let headerTextX = xPosition + 60; //x position aligned with psd image
+  textAlign(CENTER, BOTTOM); // centered header
+  let headerTextX = xPosition + psdWidth / 2; // x position aligned with psd image
   let headerTextY = yPosition - 30; // y pos for being above psd image
   text("This is the Header for White Noise", headerTextX, headerTextY);
 
   fill(230); 
   textSize(16); 
-  textAlign(LEFT, BOTTOM); 
-  let textX = xPosition; //x position aligned with psd image
-  let textY = yPosition + 700; // y pos for being above psd image
+  textAlign(CENTER, CENTER); // centered body text
+  let textX = xPosition + psdWidth / 2; // x position aligned with psd image
+  let textY = yPosition + 650; // y pos for being below psd image
 
-  text("White Noise mixes all audible frequencies evenly, from 20Hz to 20kHz", textX, textY);
-              textY += 30;
-  text("Similar to white light, it encompasses all visible colors. Its name derives from this connection!", textX, textY);
-              textY += 30; 
-  text("This noise can be compared to listening to TV static or a vaccuum buzzing.", textX, textY);
+  let lineHeight = 20; // spacing between lines
+  let textArray = [
+    "White Noise mixes all audible frequencies evenly, from 20Hz to 20kHz.",
+    "Similar to white light, it encompasses all visible colours. Its name derives from this connection!",
+    "This noise can be compared to listening to TV static or a vacuum buzzing."
+  ];
+
+  for (let i = 0; i < textArray.length; i++) {
+    text(textArray[i], textX, textY);
+    textY += lineHeight;
+  }
 }
 function hideWhitePSD(){
 clear();
@@ -174,32 +180,37 @@ clear();
 
     // showing pinkPSD
     function showPinkPSD() {
- 
- let psdWidth = 600; 
- let psdHeight = 600; 
- let xPosition = 120; 
- let yPosition = 630; 
- image(pinkPSD, xPosition, yPosition, psdWidth, psdHeight);
+  let psdWidth = 600; 
+  let psdHeight = 600; 
+  let xPosition = 120; 
+  let yPosition = 630; 
+  
+  image(pinkPSD, xPosition, yPosition, psdWidth, psdHeight);
 
-
- fill(255); 
+  fill(255); 
   textSize(32); 
-  textAlign(LEFT, BOTTOM); 
-  let headerTextX = xPosition + 60; //x position aligned with psd image
-  let headerTextY = yPosition - 30; // y pos for being above psd image
+  textAlign(CENTER, BOTTOM); 
+  let headerTextX = xPosition + psdWidth / 2; 
+  let headerTextY = yPosition - 30; 
   text("This is the Header for Pink Noise", headerTextX, headerTextY);
 
   fill(230); 
   textSize(16); 
-  textAlign(LEFT, BOTTOM); 
-  let textX = xPosition; //x position aligned with psd image
-  let textY = yPosition + 700; // y pos for being above psd image
+  textAlign(CENTER, CENTER); 
+  let textX = xPosition + psdWidth / 2; 
+  let textY = yPosition + 650; 
 
-  text("Lower frequencies are much more audible than higher ones in pink noise", textX, textY);
-              textY += 30;
-  text("With deeper tones emphazised, we can imagine that this noise would have a warmer colour to it, giving it the name Pink Noise!", textX, textY);
-              textY += 30; 
-  text("Because of the stronger presence in lower frequencies, it can sound similar to a calm rainstorm, or even wind swishing through trees!", textX, textY);
+  let lineHeight = 20; 
+  let textArray = [
+    "Lower frequencies are much more audible than higher ones in pink noise.",
+    "This noise is given the name due to it having warmer and lower frequencies than white noise.",
+    "Because of these lower tones, pink noise can sound similar to a calm rainstorm, or even wind swishing through trees!"
+  ];
+
+  for (let i = 0; i < textArray.length; i++) {
+    text(textArray[i], textX, textY);
+    textY += lineHeight;
+  }
 }
 function hidePinkPSD(){
  clear();
@@ -230,32 +241,36 @@ function hidePinkPSD(){
 
     // showing bluePSD
     function showBluePSD() {
+  let psdWidth = 600; 
+  let psdHeight = 600; 
+  let xPosition = 120; 
+  let yPosition = 630; 
+  image(bluePSD, xPosition, yPosition, psdWidth, psdHeight);
 
-let psdWidth = 600; 
-let psdHeight = 600; 
-let xPosition = 120; 
-let yPosition = 630; 
-image(bluePSD, xPosition, yPosition, psdWidth, psdHeight);
-
-
-fill(255); 
+  fill(255); 
   textSize(32); 
-  textAlign(LEFT, BOTTOM); 
-  let headerTextX = xPosition + 60; //x position aligned with psd image
-  let headerTextY = yPosition - 30; // y pos for being above psd image
+  textAlign(CENTER, BOTTOM); 
+  let headerTextX = xPosition + psdWidth / 2; 
+  let headerTextY = yPosition - 30; 
   text("This is the Header for Blue Noise", headerTextX, headerTextY);
 
   fill(230); 
   textSize(16); 
-  textAlign(LEFT, BOTTOM); 
-  let textX = xPosition; //x position aligned with psd image
-  let textY = yPosition + 700; // y pos for being above psd image
+  textAlign(CENTER, CENTER); 
+  let textX = xPosition + psdWidth / 2; 
+  let textY = yPosition + 650; 
 
-  text("Blue noise has much more energy in higher frequencies than in lower frequencies.", textX, textY);
-              textY += 30;
-  text("It gets its name from the colour blue being on the higher side of the visible light spectrum, in connection to higher frequencies.", textX, textY);
-              textY += 30; 
-  text("With these higher frequencies present, blue noise can sound like steam escaping from a pipe, almost like it is hissing!", textX, textY);
+  let lineHeight = 20; 
+  let textArray = [
+    "Blue noise has much more energy in higher frequencies than in lower frequencies.",
+    "As the colour blue is on the higher side of the visible light spectrum, it is called blue noise by correlation!",
+    "With these higher frequencies present, blue noise can sound like steam escaping from a pipe, almost like it is hissing!"
+  ];
+
+  for (let i = 0; i < textArray.length; i++) {
+    text(textArray[i], textX, textY);
+    textY += lineHeight;
+  }
 }
 
 function hideBluePSD(){
@@ -295,15 +310,15 @@ image(violetPSD, xPosition, yPosition, psdWidth, psdHeight);
 fill(255); 
   textSize(32); 
   textAlign(LEFT, BOTTOM); 
-  let headerTextX = xPosition + 60; //x position aligned with psd image
-  let headerTextY = yPosition - 30; // y pos for being above psd image
+  let headerTextX = xPosition + 60; 
+  let headerTextY = yPosition - 30; 
   text("This is the Header for Violet Noise", headerTextX, headerTextY);
 
   fill(230); 
   textSize(16); 
   textAlign(LEFT, BOTTOM); 
-  let textX = xPosition; //x position aligned with psd image
-  let textY = yPosition + 700; // y pos for being above psd image
+  let textX = xPosition; 
+  let textY = yPosition + 700; 
 
   text("This could be something for a body text 14 wrds max", textX, textY);
               textY += 30;
@@ -338,34 +353,37 @@ clear();
 
     // showing brownPSD
     function showBrownPSD() {
-  
   let psdWidth = 600; 
   let psdHeight = 600; 
   let xPosition = 120; 
   let yPosition = 630; 
   image(brownPSD, xPosition, yPosition, psdWidth, psdHeight);
 
-  
   fill(255); 
   textSize(32); 
-  textAlign(LEFT, BOTTOM); 
-  let headerTextX = xPosition + 60; //x position aligned with psd image
-  let headerTextY = yPosition - 30; // y pos for being above psd image
+  textAlign(CENTER, BOTTOM); 
+  let headerTextX = xPosition + psdWidth / 2; 
+  let headerTextY = yPosition - 30; 
   text("This is the Header for Brown Noise", headerTextX, headerTextY);
 
   fill(230); 
   textSize(16); 
-  textAlign(LEFT, BOTTOM); 
-  let textX = xPosition; //x position aligned with psd image
-  let textY = yPosition + 700; // y pos for being above psd image
+  textAlign(CENTER, CENTER); 
+  let textX = xPosition + psdWidth / 2; 
+  let textY = yPosition + 650; 
 
-  text("We can see on the PSD chart that it decreases in energy as the frequencies get higher.", textX, textY);
-              textY += 30;
-  text("This means that brown noise contains more audible sounds in lower pitches. ", textX, textY);
-              textY += 30; 
-  text("With its strong presence in lower frequencies, brown noise can sound like a thunderstorm or a roaring waterfall!", textX, textY);
+  let lineHeight = 20; 
+  let textArray = [
+    "Brown noise decreases in energy as the frequencies increase.",
+    "This results in more audible sounds in lower pitches.",
+    "With its strong presence in lower frequencies, brown noise can sound like a thunderstorm or a roaring waterfall!"
+  ];
+
+  for (let i = 0; i < textArray.length; i++) {
+    text(textArray[i], textX, textY);
+    textY += lineHeight;
+  }
 }
-
 function hideBrownPSD(){
   clear();
 }
