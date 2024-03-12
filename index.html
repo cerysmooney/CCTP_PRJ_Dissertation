@@ -76,6 +76,24 @@
             </div>
             <div id="p5CanvasContainer" class="p5CanvasContainer"></div>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var noiseimgplaceholder = document.querySelector(".noiseimgplaceholder");
+            
+              function revealNoiseImgPlaceholder() {
+                var noiseimgplaceholderPosition = noiseimgplaceholder.getBoundingClientRect().top;
+                var screenPosition = window.innerHeight / 1.5;
+            
+                if (noiseimgplaceholderPosition < screenPosition) {
+                  noiseimgplaceholder.classList.add("reveal");
+                }
+              }
+            
+              window.addEventListener("scroll", revealNoiseImgPlaceholder);
+              revealNoiseImgPlaceholder(); // Call the function once on page load
+            });
+            </script>
         
 
         <div class="sec-2Container">
@@ -94,7 +112,23 @@
                 </div>
             </div>
         </div>
-
+  <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var noiseimgplaceholder = document.querySelector(".noiseimgplaceholder");
+            
+              function revealNoiseImgPlaceholder() {
+                var noiseimgplaceholderPosition = noiseimgplaceholder.getBoundingClientRect().top;
+                var screenPosition = window.innerHeight / 1.5;
+            
+                if (noiseimgplaceholderPosition < screenPosition) {
+                  noiseimgplaceholder.classList.add("reveal");
+                }
+              }
+            
+              window.addEventListener("scroll", revealNoiseImgPlaceholder);
+              revealNoiseImgPlaceholder(); // Call the function once on page load
+            });
+            </script>
 
 
 
