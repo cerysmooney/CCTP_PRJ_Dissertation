@@ -155,6 +155,12 @@ color: white;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+
+.noiseimgplaceholder.reveal {
+  opacity: 1;
+}
+
+
 .noiseButtonContainer {
   display: flex;
   justify-content: center;
