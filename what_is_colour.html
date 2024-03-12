@@ -33,38 +33,66 @@
         </p>
 
         <div class="prismSection">
-            <div class="textContainer">
-                <h1 class="tryItOut">Try it out!</h1>
-                <p class="whatiscolourtext">See how light shines through a prism using this simulator.</p>
-                <p class="whatiscolourtext">Move your mouse towards the triangle to activate the white light. Then, move your mouse up or down to see how the colours respond! </p>
-            </div>
-            <div id="prismContainer" class="prismContainer"></div>
+  <div class="textContainer">
+    <h1 class="tryItOut">Try it out!</h1>
+    <p class="whatiscolourtext">See how light shines through a prism using this simulator.</p>
+    <p class="whatiscolourtext">Move your mouse towards the triangle to activate the white light. Then, move your mouse up or down to see how the colours respond! </p>
+  </div>
+  <div id="prismContainer" class="prismContainer"></div>
+</div>
 
-        </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var prismSection = document.querySelector(".prismSection");
 
+  function revealPrismSection() {
+    var prismSectionPosition = prismSection.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 3;
 
-        
-        <div class='lightSpectrumSection'>
-        <div id="colourbackground"></div>
-        <h1 class="vslText">The Visible Light Spectrum</h1>
-        <p class="whatiscolourtext"> We can use a visible light spectrum chart to understand fully how each colour has a differently sized light waves.</p>
-        <img class="lsChartImage"src="Images/vlsChart.png">
-        
-        <p class="whatiscolourtext">
-          Measured in nanometers(nm), each colour's wave is differently sized.  Violet is at one end of the visble light spectrum with the shortest waves at around 400nm long. Red is at the other end with the longest waves which is about 700nm long.
-          This can explain why it might be harder to see some colours over others.
-        </p>
-        <!-- <a href="#What is Colour Again?">
-            <div class="scroll-down-colour"></div> -->
-        </a>
-    </div>
-    </div>
+    if (prismSectionPosition < screenPosition) {
+      prismSection.classList.add("reveal");
+    }
+  }
+
+  window.addEventListener("scroll", revealPrismSection);
+  revealPrismSection(); // Call the function once on page load
+});
+</script>
+<div id="colourbackground"></div>
+<div class='lightSpectrumSection'>
+    <h1 class="vslText">The Visible Light Spectrum</h1>
+    <p class="whatiscolourtext"> We can use a visible light spectrum chart to understand fully how each colour has a differently sized light waves.</p>
+    <img class="lsChartImage"src="Images/vlsChart.png">
+    
+    <p class="whatiscolourtext">
+      Measured in nanometers(nm), each colour's wave is differently sized.  Violet is at one end of the visible light spectrum with the shortest waves at around 400nm long. Red is at the other end with the longest waves which is about 700nm long.
+      This can explain why it might be harder to see some colours over others.
+    </p>
+  </div>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var lightSpectrumSection = document.querySelector(".lightSpectrumSection");
+  
+    function revealLightSpectrumSection() {
+      var lightSpectrumSectionPosition = lightSpectrumSection.getBoundingClientRect().top;
+      var screenPosition = window.innerHeight / 4.5;
+  
+      if (lightSpectrumSectionPosition < screenPosition) {
+        lightSpectrumSection.classList.add("reveal");
+      }
+    }
+  
+    window.addEventListener("scroll", revealLightSpectrumSection);
+    revealLightSpectrumSection(); // Call the function once on page load
+  });
+  </script>
 
     <!-- Second Information on Colour Screen -->
     <!-- <a id="What is Colour Again?"></a> -->
 
     
-    
+        
         <h1 class="backgroundtext2">How does Frequency Fit In?</h1>
         <p class="aboveWhatIsColourText">On the color wheel, colors such as violet are associated with shorter wavelengths, while others such as red are linked to longer wavelengths. The colors are arranged on the wheel from shortest (violet) to longest (red) as a spectrum of wavelengths, much like the visible light spectrum chart above.</p>
       

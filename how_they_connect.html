@@ -24,33 +24,47 @@
 <!-- <div class="hero-image"></div> -->
 <!-- Connection section -->
 <section id="connectionSec">
-  <div class="connectionSecContainer">
+    <div class="connectionSecContainer">
       <div class="connectionText">
-          <h1 class="H1Connection">How do Noise and Colour Connect?</h1>
-          <p>Coloured noise is a way for us to understand the frequency patterns of both noise and light together.</p>
-               <p> Take white for example. Just as the <i>colour</i> white contains all colours of the rainbow, white <i>noise</i>
-                contains every audible frequency.</p>
-               <p> We can use Power Spectral Density (PSD) to visualise more coloured noises! </p>
+        <h1 class="H1Connection">How do Noise and Colour Connect?</h1>
+        <p>Coloured noise is a way for us to understand the frequency patterns of both noise and light together.</p>
+        <p>Take white for example. Just as the <i>colour</i> white contains all colours of the rainbow, white <i>noise</i> contains every audible frequency.</p>
+        <p>We can use Power Spectral Density (PSD) to visualize more colored noises!</p>
       </div>
-      
-
-<!-- PSD GRAPHIC -->
-      <div class="psdSec">
-          <!-- <img class="psdImage" src="Images/PSD GRAPHIC.png"> -->
-          <div class="psdSecContainer">
-              <div class="psdText">
-                  <h1 class="H1PSD"> Power Spectral Density </h1>
-                  <p>A PSD chart allows us to see the distribution of frequencies (vibrations) in noise. 
-                   <p>  X shows us the specific frequency and Y shows us the presence at the specfic frequency </p>
-              </div> 
-          </div>
-           <img class="psdImage" src="Images/PSD GRAPHIC.png" width="600px" height="600px">
-           <div class="psdText">
-            <p> Noises with higher present frequencies are associated with higher light frequencies, such as violet (with a light spectrum of 400nm).
-            </p>
-            <p> Similarly, noises with lower present frequencies are connected with lower light frequencies, such as red (with a light spectrum of 700nm).</p>
-           </div>
+    </div>
+  
+    <!-- PSD GRAPHIC -->
+    <div class="psdSec">
+      <div class="psdSecContainer">
+        <div class="psdText">
+          <h1 class="H1PSD">Power Spectral Density</h1>
+          <p>A PSD chart allows us to see the distribution of frequencies (vibrations) in noise.</p>
+          <p>X shows us the specific frequency and Y shows us the presence at the specific frequency</p>
+        </div>
       </div>
-     
+      <img class="psdImage" src="Images/PSD GRAPHIC.png" width="600px" height="600px">
+      <div class="psdText">
+        <p>Noises with higher present frequencies are associated with higher light frequencies, such as violet (with a light spectrum of 400nm).</p>
+        <p>Similarly, noises with lower present frequencies are connected with lower light frequencies, such as red (with a light spectrum of 700nm).</p>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var psdSec = document.querySelector(".psdSec");
+  
+    function revealPsdSec() {
+      var psdSecPosition = psdSec.getBoundingClientRect().top;
+      var screenPosition = window.innerHeight / 1.5;
+  
+      if (psdSecPosition < screenPosition) {
+        psdSec.classList.add("reveal");
+      }
+    }
+  
+    window.addEventListener("scroll", revealPsdSec);
+  });
+  </script>
 </body>
 </html>
