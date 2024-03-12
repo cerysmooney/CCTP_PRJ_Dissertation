@@ -152,6 +152,8 @@ color: white;
   justify-content: center;
   margin-top: 180px; 
   margin-left: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 .noiseButtonContainer {
   display: flex;
