@@ -112,21 +112,21 @@
                 </div>
             </div>
         </div>
-  <script>
+        <script>
             document.addEventListener("DOMContentLoaded", function () {
-              var noiseimgplaceholder = document.querySelector(".noiseimgplaceholder");
+              var sec2Container = document.querySelector(".sec-2Container");
             
-              function revealNoiseImgPlaceholder() {
-                var noiseimgplaceholderPosition = noiseimgplaceholder.getBoundingClientRect().top;
+              function revealSec2Container() {
+                var sec2ContainerPosition = sec2Container.getBoundingClientRect().top;
                 var screenPosition = window.innerHeight / 1.5;
             
-                if (noiseimgplaceholderPosition < screenPosition) {
-                  noiseimgplaceholder.classList.add("reveal");
+                if (sec2ContainerPosition < screenPosition) {
+                  sec2Container.classList.add("reveal");
                 }
               }
             
-              window.addEventListener("scroll", revealNoiseImgPlaceholder);
-              revealNoiseImgPlaceholder(); // Call the function once on page load
+              window.addEventListener("scroll", revealSec2Container);
+              revealSec2Container(); // Call the function once on page load
             });
             </script>
 

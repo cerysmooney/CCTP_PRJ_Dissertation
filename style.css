@@ -226,7 +226,7 @@ color: white;
   transition: opacity 1s ease-in-out;
 }
 
-.sec-2Container {
+.sec-2Container.reveal {
   opacity: 1;
 }
 
