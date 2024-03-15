@@ -267,6 +267,22 @@ color: white;
   height: 100vh; /* Set height to match the viewport height */
 }
 
+.firstColourTextContainer {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
 /* H1 first visibility */
 .backgroundtext {
   text-align: center;
@@ -412,7 +428,13 @@ opacity: 1;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
 }
+
+.wheelContainer:hover{
+  transform: scale(1.05);
+}
+
 
 .frequencyTextContainer {
   /* background: rgba(51, 51, 51, 0.5); */
@@ -580,7 +602,7 @@ z-index: -1;
   margin-left: 20px;
   font-size: medium;
   opacity: 0;
-  animation: fadeIn 1.2s forwards;
+  animation: fadeIn 2s forwards;
 }
 
 @keyframes fadeIn {
