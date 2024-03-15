@@ -114,16 +114,16 @@ document.addEventListener("DOMContentLoaded", function () {
       
         function revealFrequencyColourWheelSection() {
           var sectionPosition = frequencyColourWheelSection.getBoundingClientRect().top;
-          var screenPosition = window.innerHeight / 4;
+          var screenPosition = window.innerHeight / 2;
     
           if (sectionPosition < screenPosition) {
             frequencyColourWheelSection.classList.add("reveal");
           
-        }else {
-            frequencyColourWheelSection.remove("reveal");
-          }
+        } else {
+      frequencyColourWheelSection.classList.remove("reveal"); 
         }
-      
+    }
+    
         window.addEventListener("scroll", revealFrequencyColourWheelSection);
         revealFrequencyColourWheelSection(); 
       });
