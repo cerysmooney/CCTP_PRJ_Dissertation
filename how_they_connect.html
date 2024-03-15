@@ -32,39 +32,42 @@
         <p>We can use Power Spectral Density (PSD) to visualize more colored noises!</p>
       </div>
     </div>
+</section>
   
     <!-- PSD GRAPHIC -->
-    <div class="psdSec">
-      <div class="psdSecContainer">
-        <div class="psdText">
-          <h1 class="H1PSD">Power Spectral Density</h1>
-          <p>A PSD chart allows us to see the distribution of frequencies (vibrations) in noise.</p>
-          <p>X shows us the specific frequency and Y shows us the presence at the specific frequency</p>
-        </div>
-      </div>
-      <img class="psdImage" src="Images/PSD GRAPHIC.png" width="600px" height="600px">
+  <div class="psdSec">
+    <div class="psdSecContainer">
       <div class="psdText">
-        <p>Noises with higher present frequencies are associated with higher light frequencies, such as violet (with a light spectrum of 400nm).</p>
-        <p>Similarly, noises with lower present frequencies are connected with lower light frequencies, such as red (with a light spectrum of 700nm).</p>
+        <h1 class="H1PSD">Power Spectral Density</h1>
+        <p>A PSD chart allows us to see the distribution of frequencies (vibrations) in noise.</p>
+        <p>X shows us the specific frequency and Y shows us the presence at the specific frequency</p>
       </div>
     </div>
-  </section>
-  
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var psdSec = document.querySelector(".psdSec");
-  
-    function revealPsdSec() {
-      var psdSecPosition = psdSec.getBoundingClientRect().top;
-      var screenPosition = window.innerHeight / 1.5;
-  
-      if (psdSecPosition < screenPosition) {
-        psdSec.classList.add("reveal");
-      }
+    <img class="psdImage" src="Images/PSD GRAPHIC.png" width="600px" height="600px">
+    <div class="psdText">
+      <p>Noises with higher present frequencies are associated with higher light frequencies, such as violet (with a light spectrum of 400nm).</p>
+      <p>Similarly, noises with lower present frequencies are connected with lower light frequencies, such as red (with a light spectrum of 700nm).</p>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var psdSec = document.querySelector(".psdSec");
+
+  function revealPsdSec() {
+   var psdSecPosition = psdSec.getBoundingClientRect().top;
+   var screenPosition = window.innerHeight / 3;  // when to fade in
+
+    if (psdSecPosition < screenPosition) { // reveal content on scroll down
+      psdSec.classList.add("reveal");    
+    } else {
+      psdSec.classList.remove("reveal"); // fade back out on scroll up 
     }
-  
-    window.addEventListener("scroll", revealPsdSec);
-  });
-  </script>
+  }
+  window.addEventListener("scroll", revealPsdSec);
+  revealPsdSec(); 
+});
+</script>
 </body>
 </html>
