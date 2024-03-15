@@ -80,6 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
   
       if (lightSpectrumSectionPosition < screenPosition) {
         lightSpectrumSection.classList.add("reveal");
+      }else{
+        lightSpectrumSection.classList.remove("reveal");
       }
     }
   
@@ -123,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
       frequencyColourWheelSection.classList.remove("reveal"); 
         }
     }
-    
+
         window.addEventListener("scroll", revealFrequencyColourWheelSection);
         revealFrequencyColourWheelSection(); 
       });
