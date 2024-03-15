@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     function revealLightSpectrumSection() {
       var lightSpectrumSectionPosition = lightSpectrumSection.getBoundingClientRect().top;
-      var screenPosition = window.innerHeight / 4.5;
+      var screenPosition = window.innerHeight / 2;
   
       if (lightSpectrumSectionPosition < screenPosition) {
         lightSpectrumSection.classList.add("reveal");
