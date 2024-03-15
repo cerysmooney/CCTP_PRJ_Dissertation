@@ -88,28 +88,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   </script>
 
-    <!-- Second Information on Colour Screen -->
-    <!-- <a id="What is Colour Again?"></a> -->
-
-    
-        
+    <section class="frequencyColourWheelSection">
         <h1 class="backgroundtext2">How does Frequency Fit In?</h1>
         <p class="aboveWhatIsColourText">On the color wheel, colors such as violet are associated with shorter wavelengths, while others such as red are linked to longer wavelengths. The colors are arranged on the wheel from shortest (violet) to longest (red) as a spectrum of wavelengths, much like the visible light spectrum chart above.</p>
-      
+        
         <div class="colourcontainer2">
-        <div id="wheelContainer" class="wheelContainer"></div>
-       <div class="frequencyTextContainer">
-        <p class="whatiscolourtext2">
-            In this context, frequency tells us how often a color will pass by in a second while the wheel is spinning.
-        </p>
-        <p class="whatiscolourtext2">
-            Shorter wavelength colors like violet pass by your eyes more frequently because they're closer together on the wheel. This means they have a higher frequency.
-        </p>
-        <p class="whatiscolourtext2">
-            Longer wavelength colors like red pass by less frequently because they're farther apart on the wheel, resulting in a lower frequency.
-        </p>
-    </div>
-    </div>
+          <div id="wheelContainer" class="wheelContainer"></div>
+          <div class="frequencyTextContainer">
+            <p class="whatiscolourtext2">
+              In this context, frequency tells us how often a color will pass by in a second while the wheel is spinning.
+            </p>
+            <p class="whatiscolourtext2">
+              Shorter wavelength colors like violet pass by your eyes more frequently because they're closer together on the wheel. This means they have a higher frequency.
+            </p>
+            <p class="whatiscolourtext2">
+              Longer wavelength colors like red pass by less frequently because they're farther apart on the wheel, resulting in a lower frequency.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var frequencyColourWheelSection = document.querySelector(".frequencyColourWheelSection");
+      
+        function revealFrequencyColourWheelSection() {
+          var sectionPosition = frequencyColourWheelSection.getBoundingClientRect().top;
+          var screenPosition = window.innerHeight / 4;
+    
+          if (sectionPosition < screenPosition) {
+            frequencyColourWheelSection.classList.add("reveal");
+          
+        }else {
+            frequencyColourWheelSection.remove("reveal");
+          }
+        }
+      
+        window.addEventListener("scroll", revealFrequencyColourWheelSection);
+        revealFrequencyColourWheelSection(); 
+      });
+      </script>
+
 
 
     <!-- <a href="#third">

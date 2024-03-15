@@ -386,6 +386,17 @@ text-wrap: balance;
   opacity: 1;
 }
 
+
+.frequencyColourWheelSection{
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+
+.frequencyColourWheelSection.reveal {
+opacity: 1;
+}
+
+
 /* H1 */
 .backgroundtext2{
   text-align: center;
