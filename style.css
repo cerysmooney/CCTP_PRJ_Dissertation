@@ -140,7 +140,7 @@ color: white;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 180px; 
+  margin-top: 140px; 
   margin-left: 20px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -165,7 +165,7 @@ color: white;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 180px; 
+  margin-top: 140px; 
   margin-left: 20px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -235,7 +235,7 @@ color: white;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 180px; 
+  margin-top: 140px; 
   margin-left: 20px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -324,7 +324,7 @@ color: white;
   flex-direction: column; /* Stack items vertically */
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 140px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -371,7 +371,7 @@ text-wrap: balance;
 
 
 .lightSpectrumSection {
-  margin-top: 100px;
+  margin-top: 140px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -419,6 +419,7 @@ text-wrap: balance;
 
 
 .frequencyColourWheelSection{
+margin-top: 140px;
 opacity: 0;
 transition: opacity 1s ease-in-out;
 }
