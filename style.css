@@ -482,6 +482,16 @@ opacity: 1;
   text-wrap: balance;
 }
 
+.aboveWhatIsColourText2 {
+  text-align: center;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  text-wrap: balance;
+}
+
 /* Scroll Down Button for "SECOND TEXT" */
 /* .scroll-down-colour {
   height: 70px;
