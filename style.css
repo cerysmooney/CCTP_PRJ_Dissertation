@@ -155,7 +155,13 @@ color: white;
   height: auto;
   display: block;
   margin: 0 auto; 
+  transition: transform 0.3s ease-in-out;
 }
+
+.waveformChart:hover{
+  transform: scale(1.05);
+}
+
 .textContainer {
   margin: 0 auto; 
 }
