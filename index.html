@@ -231,7 +231,9 @@
             osc2 = new p5.Oscillator();
             osc2.setType('sine');
             osc2.freq(0);
-        };
+            osc2.amp(0.2); 
+
+         };
 
         p.draw = function() {
             p.background(255);
@@ -254,6 +256,7 @@
             if (!isOscillatorStarted) {
                 osc2.start();
                 isOscillatorStarted = true;
+                setVolume(0.2);
                 // instructionTextOpacity = 0;
             }
         };
@@ -264,6 +267,10 @@
                 isOscillatorStarted = false;
                 
             }
+        };
+        //volume
+        window.setVolume = function(vol) {
+            osc2.amp(vol); 
         };
     };
 
