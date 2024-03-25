@@ -273,7 +273,7 @@ color: white;
  */
 /* Responsive Background for "What is Colour" Page */
 #colourbackground {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url("Images/coloursbg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) , url("Images/rainbowBg.jpg");
   height: 100vh;
   width: 100%;
   background-size: cover;
