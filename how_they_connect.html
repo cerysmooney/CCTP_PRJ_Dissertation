@@ -52,22 +52,25 @@
 </section>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  var psdSec = document.querySelector(".psdSec");
+  document.addEventListener("DOMContentLoaded", function () {
+    const psdSec = document.querySelector(".psdSec");
 
-  function revealPsdSec() {
-   var psdSecPosition = psdSec.getBoundingClientRect().top;
-   var screenPosition = window.innerHeight / 3;  // when to fade in
-
-    if (psdSecPosition < screenPosition) { // reveal content on scroll down
-      psdSec.classList.add("reveal");    
-    } else {
-      psdSec.classList.remove("reveal"); // fade back out on scroll up 
+    function revealPsdSec(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          psdSec.classList.add("reveal");
+        } else {
+          psdSec.classList.remove("reveal");
+        }
+      });
     }
-  }
-  window.addEventListener("scroll", revealPsdSec);
-  revealPsdSec(); 
-});
+
+    const observer = new IntersectionObserver(revealPsdSec, {
+      threshold: 0.5
+    });
+
+    observer.observe(psdSec);
+  });
 </script>
 </body>
 </html>
