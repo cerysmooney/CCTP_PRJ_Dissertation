@@ -19,8 +19,8 @@
 
   </div>
   <body>
-
-
+<!-- 
+<a id="backToTopButton"></a> -->
     <div class="connectionSecContainer">
       <div class="connectionText">
           <h1 class="H1Connection">Pick Your Coloured Noise..</h1>
@@ -34,6 +34,7 @@
    <img class="bluePSDImage" src="Images/White/myWhiteNoiseGraph.jpg" width="600px" height="600px"> -->
 
 
+  
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -113,6 +114,7 @@ whiteButton.mouseClicked(function() {
   changeChameleon(whiteCham);
   showWhitePSD(); // showing whitePSD on white mouse clicked
 });
+
 
 
 
@@ -423,6 +425,26 @@ function hideBrownPSD(){
       }
     }
 </script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var btn = $('#backToTopButton');
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
+        });
+    });
+</script> -->
 
 
 </div>
