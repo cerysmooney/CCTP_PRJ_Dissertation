@@ -49,23 +49,25 @@
           </div>
           
           <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            var waveformImage = document.querySelector(".waveformImage");
+            document.addEventListener("DOMContentLoaded", () => {
+              const waveformImage = document.querySelector(".waveformImage");
           
-            function revealWaveformImage() {
-              var waveformImagePosition = waveformImage.getBoundingClientRect().top;
-              var screenPosition = window.innerHeight / 2;
+              const revealWaveformImage = (entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    waveformImage.classList.add("reveal");
+                  } else {
+                    waveformImage.classList.remove("reveal");
+                  }
+                });
+              };
           
-              if (waveformImagePosition < screenPosition) {
-                waveformImage.classList.add("reveal");
-              }else{
-                waveformImage.classList.remove("reveal");
-              }
-            }
+              const observer = new IntersectionObserver(revealWaveformImage, {
+                threshold: 0.5 
+              });
           
-            window.addEventListener("scroll", revealWaveformImage);
-            revealWaveformImage(); // Call the function once on page load
-          });
+              observer.observe(waveformImage);
+            });
           </script>
         
         <div class="noiseimgplaceholder">
@@ -81,24 +83,27 @@
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-              var noiseimgplaceholder = document.querySelector(".noiseimgplaceholder");
-            
-              function revealNoiseImgPlaceholder() {
-                var noiseimgplaceholderPosition = noiseimgplaceholder.getBoundingClientRect().top;
-                var screenPosition = window.innerHeight / 1.5;
-            
-                if (noiseimgplaceholderPosition < screenPosition) {
-                  noiseimgplaceholder.classList.add("reveal");
-                }else{
+              const noiseimgplaceholder = document.querySelector(".noiseimgplaceholder");
+          
+              function revealNoiseImgPlaceholder(entries, observer) {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    noiseimgplaceholder.classList.add("reveal");
+                  }
+                  else {
                     noiseimgplaceholder.classList.remove("reveal");
-                }
+                  }
+                });
               }
-            
-              window.addEventListener("scroll", revealNoiseImgPlaceholder);
-              revealNoiseImgPlaceholder(); // Call the function once on page load
+          
+              const observer = new IntersectionObserver(revealNoiseImgPlaceholder, {
+                threshold: 0.5 
+              });
+          
+              observer.observe(noiseimgplaceholder);
             });
-            </script>
-        
+          </script>
+          
 
         <div class="sec-2Container">
             <div class="noisetext2">
@@ -118,23 +123,26 @@
         </div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-              var sec2Container = document.querySelector(".sec-2Container");
-            
-              function revealSec2Container() {
-                var sec2ContainerPosition = sec2Container.getBoundingClientRect().top;
-                var screenPosition = window.innerHeight / 1.5;
-            
-                if (sec2ContainerPosition < screenPosition) {
-                  sec2Container.classList.add("reveal");
-                }else{
+              const sec2Container = document.querySelector(".sec-2Container");
+          
+              function revealSec2Container(entries, observer) {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    sec2Container.classList.add("reveal");
+                  } else {
                     sec2Container.classList.remove("reveal");
-                }
+                  }
+                });
               }
-            
-              window.addEventListener("scroll", revealSec2Container);
-              revealSec2Container(); // Call the function once on page load
+          
+              const observer = new IntersectionObserver(revealSec2Container, {
+                threshold: 0.5 
+              });
+          
+              observer.observe(sec2Container);
             });
-            </script>
+          </script>
+          
 
 
 
