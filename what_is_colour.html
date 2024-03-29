@@ -36,6 +36,8 @@
     </div>
 </div>
 
+<a id="backToTopButton"></a>
+
         <div class="prismSection">
   <div class="textContainer">
     <h1 class="tryItOut">Try it out!</h1>
@@ -44,6 +46,26 @@
   </div>
   <div id="prismContainer" class="prismContainer"></div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var btn = $('#backToTopButton');
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
+        });
+    });
+</script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
