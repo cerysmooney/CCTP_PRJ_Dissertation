@@ -27,6 +27,9 @@
     </div> -->
 </div>
 
+<a id="backToTopButton"></a>
+
+
 <!-- Waveform interaction Section -->
 <section id="sec-1">
     <div class="sec-1Container">
@@ -36,6 +39,7 @@
                 <p> As the waves of energy continue to travel, they create patterns of disturbance.</p>
                  <p> We visualise these vibrational disturbances with waveforms! </p>
         </div>
+        
         <div class="waveformImage">
             <div class="textContainer">
               <div class="noisetext2">
@@ -48,6 +52,9 @@
             <img class="waveformChart" src="Images/MyWaveformImg-01.jpg" width="720px" height="356px">
           </div>
           
+
+      
+
           <script>
             document.addEventListener("DOMContentLoaded", () => {
               const waveformImage = document.querySelector(".waveformImage");
@@ -69,6 +76,27 @@
               observer.observe(waveformImage);
             });
           </script>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var btn = $('#backToTopButton');
+    
+                $(window).scroll(function() {
+                    if ($(window).scrollTop() > 600) {
+                        btn.addClass('show');
+                    } else {
+                        btn.removeClass('show');
+                    }
+                });
+    
+                btn.on('click', function(e) {
+                    e.preventDefault();
+                    $('html, body').animate({scrollTop:0}, '600');
+                });
+            });
+        </script>
+        
         
         <div class="noiseimgplaceholder">
             <div class="textContainer">
