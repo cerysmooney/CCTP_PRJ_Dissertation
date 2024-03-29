@@ -46,24 +46,27 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  var prismSection = document.querySelector(".prismSection");
+  document.addEventListener("DOMContentLoaded", function () {
+    const prismSection = document.querySelector(".prismSection");
 
-  function revealPrismSection() {
-    var prismSectionPosition = prismSection.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight / 3;
-
-    if (prismSectionPosition < screenPosition) {
-      prismSection.classList.add("reveal");
-    }else{
-        prismSection.classList.remove("reveal");
+    function revealPrismSection(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          prismSection.classList.add("reveal");
+        } else {
+          prismSection.classList.remove("reveal");
+        }
+      });
     }
-  }
 
-  window.addEventListener("scroll", revealPrismSection);
-  revealPrismSection(); // Call the function once on page load
-});
+    const observer = new IntersectionObserver(revealPrismSection, {
+      threshold: 0.5 
+    });
+
+    observer.observe(prismSection);
+  });
 </script>
+
 <div id="colourbackground"></div>
 <div class='lightSpectrumSection'>
     <h1 class="vslText">The Visible Light Spectrum</h1>
