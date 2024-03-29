@@ -81,23 +81,25 @@
   </div>
   
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var lightSpectrumSection = document.querySelector(".lightSpectrumSection");
+    document.addEventListener("DOMContentLoaded", function () {
+      const lightSpectrumSection = document.querySelector(".lightSpectrumSection");
   
-    function revealLightSpectrumSection() {
-      var lightSpectrumSectionPosition = lightSpectrumSection.getBoundingClientRect().top;
-      var screenPosition = window.innerHeight / 2;
-  
-      if (lightSpectrumSectionPosition < screenPosition) {
-        lightSpectrumSection.classList.add("reveal");
-      }else{
-        lightSpectrumSection.classList.remove("reveal");
+      function revealLightSpectrumSection(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            lightSpectrumSection.classList.add("reveal");
+          } else {
+            lightSpectrumSection.classList.remove("reveal");
+          }
+        });
       }
-    }
   
-    window.addEventListener("scroll", revealLightSpectrumSection);
-    revealLightSpectrumSection(); // Call the function once on page load
-  });
+      const observer = new IntersectionObserver(revealLightSpectrumSection, {
+        threshold: 0.5
+      });
+  
+      observer.observe(lightSpectrumSection);
+    });
   </script>
 
     <section class="frequencyColourWheelSection">
@@ -122,24 +124,25 @@
       </section>
       
       <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var frequencyColourWheelSection = document.querySelector(".frequencyColourWheelSection");
+        document.addEventListener("DOMContentLoaded", function () {
+          const frequencyColourWheelSection = document.querySelector(".frequencyColourWheelSection");
       
-        function revealFrequencyColourWheelSection() {
-          var sectionPosition = frequencyColourWheelSection.getBoundingClientRect().top;
-          var screenPosition = window.innerHeight / 2;
-    
-          if (sectionPosition < screenPosition) {
-            frequencyColourWheelSection.classList.add("reveal");
-          
-        } else {
-      frequencyColourWheelSection.classList.remove("reveal"); 
-        }
-    }
-
-        window.addEventListener("scroll", revealFrequencyColourWheelSection);
-        revealFrequencyColourWheelSection(); 
-      });
+          function revealFrequencyColourWheelSection(entries, observer) {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                frequencyColourWheelSection.classList.add("reveal");
+              } else {
+                frequencyColourWheelSection.classList.remove("reveal");
+              }
+            });
+          }
+      
+          const observer = new IntersectionObserver(revealFrequencyColourWheelSection, {
+            threshold: 0.5 
+          });
+      
+          observer.observe(frequencyColourWheelSection);
+        });
       </script>
 
 
