@@ -11,12 +11,6 @@
     <a href="what_is_colour.html">What is Colour?</a>
     <a href="how_they_connect.html">The Connection</a>
     <a class="active" href="pick_your_colour.html">Pick Your Colour</a>
-    <!-- <a href="white_noise.html"> White</a>
-    <a href="pink_noise.html"> Pink</a>
-    <a href="blue_noise.html">Blue</a>
-    <a href="brown_noise.html"> Brown</a>
-    <a href="violet_noise.html"> Violet</a> -->
-
   </div>
   <body>
 <!-- 
@@ -28,13 +22,14 @@
       </div>
   <div id="chooseNoiseContainer"></div>
 
-  <div id="colourbgcham"></div>
 
-<!-- 
-   <img class="bluePSDImage" src="Images/White/myWhiteNoiseGraph.jpg" width="600px" height="600px"> -->
+  <!-- image background -->
+  <div id="colourbgcham"></div> 
 
 
-  
+
+
+  <!-- Chameleon changing colour, following the mouse, playing each noise, button click, all in one p5.js canvas -->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js" integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -58,7 +53,8 @@
     let brownSound;
     
     // Preload function to load images and sounds
-    function preload() {
+    function preload() { 
+      // Chameleon Images
       greenCham = loadImage("Images/UpdatedGreenNoEyes-01.png");
       whiteCham = loadImage("Images/UpdatedWhiteNoEyes-01.png");
       pinkCham = loadImage("Images/UpdatedPinkNoEyes-01.png");
@@ -66,14 +62,14 @@
       violetCham = loadImage("Images/UpdatedVioletNoEyes-01.png");
       brownCham = loadImage("Images/UpdatedBrownNoEyes-01.png");
 
-
+      // Power Spectral Density Charts
       whitePSD = loadImage("Images/White/myUpdatedWhiteNoiseGraph.png");
       pinkPSD = loadImage("Images/Pink/myUpdatedPinkNoiseGraph.png");
       bluePSD = loadImage("Images/Blue/myUpdatedBlueNoiseGraph.png");
       brownPSD = loadImage("Images/Brown/myUpdatedBrownNoiseGraph.png");
       violetPSD = loadImage("Images/Violet/myVioletNoiseGraph.png");
 
-    
+    // Noise specific sounds
       console.log("Preloading sounds...");
       whiteSound = loadSound("Audio/White Noise.mp3");
       pinkSound = loadSound("Audio/Pink Noise.mp3");
@@ -83,15 +79,15 @@
     }
     
 
-    // change chameleon image based on mouse hover
+    // change chameleon image based on mouse click
     function changeChameleon(chameleonImage) {
       selectedChameleon = chameleonImage;
     }
     
     function setup() {
       
-      let canvas = createCanvas(1080,3000);
-      canvas.parent('chooseNoiseContainer'); 
+      let canvas = createCanvas(1080,3000); // setting up the canvas
+      canvas.parent('chooseNoiseContainer'); // parenting to add anywhere on the page
       // green cham as initial
       selectedChameleon = greenCham;
     
@@ -100,32 +96,29 @@
       let buttonMargin = 190; // spacing buttons
       let yPosition = height - 2370; // y position
     
-      let whiteButton = createButton('White Noise');
+      let whiteButton = createButton('White Noise'); // white noise button
 whiteButton.position(100, yPosition);
-whiteButton.class('whiteNoiseButton');
+whiteButton.class('whiteNoiseButton'); // connecting to CSS
 
-whiteButton.mouseClicked(function() {
-  hideBrownPSD();
-  hideVioletPSD();
-  hidePinkPSD();
-  hideBluePSD();
-  stopAllSounds();
-  whiteSound.play();
-  changeChameleon(whiteCham);
+whiteButton.mouseClicked(function() { // if the white noise button is clicked
+  hideBrownPSD(); // dont show brown psd
+  hideVioletPSD(); // dont show violet psd
+  hidePinkPSD(); // dont show pink psd
+  hideBluePSD(); // dont show blue psd
+  stopAllSounds(); // dont play any sounds
+  whiteSound.play(); // play the whitenoise.mp4!
+  changeChameleon(whiteCham); // show the white chameleon image
   showWhitePSD(); // showing whitePSD on white mouse clicked
 });
 
-
-
-
-// showing whitePSD
+// Showing the White Noise PSD on button click
 function showWhitePSD() {
-  let psdWidth = 600; 
-  let psdHeight = 600; 
-  let xPosition = 120; 
-  let yPosition = 630; 
+  let psdWidth = 600; // width
+  let psdHeight = 600;  // height
+  let xPosition = 120;  // x position
+  let yPosition = 630; // y position
   
-  image(whitePSD, xPosition, yPosition+110, psdWidth, psdHeight);
+  image(whitePSD, xPosition, yPosition+110, psdWidth, psdHeight); // psd position on page
 
   
   
@@ -136,7 +129,7 @@ function showWhitePSD() {
   let headerTextX = xPosition + psdWidth / 2; // x position aligned with psd image
   let headerTextY = yPosition - 30; // y pos for being above psd image
   textFont('Gill Sans MT');
-  text("Understanding White Noise", headerTextX, headerTextY);
+  text("Understanding White Noise", headerTextX, headerTextY); // heading
 
   fill(230); 
   textSize(16); 
@@ -145,7 +138,7 @@ function showWhitePSD() {
   let textY = yPosition + 10; // y pos for being below psd image
 
   let lineHeight = 30; // spacing between lines
-  let textArray = [
+  let textArray = [  // body!
     "White Noise mixes all audible frequencies evenly, from 20Hz to 20kHz, as shown on the PSD chart below.",
     "Similar to white light, it encompasses all visible colours. Its name derives from this connection!",
     "This noise can be compared to listening to TV static or a vacuum buzzing."
@@ -156,45 +149,45 @@ function showWhitePSD() {
     textY += lineHeight;
   }
 }
-function hideWhitePSD(){
+function hideWhitePSD(){  // if any of the other coloured buttons are pressed, 
 clear();
 }
 
 
 
 
-      // pink noise
-      let pinkButton = createButton('Pink Noise');
-      pinkButton.position(whiteButton.x + whiteButton.width + buttonMargin, yPosition);
-      pinkButton.class('pinkNoiseButton');
-  
-      pinkButton.mouseClicked(function() {
-        hideBrownPSD();
-        hideVioletPSD();
-        hideBluePSD();
-        hideWhitePSD();
-        stopAllSounds();
-        pinkSound.play();
-        changeChameleon(pinkCham);
-        showPinkPSD();
+      // Pink Noise
+      let pinkButton = createButton('Pink Noise'); // pink noise button
+      pinkButton.position(whiteButton.x + whiteButton.width + buttonMargin, yPosition); // button position
+      pinkButton.class('pinkNoiseButton'); // linking to CSS
+   
+      pinkButton.mouseClicked(function() { // if pink button is clicked
+        hideBrownPSD(); // hide brown psd
+        hideVioletPSD(); // hide violet psd
+        hideBluePSD(); // hide blue psd
+        hideWhitePSD(); // hide white psd
+        stopAllSounds(); // dont play any other noises
+        pinkSound.play(); // play the pink noise.mp4
+        changeChameleon(pinkCham); // change chameleon to the pink chameleon
+        showPinkPSD(); // show pink psd
       });
     
 
     // showing pinkPSD
     function showPinkPSD() {
-  let psdWidth = 600; 
-  let psdHeight = 600; 
-  let xPosition = 120; 
-  let yPosition = 630; 
+  let psdWidth = 600;  // width
+  let psdHeight = 600; // height
+  let xPosition = 120; // x pos
+  let yPosition = 630; // y pos
   
-  image(pinkPSD, xPosition, yPosition+110, psdWidth, psdHeight);
+  image(pinkPSD, xPosition, yPosition+110, psdWidth, psdHeight); // psd position on page
 
-  fill(255); 
-  textSize(32); 
-  textAlign(CENTER, BOTTOM); 
+  fill(255); // colour
+  textSize(32);  // sizing
+  textAlign(CENTER, BOTTOM);  // centering text
   let headerTextX = xPosition + psdWidth / 2; 
   let headerTextY = yPosition - 30; 
-  text("The Calmness of Pink Noise", headerTextX, headerTextY);
+  text("The Calmness of Pink Noise", headerTextX, headerTextY); // header text
 
   fill(230); 
   textSize(16); 
@@ -203,7 +196,7 @@ clear();
   let textY = yPosition + 10; 
 
   let lineHeight = 30; 
-  let textArray = [
+  let textArray = [ // body text
     "Lower frequencies are much more audible than higher ones in pink noise. This is displayed on the PSD chart below.",
     "This noise is given the name due to it having warmer and lower frequencies than white noise.",
     "Because of these lower tones, pink noise can sound similar to a calm rainstorm, or even wind swishing through trees!"
@@ -214,7 +207,7 @@ clear();
     textY += lineHeight;
   }
 }
-function hidePinkPSD(){
+function hidePinkPSD(){ // if any other buttons are pressed,
  clear();
 }
 
@@ -225,37 +218,37 @@ function hidePinkPSD(){
 
 
       // blue noise
-      let blueButton = createButton('Blue Noise');
-      blueButton.position(pinkButton.x + pinkButton.width + buttonMargin, yPosition);
-      blueButton.class('blueNoiseButton');
+      let blueButton = createButton('Blue Noise'); // button
+      blueButton.position(pinkButton.x + pinkButton.width + buttonMargin, yPosition); // button position
+      blueButton.class('blueNoiseButton'); // linking to CSS
   
-      blueButton.mouseClicked(function() {
-        hideBrownPSD();
-        hideVioletPSD();
-        hidePinkPSD();
-        hideWhitePSD();
-        stopAllSounds();
-        blueSound.play();
-        changeChameleon(blueCham);
-        showBluePSD();
+      blueButton.mouseClicked(function() { // if blue button is clicked
+        hideBrownPSD(); // hide brown psd
+        hideVioletPSD(); // hide violet psd
+        hidePinkPSD(); // hide pink psd
+        hideWhitePSD(); // hide white psd
+        stopAllSounds(); // dont play any sound
+        blueSound.play(); // only play blue noise.mp4
+        changeChameleon(blueCham); // change exisisting cham to the blue cham
+        showBluePSD(); // show blue psd
       });
     
 
     // showing bluePSD
     function showBluePSD() {
-  let psdWidth = 600; 
-  let psdHeight = 600; 
-  let xPosition = 120; 
-  let yPosition = 630; 
-  image(bluePSD, xPosition, yPosition+110, psdWidth, psdHeight);
+  let psdWidth = 600;  // width
+  let psdHeight = 600;  // height
+  let xPosition = 120; // x pos
+  let yPosition = 630; // y pos
+  image(bluePSD, xPosition, yPosition+110, psdWidth, psdHeight); // psd pos on page
 
-  fill(255); 
-  textSize(32); 
-  textAlign(CENTER, BOTTOM); 
+  fill(255); //white
+  textSize(32);  // size
+  textAlign(CENTER, BOTTOM); // allignment 
   let headerTextX = xPosition + psdWidth / 2; 
   let headerTextY = yPosition - 30; 
 
-  text("The Dynamics of Blue Noise", headerTextX, headerTextY);
+  text("The Dynamics of Blue Noise", headerTextX, headerTextY); // headertext
 
   fill(230); 
   textSize(16); 
@@ -264,7 +257,7 @@ function hidePinkPSD(){
   let textY = yPosition + 10; 
 
   let lineHeight = 30; 
-  let textArray = [
+  let textArray = [  //body text
     "Blue noise emphasizes higher frequencies over lower frequencies, as show from the PSD chart below.",
     "As the colour blue is on the higher side of the visible light spectrum, it is called blue noise by correlation!",
     "With these higher frequencies present, blue noise can sound like steam escaping from a pipe, almost like it is hissing!"
@@ -276,7 +269,7 @@ function hidePinkPSD(){
   }
 }
 
-function hideBluePSD(){
+function hideBluePSD(){ // if any of the other buttons are pressed,
 clear();
 }
 
@@ -285,31 +278,31 @@ clear();
 
 
       // violet noise
-      let violetButton = createButton('Violet Noise');
-      violetButton.position(blueButton.x + blueButton.width + buttonMargin, yPosition);
-      violetButton.class('violetNoiseButton');
+      let violetButton = createButton('Violet Noise'); // created violet noise button
+      violetButton.position(blueButton.x + blueButton.width + buttonMargin, yPosition); // position on page
+      violetButton.class('violetNoiseButton'); // linking to css
   
-      violetButton.mouseClicked(function() {
-        hideBrownPSD();
-        hideBluePSD();
-        hidePinkPSD();
-        hideWhitePSD();
-        stopAllSounds();
-        violetSound.play();
-        changeChameleon(violetCham);
-        showVioletPSD();
+      violetButton.mouseClicked(function() { // if violet button is pressed,
+        hideBrownPSD(); // hide brown psd
+        hideBluePSD(); // hide blue psd
+        hidePinkPSD(); // hide pink psd
+        hideWhitePSD(); // hide white psd
+        stopAllSounds(); // stop playing any exisiting sounds
+        violetSound.play(); // play the violet noise.mp4
+        changeChameleon(violetCham); // change existing chameleon to the violet chameleon
+        showVioletPSD(); // show the violet psd
       });
     
     // showing violetPSD
     function showVioletPSD() {
 
-let psdWidth = 600; 
-let psdHeight = 600; 
-let xPosition = 120; 
-let yPosition = 630; 
-image(violetPSD, xPosition, yPosition+110, psdWidth, psdHeight);
+let psdWidth = 600;  // psd width
+let psdHeight = 600;  // psd height
+let xPosition = 120;  // x pos
+let yPosition = 630;  // y pos
+image(violetPSD, xPosition, yPosition+110, psdWidth, psdHeight); // psd position on page
 
-
+// header text about violet noise psd
 fill(255); 
   textSize(32); 
   textAlign(CENTER, BOTTOM); 
@@ -317,7 +310,7 @@ fill(255);
   let headerTextY = yPosition - 30; 
   text("Take a Look at Violet Noise", headerTextX, headerTextY);
 
-
+// body text psd
   fill(230); 
   textSize(16); 
   textAlign(CENTER, CENTER); // centered body text
@@ -336,18 +329,18 @@ fill(255);
     textY += lineHeight;
   }
 }
-function hideVioletPSD(){
+function hideVioletPSD(){ // if any other buttons are pressed,
 clear();
 }
 
 
 
       // brown noise
-      let brownButton = createButton('Brown Noise');
-      brownButton.position(violetButton.x + violetButton.width + buttonMargin, yPosition);
-      brownButton.class('brownNoiseButton');
+      let brownButton = createButton('Brown Noise'); // button for brown noise
+      brownButton.position(violetButton.x + violetButton.width + buttonMargin, yPosition); // button position
+      brownButton.class('brownNoiseButton'); // css linking
   
-      brownButton.mouseClicked(function() {
+      brownButton.mouseClicked(function() { // if brown button is clicked, hide every psd but brown psd and change existing chameleon to the brown chameleon
         hideBluePSD();
         hidePinkPSD();
         hideWhitePSD();
@@ -361,20 +354,22 @@ clear();
 
 
     // showing brownPSD
-    function showBrownPSD() {
-  let psdWidth = 600; 
-  let psdHeight = 600; 
-  let xPosition = 120; 
-  let yPosition = 630; 
-  image(brownPSD, xPosition, yPosition+110, psdWidth, psdHeight);
+    function showBrownPSD() { 
+  let psdWidth = 600;  // psd width
+  let psdHeight = 600; // psd height
+  let xPosition = 120;  // x pos
+  let yPosition = 630;  // y pos
+  image(brownPSD, xPosition, yPosition+110, psdWidth, psdHeight); // psd pos on page
 
+  // psd header info
   fill(255); 
   textSize(32); 
-  textAlign(CENTER, BOTTOM); 
+  textAlign(CENTER, BOTTOM);  // allignment
   let headerTextX = xPosition + psdWidth / 2; 
   let headerTextY = yPosition - 30; 
-  text("Exploring the Subtle Power of Brown Noise", headerTextX, headerTextY);
+  text("Exploring the Subtle Power of Brown Noise", headerTextX, headerTextY); // header text
 
+  // psd body info
   fill(230); 
   textSize(16); 
   textAlign(CENTER, CENTER); 
@@ -383,8 +378,8 @@ clear();
 
   let lineHeight = 30; 
   let textArray = [
-    "Brown noise decreases in energy as the frequencies increase. We can see this in the PSD chart below.",
-    "This results in more audible sounds in lower pitches.",
+    "Brown noise, named after Robert Brown's discovery of Brownian motion, isn't linked to the visible light spectrum.",
+    "It decreases in energy as the frequencies increase. We can see this in the PSD chart below.",
     "With its strong presence in lower frequencies, brown noise can sound like a thunderstorm or a roaring waterfall!"
   ];
 
@@ -393,7 +388,7 @@ clear();
     textY += lineHeight;
   }
 }
-function hideBrownPSD(){
+function hideBrownPSD(){ // if any other button is clicked, 
   clear();
 }
 
