@@ -6,25 +6,21 @@
     <link rel="icon" href="Images/icon-06.png" type="image/x-icon">
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+<!-- Navbar -->
 <div class="topnav">
     <a href="index.html">What is Noise?</a>
     <a href="what_is_colour.html">What is Colour?</a>
     <a class="active" href="how_they_connect.html">The Connection</a>
     <a href="pick_your_colour.html">Pick Your Colour</a>
-    <!-- <a href="white_noise.html"> White</a>
-    <a href="pink_noise.html"> Pink</a>
-    <a href="blue_noise.html">Blue</a>
-    <a href="brown_noise.html"> Brown</a>
-    <a href="violet_noise.html"> Violet</a> -->
+    </div>
 
-  </div>
+    <!-- image as a background -->
+<div id="connectionBG"></div> 
 
-<div id="connectionBG"></div>
-<!-- <div class="hero-image"></div> -->
 <!-- Connection section -->
 <section id="connectionSec">
     <div class="connectionSecContainer">
+      <!-- explaining how noise and colour are related -->
       <div class="connectionText">
         <h1 class="H1Connection">How do Noise and Colour Connect?</h1>
         <p>Coloured noise is a way for us to understand the frequency patterns of both noise and light together.</p>
@@ -38,19 +34,23 @@
   <div class="psdSec">
     <div class="psdSecContainer">
       <div class="psdText">
+        <!-- explaining how PSD charts help us connect noise and colour -->
         <h1 class="H1PSD">Power Spectral Density</h1>
         <p>A PSD chart allows us to see the distribution of frequencies (vibrations) in noise.</p>
         <p>X shows us the specific frequency and Y shows us the presence at the specific frequency</p>
       </div>
     </div>
+    <!-- showing psd chart graphic -->
     <img class="psdImage" src="Images/PSD GRAPHIC.png" width="600px" height="600px">
     <div class="psdText">
+      <!-- explaining the association -->
       <p>Noises with higher present frequencies are associated with higher light frequencies, such as violet (with a light spectrum of 400nm).</p>
       <p>Similarly, noises with lower present frequencies are connected with lower light frequencies, such as red (with a light spectrum of 700nm).</p>
     </div>
   </div>
 </section>
 
+<!-- Fade in/fade out controls for psd graphic section! This is used with IntersectionObserver  -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const psdSec = document.querySelector(".psdSec");
@@ -66,7 +66,7 @@
     }
 
     const observer = new IntersectionObserver(revealPsdSec, {
-      threshold: 0.5
+      threshold: 0.5 // when 50% of the section is scrolled to, the section will appear 
     });
 
     observer.observe(psdSec);
