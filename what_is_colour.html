@@ -10,24 +10,19 @@
 
 <body style="background-color: grey;">
 
+  <!-- Nav Bar -->
     <div class="topnav">
         <a href="index.html">What is Noise?</a>
         <a class="active" href="what_is_colour.html">What is Colour?</a>
         <a href="how_they_connect.html">The Connection</a>
         <a href="pick_your_colour.html">Pick Your Colour</a>
-        <!-- <a href="white_noise.html">White</a>
-        <a href="pink_noise.html">Pink</a>
-        <a href="blue_noise.html">Blue</a>
-        <a href="brown_noise.html">Brown</a>
-        <a href="violet_noise.html">Violet</a> -->
     </div>
 
-    <!-- First Information on Colour Section -->
+    <!-- First Information on Colour Section, explaining how we see colour -->
     <div class="colourcontainer1">
         <div class="firstColourTextContainer">
         <h1 class="backgroundtext">Colour: How does it Work?</h1>
         <p class="whatiscolourtext">
-            <!-- WORK ON WORDING GOOD LORD -->
             All light is part of a big family called electromagnetic radiation. 
             <p class="whatiscolourtext"> We can only see a small part of it called visible light. Our eyes have special cells that can pick up these visible light waves.
 
@@ -36,24 +31,28 @@
     </div>
 </div>
 
-<a id="backToTopButton"></a>
+<!-- place where back to top button will take the user after clicking  -->
+<a id="backToTopButton"></a> 
 
+<!-- Prism Instructions and Interaction Section -->
         <div class="prismSection">
   <div class="textContainer">
     <h1 class="tryItOut">Try it out!</h1>
     <p class="whatiscolourtext">See how light shines through a prism using this simulator.</p>
     <p class="whatiscolourtext">Move your mouse towards the triangle to activate the white light. Then, move your mouse up or down to see how the colours respond! </p>
   </div>
-  <div id="prismContainer" class="prismContainer"></div>
+  <!-- calling the p5.js prism canvas -->
+  <div id="prismContainer" class="prismContainer"></div>  
 </div>
 
+<!-- Scroll to top button --> 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var btn = $('#backToTopButton');
 
         $(window).scroll(function() {
-            if ($(window).scrollTop() > 300) {
+            if ($(window).scrollTop() > 300) { // appears just after Prism intstructions and interaction section
                 btn.addClass('show');
             } else {
                 btn.removeClass('show');
@@ -62,12 +61,13 @@
 
         btn.on('click', function(e) {
             e.preventDefault();
-            $('html, body').animate({scrollTop:0}, '300');
+            $('html, body').animate({scrollTop:0}, '300'); // on click, goes to top of page
         });
     });
 </script>
 
-<script>
+
+<script> // Fade in/fade out controls for prism interaction and instructions section! This is used with IntersectionObserver 
   document.addEventListener("DOMContentLoaded", function () {
     const prismSection = document.querySelector(".prismSection");
 
@@ -82,19 +82,24 @@
     }
 
     const observer = new IntersectionObserver(revealPrismSection, {
-      threshold: 0.5 
+      threshold: 0.5 // when 50% of the section is scrolled to, the section will appear 
     });
 
     observer.observe(prismSection);
   });
 </script>
 
-<div id="colourbackground"></div>
+<!-- calling image background here -->
+<div id="colourbackground"></div> 
+
+<!-- Visible Light Spectrum Section -->
 <div class='lightSpectrumSection'>
     <h1 class="vslText">The Visible Light Spectrum</h1>
     <p class="whatiscolourtext"> We can use a visible light spectrum chart to understand fully how each colour has a differently sized light waves.</p>
-    <img class="lsChartImage"src="Images/vlsChart.png">
+    <!-- showcasing the vls chart I created -->
+    <img class="lsChartImage"src="Images/vlsChart.png"> 
     
+    <!-- information on the section -->
     <p class="whatiscolourtext">
       Measured in nanometers(nm), each colour's wave is differently sized. 
     </p>
@@ -102,6 +107,8 @@
     <p class="whatiscolourtext">  This can explain why it might be harder to see some colours over others.</p>
   </div>
   
+
+  <!-- Fade in/fade out controls for Visible Light Spectrum Section! This is used with IntersectionObserver  -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const lightSpectrumSection = document.querySelector(".lightSpectrumSection");
@@ -117,34 +124,39 @@
       }
   
       const observer = new IntersectionObserver(revealLightSpectrumSection, {
-        threshold: 0.5
+        threshold: 0.5 // when 50% of the section is scrolled to, the section will appear 
       });
   
       observer.observe(lightSpectrumSection);
     });
   </script>
 
+<!-- Frequency and Colour Wheel Section -->
     <section class="frequencyColourWheelSection">
+      <!-- Information on frequency fitting within a colour wheel -->
         <h1 class="backgroundtext2">How does Frequency Fit In?</h1>
         <p class="aboveWhatIsColourText">On the colour wheel, colours such as violet are associated with shorter wavelengths, while others such as red are linked to longer wavelengths. </p>
           <p class="aboveWhatIsColourText2">Colours are arranged on the wheel from shortest (violet) to longest (red) as a spectrum of wavelengths, much like the visible light spectrum chart above.</p>
         
         <div class="colourcontainer2">
+          <!-- calling the p5.js spinning colour wheel -->
           <div id="wheelContainer" class="wheelContainer"></div>
           <div class="frequencyTextContainer">
             <p class="whatiscolourtext2">
-              In this context, frequency tells us how often a color will pass by in a second while the wheel is spinning.
+              <!-- more information on frequency and colour -->
+              In this context, frequency tells us how often a colour will pass by in a second while the wheel is spinning.
             </p>
             <p class="whatiscolourtext2">
-              Shorter wavelength colors like violet pass by your eyes more frequently because they're closer together on the wheel. This means they have a higher frequency.
+              Shorter wavelength colours like violet pass by your eyes more frequently because they're closer together on the wheel. This means they have a higher frequency.
             </p>
             <p class="whatiscolourtext2">
-              Longer wavelength colors like red pass by less frequently because they're farther apart on the wheel, resulting in a lower frequency.
+              Longer wavelength colours like red pass by less frequently because they're farther apart on the wheel, resulting in a lower frequency.
             </p>
           </div>
         </div>
       </section>
       
+      <!-- Fade in/fade out controls for Frequency and Colour Wheel Section This is used with IntersectionObserver  -->
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           const frequencyColourWheelSection = document.querySelector(".frequencyColourWheelSection");
@@ -160,41 +172,23 @@
           }
       
           const observer = new IntersectionObserver(revealFrequencyColourWheelSection, {
-            threshold: 0.5 
+            threshold: 0.5 // when 50% of the section is scrolled to, the section will appear
           });
       
           observer.observe(frequencyColourWheelSection);
         });
       </script>
 
-
-
-    <!-- <a href="#third">
-        <div class="scroll-down-third"></div>
-    </a> -->
-
-    <!-- Third Information on Colour Screen -->
-    <!-- <a id="third"></a>
-    <div class="colourcontainer3">
-        <h1 class="backgroundtext3">How does frequency fit in?
-        </h1>
-        <p class="whatiscolourtext3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos unde cum veritatis.
-        </p>
-        <img class="placebearBrown" src="Images/Colour.1">
-    </div> -->
-
-    <div class="whatIsColourP5Container"></div>
-
+<!-- Prism interaction using p5.js -->
     <script>
         let lightBeamLength = 250; // Initial length of the light beam
         let lightIntersecting = false; // Flag to indicate if the light beam intersects with the triangle
         let spectrumLength = 50; // Initial length of the spectrum lines
 
         function setup() {
-           let prism = createCanvas(600, 600); 
-           prism.parent('prismContainer');
-            frameRate(120);
+           let prism = createCanvas(600, 600); // sizing of canvas
+           prism.parent('prismContainer'); // parent so it can go anywhere on the page
+            frameRate(120); // speed of animation
         }
 
         function draw() {
@@ -221,45 +215,33 @@
 
             // dotted line instead of solid
             stroke(255);
-            strokeWeight(2);
+            strokeWeight(2); 
             let dottedSpacing = 8; // spacing 
 
-            // p5.js lerps 
-            for (let i = 0; i < lightBeamLength; i += dottedSpacing * 2) {
-                let x1 = lerp(0, endX, i / lightBeamLength);
-                let y1 = lerp(350, endY, i / lightBeamLength);
-                let x2 = lerp(0, endX, (i + dottedSpacing) / lightBeamLength);
-                let y2 = lerp(350, endY, (i + dottedSpacing) / lightBeamLength);
-                line(x1, y1, x2, y2);
+            // p5.js lerps so it can calculate between one space and another
+            for (let i = 0; i < lightBeamLength; i += dottedSpacing * 2) {  // setting up a loop so the white dots in the line have spacing between them
+                let x1 = lerp(0, endX, i / lightBeamLength); // calculating starting and ending point of the x position of line
+                let y1 = lerp(350, endY, i / lightBeamLength); // calculating starting and ending point of y position of line
+                let x2 = lerp(0, endX, (i + dottedSpacing) / lightBeamLength);  // allowing the spacing between line
+                let y2 = lerp(350, endY, (i + dottedSpacing) / lightBeamLength); // allowing spacing between line
+                line(x1, y1, x2, y2); // creating the dotted line 
             }
         }
 
         function prism() {  // making the main triangle
-            noFill();
+            noFill(); // no colour inside
             strokeWeight(6);
-            stroke(255);
-            triangle(300, 200, 175, 400, 425, 400);
+            stroke(255); // white
+            triangle(300, 200, 175, 400, 425, 400); // creating the triangle
 
             // adding depth with another triangle
             noFill();
             strokeWeight(7);
-            stroke(255, 150); 
-            triangle(300, 203, 178, 397, 422, 397);
+            stroke(255, 150); // greyish
+            triangle(300, 203, 178, 397, 422, 397); // creating inner triange
         }
 
-
-        // STILL FIGURING THIS SECTION OUT
         function innerPrism() {
-            // let x1 = 255, y1 = 280, x2 = 345, y2 = 266;
-            // let n = 0;
-            // while (n < 11) {
-            //     stroke(255, 20); // Adjusted stroke color for better visibility
-            //     strokeWeight(0.5); // Adjusted stroke weight for better visibility
-            //     line(x1, y1, x2, y2);
-            //     x2 += 1.3;
-            //     y2 += 3.45;
-            //     n++;
-            // }
         }
 
         function spectrum() {
@@ -288,11 +270,12 @@
                     [230, 75, 175]
                 ];
 
+                // drawing the sprectrum coloured lines
                 for (let n = 0; n < 11; n++) {
                     let [a, b, c] = colors[n];
                     stroke(a, b, c, 250); // visibility settings
                     strokeWeight(5); // visibility settings
-                    line(x1, y1, x2, y2);
+                    line(x1, y1, x2, y2); 
                     x1 += 2.2;
                     y1 += 3;
                     spectrumLength += 1; // length of line, makes a little animation
@@ -342,9 +325,10 @@
         }
     </script>
 
+<!-- Spinning colour wheel section -->
     <script>
         // COLOUR WHEEL 
-        var sketch = function (c) {
+        var sketch = function (c) {  // "C" was used for "Colour Wheel" in creating a new p5.js canvas
             // defining colours
             const red = "#FE2712";
             const redOrange = "#FC600A";
@@ -383,7 +367,7 @@
                     c.arc(0, 0, size, size, startAngle, endAngle, c.PIE); // drawing the arc with start/end angles
                 }
 
-                angle += 0.04; //spinny
+                angle += 0.04; //allows the wheel to spin
             };
 
             function getColorAtAngle(angle) {
