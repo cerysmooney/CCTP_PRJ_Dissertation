@@ -13,8 +13,8 @@
     <a class="active" href="pick_your_colour.html">Pick Your Colour</a>
   </div>
   <body>
-<!-- 
-<a id="backToTopButton"></a> -->
+
+<a id="backToTopButton"></a>
     <div class="connectionSecContainer">
       <div class="connectionText">
           <h1 class="H1Connection">Pick Your Coloured Noise..</h1>
@@ -85,8 +85,8 @@
     }
     
     function setup() {
-      
-      let canvas = createCanvas(1080,3000); // setting up the canvas
+      // 1080, 3000
+      let canvas = createCanvas(1080,1500); // setting up the canvas
       canvas.parent('chooseNoiseContainer'); // parenting to add anywhere on the page
       // green cham as initial
       selectedChameleon = greenCham;
@@ -94,7 +94,8 @@
       // Define button dimensions and position variables
       let buttonHeight = 30;
       let buttonMargin = 190; // spacing buttons
-      let yPosition = height - 2370; // y position
+      // 2370
+      let yPosition = height - 870; // y position
     
       let whiteButton = createButton('White Noise'); // white noise button
 whiteButton.position(100, yPosition);
@@ -421,13 +422,13 @@ function hideBrownPSD(){ // if any other button is clicked,
     }
 </script>
 
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var btn = $('#backToTopButton');
 
         $(window).scroll(function() {
-            if ($(window).scrollTop() > 300) {
+            if ($(window).scrollTop() > 600) {
                 btn.addClass('show');
             } else {
                 btn.removeClass('show');
@@ -436,10 +437,10 @@ function hideBrownPSD(){ // if any other button is clicked,
 
         btn.on('click', function(e) {
             e.preventDefault();
-            $('html, body').animate({scrollTop:0}, '300');
+            $('html, body').animate({scrollTop:0}, '600');
         });
     });
-</script> -->
+</script>
 
 
 </div>
