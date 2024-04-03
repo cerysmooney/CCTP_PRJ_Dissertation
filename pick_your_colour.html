@@ -78,11 +78,28 @@
       brownSound = loadSound("Audio/Brown Noise.mp3");
     }
     
+   // showing a "please click button to display info" text 
+    function displayMoreInfoText() {
+     fill(255);
+     textSize(32); 
+    textAlign(CENTER, BOTTOM); 
+    let textX = 120 + 600 / 2; // took info from the psd text to make sure it's aligned right
+    let textY = 1000; // y position aligned with the header text
+    textFont('Gill Sans MT');
+    text("Please click any noise button to display more information!", textX, textY);
+}
+    //  hide initial text
+    function hideMoreInfoText() {
+      clear(); // Clear the canvas
+    }
 
     // change chameleon image based on mouse click
     function changeChameleon(chameleonImage) {
       selectedChameleon = chameleonImage;
     }
+    
+
+
     
     function setup() {
       // 1080, 3000
@@ -90,6 +107,8 @@
       canvas.parent('chooseNoiseContainer'); // parenting to add anywhere on the page
       // green cham as initial
       selectedChameleon = greenCham;
+      displayMoreInfoText(); // Call the function to display initial text
+
     
       // Define button dimensions and position variables
       let buttonHeight = 30;
@@ -97,6 +116,11 @@
       // 2370
       let yPosition = height - 870; // y position
     
+
+
+
+
+      
       let whiteButton = createButton('White Noise'); // white noise button
 whiteButton.position(100, yPosition);
 whiteButton.class('whiteNoiseButton'); // connecting to CSS
@@ -111,6 +135,7 @@ whiteButton.mouseClicked(function() { // if the white noise button is clicked
   changeChameleon(whiteCham); // show the white chameleon image
   showWhitePSD(); // showing whitePSD on white mouse clicked
 });
+
 
 // Showing the White Noise PSD on button click
 function showWhitePSD() {
