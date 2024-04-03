@@ -629,8 +629,6 @@ z-index: -1;
 }
 
 .connectionText{
-  margin-top: 20px;
-  margin-left: 20px;
   font-size: medium;
   opacity: 0;
   animation: fadeIn 2s forwards;
