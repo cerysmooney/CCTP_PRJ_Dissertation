@@ -688,9 +688,14 @@ z-index: -1;
   text-align: center;
   color: whitesmoke;
   font-size: medium;
-  margin-bottom: 50px;
 }
 
+.psdText2{
+  text-align: center;
+  color: whitesmoke;
+  font-size: medium;
+  margin-bottom: 50px;
+}
 /* responsive */
 @media only screen and (max-width: 768px){
   .connectionText {
