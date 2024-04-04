@@ -51,9 +51,15 @@
     let blueSound;
     let violetSound;
     let brownSound;
+
+    let myFont;
     
+
     // Preload function to load images and sounds
     function preload() { 
+
+      myFont = loadFont('Fonts/gillsansmt.ttf');
+
       // Chameleon Images
       greenCham = loadImage("Images/UpdatedGreenNoEyes-01.png");
       whiteCham = loadImage("Images/UpdatedWhiteNoEyes-01.png");
@@ -85,7 +91,7 @@
     textAlign(CENTER, BOTTOM); 
     let textX = 120 + 600 / 2; // took info from the psd text to make sure it's aligned right
     let textY = 1000; // y position aligned with the header text
-    textFont('Gill Sans MT');
+    textFont(myFont);
     text("Please click any noise button to display more information!", textX, textY);
 }
     //  hide initial text
@@ -154,7 +160,7 @@ function showWhitePSD() {
   textAlign(CENTER, BOTTOM); // centered header
   let headerTextX = xPosition + psdWidth / 2; // x position aligned with psd image
   let headerTextY = yPosition - 30; // y pos for being above psd image
-  textFont('Gill Sans MT');
+  textFont(myFont);
   text("Understanding White Noise", headerTextX, headerTextY); // heading
 
   fill(230); 
@@ -213,7 +219,7 @@ clear();
   textAlign(CENTER, BOTTOM);  // centering text
   let headerTextX = xPosition + psdWidth / 2; 
   let headerTextY = yPosition - 30; 
-  textFont('Gill Sans MT'); 
+  textFont(myFont); 
   text("The Calmness of Pink Noise", headerTextX, headerTextY); // header text
 
   fill(230); 
@@ -274,7 +280,7 @@ function hidePinkPSD(){ // if any other buttons are pressed,
   textAlign(CENTER, BOTTOM); // allignment 
   let headerTextX = xPosition + psdWidth / 2; 
   let headerTextY = yPosition - 30; 
-  textFont('Gill Sans MT'); 
+  textFont(myFont); 
   text("The Dynamics of Blue Noise", headerTextX, headerTextY); // headertext
 
   fill(230); 
@@ -335,7 +341,7 @@ fill(255);
   textAlign(CENTER, BOTTOM); 
   let headerTextX = xPosition + psdWidth / 2; 
   let headerTextY = yPosition - 30; 
-  textFont('Gill Sans MT'); 
+  textFont(myFont); 
   text("Take a Look at Violet Noise", headerTextX, headerTextY);
 
 // body text psd
@@ -395,7 +401,7 @@ clear();
   textAlign(CENTER, BOTTOM);  // allignment
   let headerTextX = xPosition + psdWidth / 2; 
   let headerTextY = yPosition - 30; 
-  textFont('Gill Sans MT'); 
+  textFont(myFont); 
   text("Exploring the Subtle Power of Brown Noise", headerTextX, headerTextY); // header text
 
   // psd body info
