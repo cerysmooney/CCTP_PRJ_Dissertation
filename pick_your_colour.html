@@ -58,7 +58,7 @@
     // Preload function to load images and sounds
     function preload() { 
 
-      myFont = loadFont('Fonts/gillsansmt.ttf');
+      myFont = loadFont('Fonts/GillSans.otf');
 
       // Chameleon Images
       greenCham = loadImage("Images/UpdatedGreenNoEyes-01.png");
@@ -91,7 +91,7 @@
     textAlign(CENTER, BOTTOM); 
     let textX = 120 + 600 / 2; // took info from the psd text to make sure it's aligned right
     let textY = 1000; // y position aligned with the header text
-    textFont(myFont);
+    textFont(myFont,"Arial, sans-serif");
     text("Please click any noise button to display more information!", textX, textY);
 }
     //  hide initial text
@@ -108,6 +108,7 @@
 
     
     function setup() {
+      textFont(myFont);
       // 1080, 3000
       let canvas = createCanvas(1080,1500); // setting up the canvas
       canvas.parent('chooseNoiseContainer'); // parenting to add anywhere on the page
