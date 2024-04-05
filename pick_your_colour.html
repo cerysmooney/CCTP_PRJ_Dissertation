@@ -52,12 +52,14 @@
     let violetSound;
     let brownSound;
 
+    // font variable
     let myFont;
     
 
     // Preload function to load images and sounds
     function preload() { 
 
+      // loading in Gill Sans because it isn't the default font 
       myFont = loadFont('Fonts/GillSans.otf');
 
       // Chameleon Images
@@ -457,6 +459,7 @@ function hideBrownPSD(){ // if any other button is clicked,
     }
 </script>
 
+<!-- Back to top button inspired by Matthew Cane's back to top button (https://codepen.io/matthewcain/pen/ZepbeR) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
