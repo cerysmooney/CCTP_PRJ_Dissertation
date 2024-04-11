@@ -448,13 +448,12 @@ function hideBrownPSD(){ // if any other button is clicked,
     
     // Function to draw the chameleon image
     function draw() {
-
       if (selectedChameleon) {
-        image(selectedChameleon, -200, -300, 1200, 1100);
-        let constrainedX = constrain(mouseX, 620, 650);
-        let constrainedY = constrain(mouseY, 184.5, 206.5);
-        fill(0);
-        ellipse(constrainedX, constrainedY, 15, 15);
+        image(selectedChameleon, -200, -300, 1200, 1100); // position of chameleon
+        let constrainedX = constrain(mouseX, 620, 650); // x position of ellipse constraints
+        let constrainedY = constrain(mouseY, 184.5, 206.5); // y position of ellipse constraints
+        fill(0); // black
+        ellipse(constrainedX, constrainedY, 15, 15); // constraints and size of ellipse
       }
     }
 </script>
