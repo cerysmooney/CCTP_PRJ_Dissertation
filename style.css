@@ -11,9 +11,9 @@ body, html {
 }
 
 
-
+/* Navigation bar styles */
 .topnav {
-  background-color: #333;
+  background-color: #333; 
   overflow: hidden;
 }
 
@@ -51,18 +51,20 @@ body, html {
 }
 
 
-
+/* Medium font size */
 .noisetext,
 .noisetext2,
 .noisetext3 {
   font-size: medium; 
 }
-
+ 
+/* Fade in animation */
 .noisetext{
   opacity: 0;
   animation: fadeIn 2s forwards;
 }
 
+/*  0 - 1 in 2seconds so it fades in queickly */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -72,7 +74,7 @@ body, html {
   }
 }
 
-
+/* Back to top button styles */
 #backToTopButton {
   display: inline-block;
   background-color: grey;
@@ -88,6 +90,7 @@ body, html {
   visibility: hidden;
   z-index: 1000;
 }
+
 #backToTopButton::after {
   content: ""; 
   width: 34px; 
@@ -98,6 +101,8 @@ body, html {
   display: inline-block;
   margin-top: 8px; 
 }
+
+/* On hover controls */
 #backToTopButton:hover {
   cursor: pointer;
   background-color: #333;
@@ -121,6 +126,7 @@ body, html {
   text-align: center;
 }
 
+/* header styles */
 .noiseH1 {
   text-align: center;
   color: white;
@@ -134,6 +140,7 @@ body, html {
   position: relative;
 }
 
+/* waveform definitions styling */
 .waveformImage {
   display: flex;
   flex-direction: column;
@@ -145,6 +152,7 @@ body, html {
   transition: opacity 1s ease-in-out;
 }
 
+/* making opacity 1 after reveal */
 .waveformImage.reveal {
   opacity: 1;
 }
@@ -157,6 +165,7 @@ body, html {
   transition: transform 0.3s ease-in-out;
 }
 
+/* little interaction, scale image up on hover */
 .waveformChart:hover{
   transform: scale(1.05);
 }
@@ -165,6 +174,7 @@ body, html {
   margin: 0 auto; 
 }
 
+/* image styling */
 .noiseimgplaceholder {
   display: flex;
   flex-direction: column;
@@ -176,16 +186,18 @@ body, html {
   transition: opacity 1s ease-in-out;
 }
 
+/* opacity should  be 1 after reveal */
 .noiseimgplaceholder.reveal {
   opacity: 1;
 }
 
-
+/* making sure content is centred */
 .noiseButtonContainer {
   display: flex;
   justify-content: center;
 }
 
+/* oscillator buttons styling */
 .noiseButton {
   padding: 5px; /* Adjust padding */
   text-align: center;
@@ -205,6 +217,7 @@ body, html {
 }
 
 
+/* oscillator button styling */
 .button {
   background-color: #666;
   color: white;
@@ -220,6 +233,7 @@ body, html {
   transition-duration: 0.4s;
 }
 
+/* on hover controls */
 .button:hover {
   background-color: #555;
 }
@@ -235,6 +249,7 @@ body, html {
   text-align: center;
 }
 
+/* centred contend with big margin and animation controls */
 .sec-2Container {
   display: flex;
   flex-direction: column;
@@ -246,14 +261,17 @@ body, html {
   transition: opacity 1s ease-in-out;
 }
 
+/* after reveal, opacity should be 1 (visible) */
 .sec-2Container.reveal {
   opacity: 1;
 }
 
+/* spacing */
 .freqeuncyContainer {
-  margin: 20px; /* Adjust margin as needed */
+  margin: 20px; 
 }
 
+/* centred, medium, white text */
 .noisetext2 {
   text-align: center;
   color: whitesmoke;
@@ -282,11 +300,8 @@ body, html {
   z-index: -1;
 }
 
-.whatIs1P5Container {
-  width: 100%;
-  height: 100vh; /* Set height to match the viewport height */
-}
 
+/* fade in animations for first bit of text */
 .firstColourTextContainer {
   opacity: 0;
   animation: fadeIn 2s forwards;
@@ -311,7 +326,6 @@ body, html {
   margin-top: 50px;
   font-size: xx-large;
   
-  /* background-color: #333; */
 }
 
 
@@ -322,8 +336,10 @@ body, html {
   text-align: center;
 }
 
+/* centred text */
 
 
+/* making sure prism is in the centre with some spacing between the H1 section */
 .prismSection {
   display: flex;
   flex-direction: column; /* Stack items vertically */
@@ -338,34 +354,36 @@ body, html {
   opacity: 1;
 }
 
+/* little bit of spacing */
 .prismContainer {
-  margin-top: 20px; /* Adjust as needed */
+  margin-top: 20px; 
 }
 
+/* header styles */
 .tryItOut {
   text-align: center;
   color: white;
   font-size: xx-large;
 }
 
+/* centered text with spacing at the bottom */
 .textContainer {
   text-align: center;
   color: whitesmoke;
-  margin-bottom: 20px; /* Add some margin between text and image */
+  margin-bottom: 20px; 
 }
 
 
 
 
 /* first body text */
+/* centre aligned */
 .whatiscolourtext {
   text-align: center;
   color: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-left: 50px;
-  margin-top: 50px; */
 font-size: medium;
 text-wrap: balance;
 }
@@ -374,7 +392,7 @@ text-wrap: balance;
 
 /* light spectrum section */
 
-
+/* spacing and animation */
 .lightSpectrumSection {
   margin-top: 140px;
   opacity: 0;
@@ -384,7 +402,8 @@ text-wrap: balance;
 .lightSpectrumSection.reveal {
   opacity: 1;
 }
-
+ 
+/* header for vsl section */
 .vslText {
   text-align: center;
   color: white;
@@ -395,6 +414,7 @@ text-wrap: balance;
   /* background-color: #333; */
 }
 
+/* making sure light spectrum image is visible and not taking up all of the page */
 .lsChartImage {
   max-width: 65%;
   height: auto;
@@ -404,14 +424,16 @@ text-wrap: balance;
   transition: transform 0.3s ease-in-out;
 }
 
+/* enlarge image a tiny bit just for interactivity */
 .lsChartImage:hover{
   transform: scale(1.05);
 }
 
 
 /* colour wheel info */
+
+/* centered and fade in animation */
 .colourcontainer2 {
-  /* background: rgba(51, 51, 51, 0.5); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -422,7 +444,7 @@ text-wrap: balance;
   opacity: 1;
 }
 
-
+/* spacing between sections and fade ins */
 .frequencyColourWheelSection{
 margin-top: 140px;
 opacity: 0;
@@ -441,24 +463,22 @@ opacity: 1;
   display: block;
   margin-top: 100px;
   font-size: xx-large;
-  /* background-color: #333; */
 }
 
-
+/* centering container */
 .wheelContainer {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   transition: transform 0.3s ease-in-out;
 }
-
+/* little enlarge interaction on static image */
 .wheelContainer:hover{
   transform: scale(1.05);
 }
 
-
+/* styling container */
 .frequencyTextContainer {
-  /* background: rgba(51, 51, 51, 0.5); */
   display: flex;
   flex-direction: column; 
   justify-content: center;
@@ -466,7 +486,7 @@ opacity: 1;
  margin-bottom: 50px;
 }
 
-/* body text */
+/* body text with spacing and centred alignment*/
 .whatiscolourtext2 {
   text-align: center;
   color: whitesmoke;
@@ -475,6 +495,8 @@ opacity: 1;
   font-size: medium;
   text-wrap: balance;
 }
+
+/* spacing and centred alignment */
 .aboveWhatIsColourText{
  
   text-align: center;
@@ -487,6 +509,7 @@ opacity: 1;
   text-wrap: balance;
 }
 
+/* spacing and alignment */
 .aboveWhatIsColourText2 {
   text-align: center;
   color: whitesmoke;
@@ -537,12 +560,7 @@ z-index: -1;
 
 /* First bit about definition */
 #connectionSec{
-  /* background: linear-gradient(45deg, #000000, #333 45%, #000000);
-  background-size: 400% 400%;
-  animation: gradientAnimation 8s ease infinite; */
-  /* position: relative; */
   color: white;
-  /* padding: 50px 0; */
   text-align: center;
 }
 
@@ -560,6 +578,7 @@ z-index: -1;
   font-size: xx-large;
 }
 
+/* fade in animations */
 .connectionText{
   font-size: medium;
   opacity: 0;
@@ -575,7 +594,7 @@ z-index: -1;
   }
 }
 
-
+/* spacing between sections and fade in animation */
 .psdSec{
   display: flex;
   flex-direction: column;
@@ -590,16 +609,18 @@ z-index: -1;
   opacity: 1;
 }
 
+/* centred align text and white */
 .H1PSD{
   position: relative;
   text-align: center;
   color: white;
-  display: block; /* Change display to block */
+  display: block;
   margin-top: 50px;
   font-size: xx-large;
 }
 
 
+/* making sure image is visible and enabling hover animation */
 .psdImage{
   max-width: 65%; 
   height: auto;
@@ -609,19 +630,19 @@ z-index: -1;
   transition: transform 0.3s ease-in-out;
 }
 
+/* enlarge just a little for interaction */
 .psdImage:hover{
   transform: scale(1.05);
 }
-/* .psdSecContainer{
-  /* padding: 30px; */
-/* } */ 
 
+/* centred white text */
 .psdText{
   text-align: center;
   color: whitesmoke;
   font-size: medium;
 }
 
+/* centred white text with spacing */
 .psdText2{
   text-align: center;
   color: whitesmoke;
@@ -695,11 +716,10 @@ z-index: -1;
   width: 100%; 
   max-width: 800px; 
   margin: 0 auto;   
-  /* margin-bottom: ; */
 }
 
 
-
+/* button styles, each are the same, just changed to their respective colours (pink, white, brown, blue, violet) */
 .whiteNoiseButton {
   padding: 10px;
   text-align: center;
